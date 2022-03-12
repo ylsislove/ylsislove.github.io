@@ -10,27 +10,10 @@
         </author>
         <description>真理和热爱是吾永生的追求</description>
         <language>zh-CN</language>
-        <pubDate>Sat, 12 Mar 2022 00:00:00 +0800</pubDate>
-        <lastBuildDate>Sat, 12 Mar 2022 00:00:00 +0800</lastBuildDate>
+        <pubDate>Sat, 12 Mar 2022 19:00:00 +0800</pubDate>
+        <lastBuildDate>Sat, 12 Mar 2022 19:00:00 +0800</lastBuildDate>
         <category term="HoloLens" />
         <category term=" NAS" />
-        <item>
-            <guid isPermalink="true">https://blog.aayu.today/basic-subjects/mathematics/advanced-mathematics/20220312/</guid>
-            <title>高等数学-常用公式</title>
-            <link>https://blog.aayu.today/basic-subjects/mathematics/advanced-mathematics/20220312/</link>
-            <category term="基础学科" scheme="https://blog.aayu.today/categories/basic-subjects/" />
-            <category term="数学" scheme="https://blog.aayu.today/categories/basic-subjects/mathematics/" />
-            <category term="高等数学" scheme="https://blog.aayu.today/categories/basic-subjects/mathematics/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/" />
-            <category term="高等数学" scheme="https://blog.aayu.today/tags/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/" />
-            <pubDate>Sat, 12 Mar 2022 00:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/03/05/e8f45bd5ba680.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/03/12/f4c3e2d6045a0.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/03/12/186c8c62e410f.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/03/12/60421e57c4f60.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/03/12/aa7d9101fe782.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/03/12/52bbf53b0c6ea.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
- ]]></description>
-        </item>
         <item>
             <guid isPermalink="true">https://blog.aayu.today/linux/ubuntu/20220312/</guid>
             <title>Ubuntu-解决2.5G网卡驱动问题</title>
@@ -38,7 +21,7 @@
             <category term="Linux进阶之路" scheme="https://blog.aayu.today/categories/linux/" />
             <category term="Ubuntu" scheme="https://blog.aayu.today/categories/linux/ubuntu/" />
             <category term="Ubuntu" scheme="https://blog.aayu.today/tags/Ubuntu/" />
-            <pubDate>Sat, 12 Mar 2022 00:00:00 +0800</pubDate>
+            <pubDate>Sat, 12 Mar 2022 19:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h2&gt;
 &lt;p&gt;由于 2.5G 网卡较新，各 linux 发行版的通用驱动已不适用，新装的系统会出现无法上网问题，由于国内网络环境去 Realtek 官网很难下载到驱动文件，故本文提供 github 上的 2.5G Ethernet LINUX driver r8125 for kernel up to 5.6 的版本驱动文件 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL1ZpdG8tVHUvcjgxMjU=&#34;&gt;r8125-9.003.05.tar.bz2&lt;/span&gt; 各位可以自行下载，并结合此教程安装。&lt;/p&gt;
 &lt;h2 id=&#34;本机环境&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#本机环境&#34;&gt;#&lt;/a&gt; 本机环境&lt;/h2&gt;
@@ -132,6 +115,23 @@ sudo ./fixNetworkCard.sh
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bvb3JndXlfYW9zL2FydGljbGUvZGV0YWlscy8xMDgyNTA4Mzg=&#34;&gt;解决 linux 2.5G 网卡驱动问题&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuY25ibG9ncy5jb20veHV5YW93ZW4vcC9saW51eC1zZWN1cmUtYm9vdC1kaXNhYmxlLmh0bWw=&#34;&gt;modprobe 加载模块时 出现权限不允许提醒；Operation not permitted&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://blog.aayu.today/basic-subjects/mathematics/advanced-mathematics/20220312/</guid>
+            <title>高等数学-常用公式</title>
+            <link>https://blog.aayu.today/basic-subjects/mathematics/advanced-mathematics/20220312/</link>
+            <category term="基础学科" scheme="https://blog.aayu.today/categories/basic-subjects/" />
+            <category term="数学" scheme="https://blog.aayu.today/categories/basic-subjects/mathematics/" />
+            <category term="高等数学" scheme="https://blog.aayu.today/categories/basic-subjects/mathematics/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/" />
+            <category term="高等数学" scheme="https://blog.aayu.today/tags/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/" />
+            <pubDate>Sat, 12 Mar 2022 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/03/05/e8f45bd5ba680.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/03/12/f4c3e2d6045a0.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/03/12/186c8c62e410f.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/03/12/60421e57c4f60.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/03/12/aa7d9101fe782.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/03/12/52bbf53b0c6ea.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>

@@ -8,26 +8,9 @@
     <author>
       <name>宇凌喵</name>
     </author>
-    <updated>2022-03-11T16:00:00.000Z</updated>
+    <updated>2022-03-12T11:00:00.000Z</updated>
     <category term="HoloLens" />
     <category term=" NAS" />
-    <entry>
-        <id>https://blog.aayu.today/basic-subjects/mathematics/advanced-mathematics/20220312/</id>
-        <title>高等数学-常用公式</title>
-        <link rel="alternate" href="https://blog.aayu.today/basic-subjects/mathematics/advanced-mathematics/20220312/"/>
-        <content type="html">&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/03/05/e8f45bd5ba680.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/03/12/f4c3e2d6045a0.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/03/12/186c8c62e410f.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/03/12/60421e57c4f60.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/03/12/aa7d9101fe782.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/03/12/52bbf53b0c6ea.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</content>
-        <category term="基础学科" scheme="https://blog.aayu.today/categories/basic-subjects/" />
-        <category term="数学" scheme="https://blog.aayu.today/categories/basic-subjects/mathematics/" />
-        <category term="高等数学" scheme="https://blog.aayu.today/categories/basic-subjects/mathematics/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/" />
-        <category term="高等数学" scheme="https://blog.aayu.today/tags/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/" />
-        <updated>2022-03-11T16:00:00.000Z</updated>
-    </entry>
     <entry>
         <id>https://blog.aayu.today/linux/ubuntu/20220312/</id>
         <title>Ubuntu-解决2.5G网卡驱动问题</title>
@@ -129,6 +112,23 @@ sudo ./fixNetworkCard.sh
         <category term="Linux进阶之路" scheme="https://blog.aayu.today/categories/linux/" />
         <category term="Ubuntu" scheme="https://blog.aayu.today/categories/linux/ubuntu/" />
         <category term="Ubuntu" scheme="https://blog.aayu.today/tags/Ubuntu/" />
+        <updated>2022-03-12T11:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://blog.aayu.today/basic-subjects/mathematics/advanced-mathematics/20220312/</id>
+        <title>高等数学-常用公式</title>
+        <link rel="alternate" href="https://blog.aayu.today/basic-subjects/mathematics/advanced-mathematics/20220312/"/>
+        <content type="html">&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/03/05/e8f45bd5ba680.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/03/12/f4c3e2d6045a0.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/03/12/186c8c62e410f.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/03/12/60421e57c4f60.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/03/12/aa7d9101fe782.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/03/12/52bbf53b0c6ea.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</content>
+        <category term="基础学科" scheme="https://blog.aayu.today/categories/basic-subjects/" />
+        <category term="数学" scheme="https://blog.aayu.today/categories/basic-subjects/mathematics/" />
+        <category term="高等数学" scheme="https://blog.aayu.today/categories/basic-subjects/mathematics/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/" />
+        <category term="高等数学" scheme="https://blog.aayu.today/tags/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/" />
         <updated>2022-03-11T16:00:00.000Z</updated>
     </entry>
     <entry>

@@ -1,0 +1,744 @@
+<!-- build time:Sat Mar 12 2022 11:22:40 GMT+0800 (GMT+08:00) --><!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"><meta name="theme-color" content="#FFF"><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png"><link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="alternate" type="application/rss+xml" title="学无止境" href="https://blog.aayu.today/rss.xml"><link rel="alternate" type="application/atom+xml" title="学无止境" href="https://blog.aayu.today/atom.xml"><link rel="alternate" type="application/json" title="学无止境" href="https://blog.aayu.today/feed.json"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext"><link rel="stylesheet" href="/css/app.css?v=0.2.5"><meta name="keywords" content="HoloLens2"><link rel="canonical" href="https://blog.aayu.today/feature/official-demo/20210307/"><title>Hololens2-研究模式API文档翻译 - 官方案例 - HoloLens2开发笔记 | Aayu Yain = 学无止境 = 阿宇的可爱博客</title><meta name="generator" content="Hexo 5.4.0"></head><body itemscope itemtype="http://schema.org/WebPage"><div id="loading"><div class="cat"><div class="body"></div><div class="head"><div class="face"></div></div><div class="foot"><div class="tummy-end"></div><div class="bottom"></div><div class="legs left"></div><div class="legs right"></div></div><div class="paw"><div class="hands left"></div><div class="hands right"></div></div></div></div><div id="container"><header id="header" itemscope itemtype="http://schema.org/WPHeader"><div class="inner"><div id="brand"><div class="pjax"><h1 itemprop="name headline">Hololens2-研究模式API文档翻译</h1><div class="meta"><span class="item" title="创建时间：2021-03-07 00:00:00"><span class="icon"><i class="ic i-calendar"></i> </span><span class="text">发表于</span> <time itemprop="dateCreated datePublished" datetime="2021-03-07T00:00:00+08:00">2021-03-07</time> </span><span class="item" title="本文字数"><span class="icon"><i class="ic i-pen"></i> </span><span class="text">本文字数</span> <span>24k</span> <span class="text">字</span> </span><span class="item" title="阅读时长"><span class="icon"><i class="ic i-clock"></i> </span><span class="text">阅读时长</span> <span>22 分钟</span></span></div></div></div><nav id="nav"><div class="inner"><div class="toggle"><div class="lines" aria-label="切换导航栏"><span class="line"></span> <span class="line"></span> <span class="line"></span></div></div><ul class="menu"><li class="item title"><a href="/" rel="start">Aayu Yain</a></li></ul><ul class="right"><li class="item theme"><i class="ic i-sun"></i></li><li class="item search"><i class="ic i-search"></i></li></ul></div></nav></div><div id="imgs" class="pjax"><ul><li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeybxm1pj20zk0m8niv.jpg"></li><li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclh5u05ej20zk0m87df.jpg"></li><li class="item" data-background-image="http://image.aayu.today/2022/02/27/a42ba97f987f8.jpg"></li><li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeyhsblkj20zk0m81kx.jpg"></li><li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeudstjqj20zk0m8k3r.jpg"></li><li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclhfehz7j20zk0m8u0x.jpg"></li></ul></div></header><div id="waves"><svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/></defs><g class="parallax"><use xlink:href="#gentle-wave" x="48" y="0"/><use xlink:href="#gentle-wave" x="48" y="3"/><use xlink:href="#gentle-wave" x="48" y="5"/><use xlink:href="#gentle-wave" x="48" y="7"/></g></svg></div><main><div class="inner"><div id="main" class="pjax"><div class="article wrap"><div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList"><i class="ic i-home"></i> <span><a href="/">首页</a></span><i class="ic i-angle-right"></i> <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/feature/" itemprop="item" rel="index" title="分类于 HoloLens2开发笔记"><span itemprop="name">HoloLens2开发笔记</span></a><meta itemprop="position" content="1"></span><i class="ic i-angle-right"></i> <span class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/feature/official-demo/" itemprop="item" rel="index" title="分类于 官方案例"><span itemprop="name">官方案例</span></a><meta itemprop="position" content="2"></span></div><article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN"><link itemprop="mainEntityOfPage" href="https://blog.aayu.today/feature/official-demo/20210307/"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="image" content="/images/avatar.jpg"><meta itemprop="name" content="宇凌喵"><meta itemprop="description" content="阿宇的可爱博客, 真理和热爱是吾永生的追求"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="学无止境"></span><div class="body md" itemprop="articleBody"><h2 id="综述"><a class="anchor" href="#综述">#</a> 综述</h2><p>第一代 HoloLens 引入了研究模式，研究不用于部署访问设备上的关键传感器的应用程序。HoloLens2 的研究模式保留了 HoloLens1 的功能，增加了对额外流的访问。同样，对于第一个版本，可以从以下输入中收集数据:</p><ul><li>可见光环境跟踪摄像机 - 系统用于头部跟踪和地图创建。它们返回每像素 8 位的灰度图像。</li><li>两种模式操纵下的深度摄像机</li><li>关节式手跟踪方式 (AHAT)，用于手跟踪的高频 (45 帧 / 秒) 近深度传感。支持距离设备 1 米之内的手势追踪，HoloLens2 仅通过计算基于相位的飞行时间相机的 “混叠深度” 来节省电力。这意味着，当距离超过 1 米时，信号只包含到设备的距离的小数部分。<ul><li>空间映射中使用的长抛、低频 (1-5 FPS) 的深度传感。</li></ul></li><li>两个版本的红外反射率流 - HoloLens 用来计算深度。这些图像由红外线照射，不受周围可见光的影响。</li></ul><p>此外，HoloLens2 还支持访问以下内容:</p><ul><li>加速度计 - 系统用来确定沿 X, Y, Z 轴的线性加速度以及重力。</li><li>陀螺仪 - 系统中用来确定旋转的仪器。</li><li>磁强计 - 系统用于绝对方位估计。</li></ul><h2 id="大纲"><a class="anchor" href="#大纲">#</a> 大纲</h2><p>研究模式 API 是基于一种名为 Nano-COM 的轻量级派生。Nano-COM 指的是一种 API 设计模式，它使用 IUnknown 作为对象标识和生存期，但不需要 COM 运行时基础设施，用工厂函数替换 CoCreateInstance 的使用，这些工厂函数返回用参数初始化的对象到这些函数。接口只支持 QueryInterface、AddRef 和 Release。api 返回 HRESULT 错误码。DirectX11 和 12 也是一个 Nano-COM api。</p><p>API 的结构如下:</p><ul><li>首先创建的对象是研究模式设备。这是 API 工厂对象。它用于:<ul><li>按类型枚举可用的传感器</li><li>创建传感器对象</li><li>请求访问权限</li><li>每个传感器类型只能创建一个传感器</li></ul></li><li>传感器提供以下功能:<ul><li>返回传感器的名称和类型</li><li>启动和停止流</li><li>在流状态下等待和检索帧</li><li>返回 extrinsics 矩阵，给出传感器相对于设备连接原点 (Rig origin) 的相对位置</li><li>返回设备坐标帧 GUID，可以用来映射设备坐标帧到其他感知坐标帧</li><li>传感器可以是摄像机或 imu，两者都返回帧传感器特定的有效载荷格式</li></ul></li><li>传感器帧提供:<ul><li>帧时间戳</li><li>帧大小</li><li>专门针对每个传感器的属性和有效负载格式。</li></ul></li></ul><p>对于所有传感器，初始化调用应该只进行一次，而且传感器不是线程安全的。帧应该从传感器打开的线程读取。传感器可以共享一个线程，或者每个都有一个线程。</p><h2 id="主传感器读取循环"><a class="anchor" href="#主传感器读取循环">#</a> 主传感器读取循环</h2><p>主传感器处理循环概述为:</p><ul><li>创建研究模式设备</li><li>获取所有传感器所在的设备坐标框架。我们称之为 rigNode，它由 GUID 标识，GUID 可与 HoloLens 感知 api 一起用于映射其他 HoloLens 感知坐标框架中的传感器特定坐标。下面的 <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vZW4tdXMvd2luZG93cy9taXhlZC1yZWFsaXR5L2Nvb3JkaW5hdGUtc3lzdGVtcw==">https://docs.microsoft.com/en-us/windows/mixed-reality/coordinate-systems</span> 解释了感知坐标框架。</li><li>枚举传感器</li><li>获取传感器信息<ul><li>对于摄像机，该对象在摄像机坐标框架中投影 / 取消投影图像点到 3D 点</li><li>Extrinsics 用于相对于设备 rigNode 定位传感器。</li></ul></li></ul><p>下面的代码显示了打开研究模式设备，获取传感器描述符和从传感器获取帧。api 返回应该检查错误的结果 HRSULTS。下面的代码省略了错误检查，以便更容易地执行 API 调用。与坐标框架相关的 api 将在后面的章节中描述。</p><pre><code class="language-C++">    HRESULT hr = S_OK; 
+    IResearchModeSensorDevice *pSensorDevice; 
+    IResearchModeSensorDevicePerception *pSensorDevicePerception; 
+    std::vector&lt;ResearchModeSensorDescriptor&gt; sensorDescriptors; 
+    size_t sensorCount = 0; 
+ 
+    hr = CreateResearchModeSensorDevice(&amp;pSensorDevice); 
+ 
+    // This call makes cameras run at full frame rate. Normaly they are optimized 
+    // for headtracker use. For some applications that may be sufficient 
+    pSensorDevice-&gt;DisableEyeSelection(); 
+ 
+    hr = pSensorDevice-&gt;GetSensorCount(&amp;sensorCount);
+    sensorDescriptors.resize(sensorCount); 
+ 
+    hr = pSensorDevice-&gt;GetSensorDescriptors(sensorDescriptors.data(), 
+sensorDescriptors.size(), &amp;sensorCount); 
+ 
+    for (const auto&amp; sensorDescriptor : sensorDescriptors) 
+    &#123; 
+        // Sensor frame read thread 
+ 
+        IResearchModeSensor *pSensor = nullptr; 
+        size_t sampleBufferSize; 
+        IResearchModeSensorFrame* pSensorFrame = nullptr; 
+ 
+        hr = pSensorDevice-&gt;GetSensor(sensorDescriptor.sensorType, &amp;pSensor); 
+ 
+        swprintf_s(msgBuffer, L&quot;Sensor %ls\n&quot;, pSensor-&gt;GetFriendlyName()); 
+        OutputDebugStringW(msgBuffer); 
+ 
+        hr = pSensor-&gt;GetSampleBufferSize(&amp;sampleBufferSize); 
+ 
+        hr = pSensor-&gt;OpenStream(); 
+ 
+        for (UINT i = 0; i &lt; 4; i++) 
+        &#123; 
+            hr = pSensor-&gt;GetNextBuffer(&amp;pSensorFrame); 
+ 
+            if (pSensor-&gt;GetSensorType() &gt;= IMU_ACCEL) 
+            &#123; 
+                ProcessFrameImu(pSensor, pSensorFrame, i); 
+            &#125; 
+            else 
+            &#123; 
+                ProcessFrameCamera(pSensor, pSensorFrame, i); 
+            &#125; 
+ 
+            if (pSensorFrame) 
+            &#123; 
+                pSensorFrame-&gt;Release(); 
+            &#125; 
+        &#125; 
+ 
+        hr = pSensor-&gt;CloseStream(); 
+ 
+        if (pSensor) 
+        &#123; 
+            pSensor-&gt;Release(); 
+        &#125; 
+    &#125; 
+ 
+    pSensorDevice-&gt;EnableEyeSelection(); 
+ 
+    pSensorDevice-&gt;Release(); 
+ 
+    return hr; 
+</code></pre><p>上面的代码显示了在同一个线程上读取的所有传感器。由于 GetNextBuffer 调用会引起阻塞，每个传感器帧循环应该在自己的线程上运行。这允许以自己的帧速率处理每个传感器。</p><p>OpenStream 和 GetNextBuffer 需要从同一个线程调用。GetNextBuffer 调用会引起阻塞。每个传感器的传感器帧循环应该在它们自己的线程上运行。这允许传感器按照它们自己的帧速率进行处理。推荐使用以下线程模式:</p><ul><li>主线程管理研究模式设备和传感器</li><li>每个传感器都有一个线程，它打开传感器流，读取缓冲区并处理缓冲区</li><li>主线程渲染缓冲区和结果</li></ul><pre><code class="language-c++">SensorLoop(IResearchModeSensor *pSensor) 
+&#123; 
+    hr = pSensor-&gt;OpenStream(); 
+ 
+    while (fRunning) 
+    &#123; 
+        hr = pSensor-&gt;GetNextBuffer(&amp;pSensorFrame); 
+ 
+        ProcessFrame(pSensor, pSensorFrame, i); 
+ 
+        if (pSensorFrame) 
+        &#123; 
+            pSensorFrame-&gt;Release(); 
+        &#125; 
+    &#125; 
+ 
+    hr = pSensor-&gt;CloseStream(); 
+&#125;
+</code></pre><h2 id="传感器类型"><a class="anchor" href="#传感器类型">#</a> 传感器类型</h2><h3 id="相机传感器"><a class="anchor" href="#相机传感器">#</a> 相机传感器</h3><ul><li>Intrinsics (投影 / 不投影)</li><li>在相机坐标空间的一些功能</li><li>Extrinsics 返回设备空间的 R, T 变换</li><li>帧被指定为相机帧</li></ul><h3 id="惯性传感器"><a class="anchor" href="#惯性传感器">#</a> 惯性传感器</h3><ul><li>Extrinsics 返回设备空间的 R, T 变换</li><li>帧被指定为惯性传感器帧</li></ul><h2 id="传感器坐标帧"><a class="anchor" href="#传感器坐标帧">#</a> 传感器坐标帧</h2><p>每个传感器返回它的变换到 rigNode (Rig origin) 表示为一个外部刚体变换。图 1 显示了相机坐标帧相对于设备坐标帧。注意，在 HoloLens2 上，设备原点对应于左前方可见光相机。因此，该传感器返回的变换对应于恒等变换。</p><p>extrinsics 变换可检索如下:</p><pre><code class="language-c++">IResearchModeCameraSensor *pCameraSensor; 
+DirectX::XMFLOAT4X4 cameraPose; 
+// … 
+// Get matrix of extrinsics wrt the rigNode 
+pCameraSensor-&gt;GetCameraExtrinsicsMatrix(&amp;cameraPose); 
+</code></pre><p>要将 rigNode（以及设备）映射到其他 HoloLens 感知坐标帧中，可以使用感知 api。</p><pre><code class="language-c++">using namespace winrt::Windows::Perception::Spatial; 
+using namespace winrt::Windows::Perception::Spatial::Preview; 
+ 
+SpatialLocator locator; 
+IResearchModeSensorDevicePerception* pSensorDevicePerception; 
+GUID guid; 
+HRESULT hr = m_pSensorDevice-&gt;QueryInterface(IID_PPV_ARGS(&amp;pSensorDevicePerception)); 
+if (SUCCEEDED(hr)) 
+&#123; 
+    hr = pSensorDevicePerception-&gt;GetRigNodeId(&amp;guid); 
+    locator = SpatialGraphInteropPreview::CreateLocatorForNode(guid); 
+&#125; 
+// … 
+auto location = locator.TryLocateAtTimestamp(timestamp, anotherCoordSystem); 
+</code></pre><p>相机传感器暴露映射 / 不映射方法，以在相机投影 3D 点。图 3 显示了摄像机参考帧的 3D 坐标与二维图像坐标的关系。</p><p>Map /unmap 方法可以使用如下:</p><pre><code class="language-c++">IResearchModeCameraSensor *pCameraSensor; 
+//… 
+float xy[2] = &#123;0&#125;; 
+float uv[2] = &#123;0&#125;; 
+float uv_mapped[2] = &#123;0&#125;; 
+ 
+for (int i = 0; i &lt;= 10; i++) 
+&#123; 
+for (int j = 0; j &lt;= 10; j++) 
+       &#123; 
+           // VLC images are 640x480 
+           uv[0] = i * 64.0f; 
+           uv[1] = j * 48.0f; 
+  
+           pCameraSensor-&gt;MapImagePointToCameraUnitPlane(uv, xy); 
+           // … 
+           pCameraSensor-&gt;MapCameraSpaceToImagePoint(xy, uv_mapped); 
+           // … 
+     &#125; 
+&#125;
+</code></pre><p><img data-src="http://image.aayu.today/2022/01/16/536e0449771e2.png" alt=""></p><p>图 1 相对于 rig node 坐标帧的深度和正面可见光相机坐标帧。Long throw 和 AHAT 是同一相机的不同模式，所以外观是一样的。</p><p><img data-src="http://image.aayu.today/2022/01/16/1366751e49808.png" alt=""></p><p>图 2 Hololens 相机。黄色是 VLC 相机，红色是深度相机</p><p><img data-src="http://image.aayu.today/2022/01/16/afd08c94deb6b.png" alt=""></p><p>图 3 Map Unmap 方法将摄像机参考帧中的 3d (X,Y,Z) 坐标转换为摄像机 (X,Y) 图像坐标，(X,Y) 图像坐标转换为摄像机坐标帧中的 (X,Y,Z) 方向向量。</p><h2 id="传感器"><a class="anchor" href="#传感器">#</a> 传感器</h2><p>iresearchmodessensor 抽象了研究模式传感器。它提供了所有传感器通用的方法和属性:</p><pre><code class="language-c++">DECLARE_INTERFACE_IID_(IResearchModeSensor, IUnknown, &quot;4D4D1D4B-9FDD-4001-BA1E-
+F8FAB1DA14D0&quot;) 
+&#123; 
+    STDMETHOD(OpenStream()) = 0; 
+    STDMETHOD(CloseStream()) = 0; 
+    STDMETHOD_(LPCWSTR, GetFriendlyName)() = 0; 
+    STDMETHOD_(ResearchModeSensorType, GetSensorType)() = 0; 
+ 
+    STDMETHOD(GetSampleBufferSize( 
+        _Out_ size_t *pSampleBufferSize)) = 0; 
+    STDMETHOD(GetNextBuffer( 
+        _Outptr_result_nullonfailure_ IResearchModeSensorFrame **ppSensorFrame)) = 0; 
+&#125;;
+</code></pre><ul><li>OpenStream 将传感器置于产生帧的状态。这必须在检索缓冲区之前调用</li><li>CloseStream 停止帧捕捉</li><li>GetFriendlyName 返回一个包含传感器名称的字符串</li><li>GetSensorType 返回传感器类型</li><li>GetNextBuffer 返回下一个可用的缓冲区。这是一个阻塞调用</li></ul><p>传感器可以有以下几种类型:</p><pre><code class="language-c++">enum ResearchModeSensorType 
+&#123;
+    LEFT_FRONT, 
+    LEFT_LEFT, 
+    RIGHT_FRONT, 
+    RIGHT_RIGHT, 
+    DEPTH_AHAT, 
+    DEPTH_LONG_THROW, 
+    IMU_ACCEL, 
+    IMU_GYRO, 
+    IMU_MAG 
+&#125;;
+</code></pre><p>每个传感器对象都定义了可以通过 QIed 实现的传感器特定接口。这些将检索传感器特定的信息。</p><h3 id="传感器帧"><a class="anchor" href="#传感器帧">#</a> 传感器帧</h3><p>一旦传感器处于流模式，传感器帧将通过 IResearchModeSensor::GetNextBuffer 从传感器中获取。所有的传感器帧都有一个共同的接口，它返回所有类型帧的共同的帧信息。缓冲区中包含帧数据的内存归帧对象所有。当释放帧接口时，内存也随之释放。帧接口提供了可以用来访问帧中包含的数据的方法。</p><pre><code class="language-c++">DECLARE_INTERFACE_IID_(IResearchModeSensorFrame, IUnknown, &quot;73479614-89C9-4FFD-9C16-
+615BC32C6A09&quot;) 
+&#123; 
+    STDMETHOD(GetResolution( 
+        _Out_ ResearchModeSensorResolution *pResolution)) = 0; 
+    // For frames with batched samples this returns the time stamp for the first sample 
+in the frame. 
+    STDMETHOD(GetTimeStamp( 
+        _Out_ ResearchModeSensorTimestamp *pTimeStamp)) = 0; 
+&#125;;
+</code></pre><p>所有传感器帧接口请参见《附录传感器帧》。</p><p>每个传感器都有自己的帧专用接口</p><ul><li>所有的帧类型：<ul><li>帧时间戳。这些是 HostTicks 和 SensorTicks。HostTicks 是以 filetime 为单位的 CPU 时间，SensorTicks 是以纳秒为单位的传感器滴答数。</li><li>以字节为单位的样本大小</li></ul></li><li>相机帧<ul><li>所有的相机帧都提供分辨率，曝光，增益</li><li>VLC 相机帧返回灰度缓冲</li><li>深度长投相机帧包含有效的亮度缓冲，距离缓冲和 sigma 缓冲</li><li>深度 AHAT 相机帧包含一个有效的亮度缓冲和距离缓冲</li></ul></li><li>IMU 帧包含大量传感器样本。每个传感器样本都是一个结构体，它包含一个传感器值和相应的 SocTicks (HostTicks)、VinylHupTicks (SensorTicks) 和温度<ul><li>加速度计的值是 3 个 m/s^2 加速度</li><li>陀螺计的值是三个角速度，单位是 deg/s</li><li>磁强计帧包含磁强计值</li></ul></li></ul><h3 id="vlc帧载荷"><a class="anchor" href="#vlc帧载荷">#</a> VLC 帧载荷</h3><p>VLC 帧实现以下接口</p><pre><code class="language-c++">DECLARE_INTERFACE_IID_(IResearchModeSensorVLCFrame, IUnknown, &quot;5C693123-3851-4FDC-A2D9-
+51C68AF53976&quot;) 
+&#123; 
+    STDMETHOD(GetBuffer( 
+        _Outptr_ const BYTE **ppBytes, 
+        _Out_ size_t *pBufferOutLength)) = 0; 
+    STDMETHOD(GetGain( 
+        _Out_ UINT32 *pGain)) = 0; 
+    STDMETHOD(GetExposure( 
+        _Out_ UINT64 *pExposure)) = 0; 
+&#125;; 
+</code></pre><p>GetBuffer 返回一个指向内存的指针，该指针包含灰度像素帧。这些是行主字节像素，值从 0 到 255。缓冲区的大小从帧的 IResearchModeSensorFrame::GetResolution 接口获取。</p><p>增益的值从 0 到 255，曝光的单位是纳秒。</p><p>下面的代码展示了如何从 VLC 帧中提取分辨率、曝光、增益、时间戳和图像数据。</p><pre><code class="language-c++">void ProcessFrame(IResearchModeSensor *pSensor, IResearchModeSensorFrame* pSensorFrame, 
+int bufferCount) 
+&#123; 
+    ResearchModeSensorResolution resolution; 
+    ResearchModeSensorTimestamp timestamp; 
+    wchar_t filename[260]; 
+    const BYTE *pImage = nullptr; 
+    IResearchModeSensorVLCFrame *pVLCFrame = nullptr; 
+    HRESULT hr = S_OK; 
+    size_t outBufferCount; 
+ 
+    pSensorFrame-&gt;GetResolution(&amp;resolution); 
+    pSensorFrame-&gt;GetTimeStamp(&amp;timestamp); 
+ 
+    hr = pSensorFrame-&gt;QueryInterface(IID_PPV_ARGS(&amp;pVLCFrame)); 
+ 
+    if (SUCCEEDED(hr)) 
+    &#123; 
+        UINT32 gain; 
+        UINT64 exposure; 
+ 
+        pVLCFrame-&gt;GetBuffer(&amp;pImage, &amp;outBufferCount); 
+ 
+        // Add code to process frame pixels here. 
+ 
+        swprintf_s(filename, L&quot;%s_%d_ts%d.bmp&quot;, pSensor-&gt;GetFriendlyName(), bufferCount, 
+            timestamp.HostTicks); 
+        // The pixel data is at pImage memory address. Pixels are BYTES from 0-255 and frame is for major. 
+        swprintf_s(filename, L&quot;  %S_%d_ts%d.bmp\n&quot;, pSensor-&gt;GetFriendlyName(), 
+bufferCount, timestamp.HostTicks); 
+        OutputDebugStringW(filename); 
+ 
+        hr = pVLCFrame-&gt;GetGain(&amp;gain); 
+ 
+        if (SUCCEEDED(hr)) 
+        &#123; 
+            swprintf_s(filename, L&quot;  Gain %d\n&quot;, gain); 
+            OutputDebugStringW(filename); 
+        &#125; 
+ 
+        hr = pVLCFrame-&gt;GetExposure(&amp;exposure); 
+ 
+        if (SUCCEEDED(hr)) 
+        &#123; 
+            swprintf_s(filename, L&quot;  Exposure %d\n&quot;, exposure); 
+            OutputDebugStringW(filename); 
+        &#125; 
+&#125; 
+</code></pre><h3 id="ahat和长抛摄像机帧载荷"><a class="anchor" href="#ahat和长抛摄像机帧载荷">#</a> AHAT 和长抛摄像机帧载荷</h3><p>深度帧实现以下接口:</p><pre><code class="language-c++">DECLARE_INTERFACE_IID_(IResearchModeSensorDepthFrame, IUnknown, &quot;35167E38-E020-43D9-898E-
+6CB917AD86D3&quot;) 
+&#123; 
+    STDMETHOD(GetBuffer( 
+        _Outptr_ const UINT16 **ppBytes, 
+        _Out_ size_t *pBufferOutLength)) = 0; 
+    STDMETHOD(GetAbDepthBuffer( 
+        _Outptr_ const UINT16 **ppBytes, 
+        _Out_ size_t *pBufferOutLength)) = 0; 
+    STDMETHOD(GetSigmaBuffer( 
+        _Outptr_ const BYTE **ppBytes, 
+        _Out_ size_t *pBufferOutLength)) = 0; 
+&#125;; 
+</code></pre><p>在长抛模式下的深度相机帧有一个深度缓冲和一个 sigma 缓冲用于无效的深度像素，和一个有效的亮度 (Ab) 缓冲。在 AHAT 模式下，它只有深度缓冲和有效的亮度缓冲。</p><p>有效亮度缓冲区返回所谓的 IR 读数。在干净的红外读数中的像素值与从场景返回的光量成比例。该图像看起来与常规的红外图像相似。</p><p>长抛的 sigma 缓冲区用于基于深度算法计算的无效掩码使不可靠的深度失效。为了提高效率，AHAT 将无效代码嵌入深度通道本身。</p><h3 id="长抛失效"><a class="anchor" href="#长抛失效">#</a> 长抛失效</h3><p>它将失效码和置信度嵌入到每个像素的 8 位数据缓冲器中。如果最高有效位 (MSB) 设置为 1，则其他 7 位表示失效原因。无效掩码是:</p><ul><li>Invalid = 0x80, // MSB 最高有效位</li><li>OutOfBounds = 0xC0, // 主动红外照明罩外</li><li>SignalSaturated = 0xA0, // 饱和的红外信号</li><li>FilterOutlier = 0x90, // 过滤异常值</li><li>EmptySignal = 0x88, // 低红外信号</li><li>MultiPathDetected = 0x84, // 多路径干扰检测（从场景中多个对象接收信号）</li><li>OutOfRangeFar = 0x82, // 超过最大支持范围 (设置为 7500mm)</li><li>OutOfRangeNear = 0x81 // 超过最小支持范围 (设置为 200mm)</li></ul><h3 id="ahat无效"><a class="anchor" href="#ahat无效">#</a> AHAT 无效</h3><p>对于 AHAT，在深度信道中嵌入了失效码。大于 4090 的像素是无效的。无效的代码是:</p><ul><li>4095：在主动红外照明罩外面</li><li>4093：低红外信号</li></ul><p>读取 AHAT 和长抛深度帧:</p><p>分辨率、曝光、增益和时间戳可以按照上面的方法读取。下面的代码展示了如何从 Long Throw 和 AHAT 帧中提取和处理缓冲区。</p><pre><code class="language-c++">void ProcessFrame(IResearchModeSensor *pSensor, IResearchModeSensorFrame* pSensorFrame, 
+int bufferCount) 
+&#123; 
+    ResearchModeSensorResolution resolution; 
+    ResearchModeSensorTimestamp timestamp; 
+    wchar_t filename[260]; 
+    IResearchModeSensorDepthFrame *pDepthFrame = nullptr; 
+    const UINT16 *pAbImage = nullptr; 
+    const UINT16 *pDepth = nullptr; 
+ 
+    // sigma buffer needed only for Long Throw 
+    const BYTE *pSigma = nullptr; 
+ 
+    // invalidation mask for Long Throw 
+    USHORT mask = 0x80; 
+ 
+    // invalidation value for AHAT 
+    USHORT maxValue = 4090;  
+ 
+    HRESULT hr = S_OK; 
+    size_t outBufferCount; 
+ 
+    pSensorFrame-&gt;GetResolution(&amp;resolution); 
+    pSensorFrame-&gt;GetTimeStamp(&amp;timestamp); 
+ 
+    hr = pSensorFrame-&gt;QueryInterface(IID_PPV_ARGS(&amp;pDepthFrame)); 
+    bool isLongThrow = (pSensor-&gt;GetSensorType() == DEPTH_LONG_THROW); 
+ 
+    if (SUCCEEDED(hr) &amp;&amp; isLongThrow) 
+    &#123; 
+       // extract sigma buffer for Long Throw 
+      hr = pDepthFrame-&gt;GetSigmaBuffer(&amp;pSigma, &amp;outBufferCount); 
+       // Add code to process buffer here. 
+    &#125; 
+  
+    if (SUCCEEDED(hr)) 
+    &#123; 
+        // extract depth buffer 
+        hr = pDepthFrame-&gt;GetBuffer(&amp;pDepth, &amp;outBufferCount); 
+        // validate depth 
+        for (size_t i = 0; i &lt; outBufferCount; ++i) 
+        &#123; 
+             // use a different invalidation condition for Long Throw and AHAT 
+             const bool isInvalid = isLongThrow ? ((pSigma[i] &amp; mask) &gt; 0) : 
+                                                   (pDepth[i] &gt;= maxValue)); 
+            if (isInvalid) 
+            &#123;     
+                    pDepth[i] = 0; 
+            &#125; 
+        &#125;
+        // Add code to process buffer here. 
+    &#125; 
+ 
+    if (SUCCEEDED(hr)) 
+    &#123; 
+        // extract active brightness buffer 
+        hr = pDepthFrame-&gt;GetAbDepthBuffer(&amp;pAbImage, &amp;outBufferCount);         
+        // Add code to process buffer here. 
+    &#125; 
+ 
+    if (pDepthFrame) 
+    &#123; 
+        pDepthFrame-&gt;Release(); 
+    &#125; 
+&#125;
+</code></pre><h3 id="imu帧载荷"><a class="anchor" href="#imu帧载荷">#</a> IMU 帧载荷</h3><p>IMU 帧实现以下接口:</p><pre><code class="language-c++">DECLARE_INTERFACE_IID_(IResearchModeAccelFrame, IUnknown, &quot;42AA75F8-E3FE-4C25-88C6-
+F2ECE1E8A2C5&quot;) 
+&#123; 
+    STDMETHOD(GetCalibratedAccelaration( 
+        _Out_ DirectX::XMFLOAT3 *pAccel)) = 0; 
+    STDMETHOD(GetCalibratedAccelarationSamples( 
+        _Outptr_ const AccelDataStruct **ppAccelBuffer, 
+        _Out_ size_t *pBufferOutLength)) = 0; 
+&#125;; 
+ 
+DECLARE_INTERFACE_IID_(IResearchModeGyroFrame, IUnknown, &quot;4C0C5EE7-CBB8-4A15-A81F-
+943785F524A6&quot;) 
+&#123; 
+    STDMETHOD(GetCalibratedGyro( 
+      Out_ DirectX::XMFLOAT3 *pGyro)) = 0; 
+    STDMETHOD(GetCalibratedGyroSamples( 
+        _Outptr_ const GyroDataStruct **ppAccelBuffer, 
+        _Out_ size_t *pBufferOutLength)) = 0; 
+&#125;; 
+ 
+DECLARE_INTERFACE_IID_(IResearchModeMagFrame, IUnknown, &quot;2376C9D2-7F3D-456E-A39E-
+3B7730DDA9E5&quot;) 
+&#123; 
+    STDMETHOD(GetMagnetometer( 
+        _Out_ DirectX::XMFLOAT3 *pMag)) = 0; 
+    STDMETHOD(GetMagnetometerSamples( 
+        _Outptr_ const MagDataStruct **ppMagBuffer, 
+        _Out_ size_t *pBufferOutLength)) = 0; 
+&#125;; 
+</code></pre><ul><li>加速度计帧 - 包含沿 X、Y、Z 轴的线性加速度以及重力。</li><li>陀螺仪框架 - 包含旋转。</li><li>磁强计 - 包含绝对方位估计。</li></ul><p>IMU 帧包含 IMU 批量样品。每个样本是下列之一：</p><pre><code class="language-c++">struct AccelDataStruct 
+&#123; 
+    uint64_t VinylHupTicks; // Sensor ticks in micro seconds 
+    uint64_t SocTicks; 
+    float AccelValues[3]; // In m/(s*s) 
+    float temperature; 
+&#125;; 
+ 
+struct GyroDataStruct 
+&#123; 
+    uint64_t VinylHupTicks; // Sensor ticks in micro seconds 
+    uint64_t SocTicks; 
+    float GyroValues[3]; 
+    float temperature; 
+&#125;; 
+ 
+struct MagDataStruct 
+&#123; 
+    uint64_t VinylHupTicks; // Sensor ticks in micro seconds 
+    uint64_t SocTicks; 
+    float MagValues[3]; 
+&#125;; 
+</code></pre><p>读取 IMU 帧的一个样本:</p><p>下面的代码显示了如何从 IMU 帧的单个样本中提取 IMU 数据</p><pre><code class="language-c++">void PrintSensorValue(IResearchModeSensorFrame *pSensorFrame) 
+&#123; 
+    DirectX::XMFLOAT3 sample; 
+    IResearchModeGyroFrame *pSensorGyroFrame = nullptr; 
+    IResearchModeAccelFrame *pSensorAccelFrame = nullptr; 
+    IResearchModeMagFrame *pSensorMagFrame = nullptr; 
+    char printString[1000]; 
+    HRESULT hr = S_OK; 
+    ResearchModeSensorTimestamp timeStamp; 
+    UINT64 lastSocTickDelta = 0;  
+ 
+    pSensorFrame-&gt;GetTimeStamp(&amp;timeStamp); 
+ 
+    if (glastSocTick != 0) 
+    &#123; 
+        lastSocTickDelta = timeStamp.HostTicks - glastSocTick; 
+    &#125; 
+    glastSocTick = timeStamp.HostTicks; 
+ 
+    hr = pSensorFrame-&gt;QueryInterface(IID_PPV_ARGS(&amp;pSensorAccelFrame)); 
+    if (SUCCEEDED(hr)) 
+    &#123;        
+        hr = pSensorAccelFrame-&gt;GetCalibratedAccelaration(&amp;sample); 
+        if (FAILED(hr)) 
+        &#123; 
+            return; 
+        &#125; 
+        sprintf(printString, &quot;####Accel: % 3.4f % 3.4f % 3.4f %f %d\n&quot;, 
+                sample.x, 
+                sample.y, 
+                sample.z, 
+                sqrt(sample.x * sample.x + sample.y * sample.y + sample.z * sample.z), 
+                (lastSocTickDelta * 1000) / timeStamp.HostTicksPerSecond 
+                ); 
+        OutputDebugStringA(printString); 
+        pSensorAccelFrame-&gt;Release(); 
+        return; 
+    &#125; 
+ 
+    hr = pSensorFrame-&gt;QueryInterface(IID_PPV_ARGS(&amp;pSensorGyroFrame)); 
+    if (SUCCEEDED(hr)) 
+    &#123;      
+        hr = pSensorGyroFrame-&gt;GetCalibratedGyro(&amp;sample); 
+        if (FAILED(hr)) 
+        &#123; 
+            return; 
+        &#125; 
+        sprintf(printString, &quot;####Gyro: % 3.4f % 3.4f % 3.4f %f %d\n&quot;, 
+                sample.x, 
+                sample.y, 
+                sample.z, 
+                sqrt(sample.x * sample.x + sample.y * sample.y + sample.z * sample.z), 
+                (lastSocTickDelta * 1000) / timeStamp.HostTicksPerSecond 
+                ); 
+        OutputDebugStringA(printString); 
+        pSensorGyroFrame-&gt;Release(); 
+        return; 
+    &#125; 
+ 
+    hr = pSensorFrame-&gt;QueryInterface(IID_PPV_ARGS(&amp;pSensorMagFrame)); 
+    if (SUCCEEDED(hr)) 
+    &#123;  
+        hr = pSensorMagFrame-&gt;GetMagnetometer(&amp;sample); 
+        if (FAILED(hr)) 
+        &#123; 
+            return;
+        &#125; 
+        sprintf(printString, &quot;####Mag: % 3.4f % 3.4f % 3.4f %d\n&quot;, 
+                sample.x, 
+                sample.y, 
+                sample.z, 
+                (lastSocTickDelta * 1000) / timeStamp.HostTicksPerSecond 
+                ); 
+        OutputDebugStringA(printString); 
+        pSensorMagFrame-&gt;Release(); 
+        return; 
+    &#125; 
+&#125;
+</code></pre><p>读取 IMU 帧的所有 IMU 样本：</p><p>下面的代码显示了如何从 IMU 帧的所有样本中提取 IMU 数据</p><pre><code class="language-c++">void PrintSensorValue(IResearchModeSensorFrame *pSensorFrame) 
+&#123; 
+    DirectX::XMFLOAT3 sample; 
+    IResearchModeGyroFrame *pSensorGyroFrame = nullptr; 
+    IResearchModeAccelFrame *pSensorAccelFrame = nullptr; 
+    IResearchModeMagFrame *pSensorMagFrame = nullptr; 
+    char printString[1000]; 
+    HRESULT hr = S_OK; 
+    ResearchModeSensorTimestamp timeStamp; 
+    UINT64 lastSocTickDelta = 0;  
+ 
+    pSensorFrame-&gt;GetTimeStamp(&amp;timeStamp); 
+ 
+    hr = pSensorFrame-&gt;QueryInterface(IID_PPV_ARGS(&amp;pSensorAccelFrame)); 
+    if (SUCCEEDED(hr)) 
+    &#123; 
+        const AccelDataStruct *pAccelBuffer; 
+        size_t BufferOutLength; 
+        hr = pSensorAccelFrame-&gt;GetCalibratedAccelarationSamples( 
+            &amp;pAccelBuffer, 
+            &amp;BufferOutLength); 
+        if (FAILED(hr)) 
+        &#123; 
+            return; 
+        &#125; 
+        for (UINT i = 0; i &lt; BufferOutLength; i++) 
+        &#123; 
+            sample.x = pAccelBuffer[i].AccelValues[0]; 
+            sample.y = pAccelBuffer[i].AccelValues[1]; 
+            sample.z = pAccelBuffer[i].AccelValues[2]; 
+            if (glastHupTick != 0) 
+            &#123; 
+                lastSocTickDelta =  pAccelBuffer[i].VinylHupTicks - glastHupTick; 
+                sprintf(printString, &quot;####Accel-%3d-%3d-%3d: % 3.4f % 3.4f % 3.4f %f %d\n&quot;, 
+                        gBatchCount, 
+                        i, 
+                        BufferOutLength, 
+                        sample.x, 
+                        sample.y, 
+                        sample.z, 
+                        sqrt(sample.x * sample.x + sample.y * sample.y + sample.z * sample.z), 
+                        lastSocTickDelta / 1000 // micro seconds 
+                        ); 
+            &#125; 
+            glastHupTick = pAccelBuffer[i].VinylHupTicks; 
+            OutputDebugStringA(printString); 
+        &#125; 
+        gBatchCount++; 
+        pSensorAccelFrame-&gt;Release(); 
+        return; 
+    &#125; 
+ 
+    hr = pSensorFrame-&gt;QueryInterface(IID_PPV_ARGS(&amp;pSensorGyroFrame)); 
+    if (SUCCEEDED(hr)) 
+    &#123; 
+        const GyroDataStruct *pGyroBuffer; 
+        size_t BufferOutLength; 
+        hr = pSensorGyroFrame-&gt;GetCalibratedGyroSamples( 
+            &amp;pGyroBuffer, 
+            &amp;BufferOutLength); 
+        if (FAILED(hr)) 
+        &#123; 
+            return; 
+        &#125; 
+        for (UINT i = 0; i &lt; BufferOutLength; i++) 
+        &#123; 
+            sample.x = pGyroBuffer[i].GyroValues[0]; 
+            sample.y = pGyroBuffer[i].GyroValues[1]; 
+            sample.z = pGyroBuffer[i].GyroValues[2]; 
+            if (glastHupTick != 0) 
+            &#123; 
+                lastSocTickDelta =  pGyroBuffer[i].VinylHupTicks - glastHupTick; 
+                sprintf(printString, &quot;####Gyro-%3d-%3d-%3d: % 3.4f % 3.4f % 3.4f %f %d\n&quot;, 
+                        gBatchCount, 
+                        i, 
+                        BufferOutLength, 
+                        sample.x, 
+                        sample.y, 
+                        sample.z, 
+                        sqrt(sample.x * sample.x + sample.y * sample.y + sample.z * sample.z), 
+                        lastSocTickDelta / 1000 // micro seconds 
+                        ); 
+            &#125; 
+            glastHupTick = pGyroBuffer[i].VinylHupTicks; 
+            OutputDebugStringA(printString); 
+        &#125; 
+        gBatchCount++; 
+        pSensorGyroFrame-&gt;Release(); 
+        return; 
+    &#125; 
+ 
+    hr = pSensorFrame-&gt;QueryInterface(IID_PPV_ARGS(&amp;pSensorMagFrame)); 
+    if (SUCCEEDED(hr)) 
+    &#123; 
+        const MagDataStruct *pMagBuffer; 
+        size_t BufferOutLength; 
+        hr = pSensorMagFrame-&gt;GetMagnetometerSamples( 
+            &amp;pMagBuffer, 
+            &amp;BufferOutLength); 
+        if (FAILED(hr)) 
+        &#123; 
+            return; 
+        &#125; 
+        for (UINT i = 0; i &lt; BufferOutLength; i++) 
+        &#123; 
+            sample.x = pMagBuffer[i].MagValues[0]; 
+            sample.y = pMagBuffer[i].MagValues[1]; 
+            sample.z = pMagBuffer[i].MagValues[2]; 
+            if (glastHupTick != 0) 
+            &#123; 
+                lastSocTickDelta =  pMagBuffer[i].VinylHupTicks - glastHupTick; 
+                sprintf(printString, &quot;####Mag-%3d-%3d: % 3.4f % 3.4f % 3.4f %d\n&quot;, 
+                        gBatchCount, 
+                        i, 
+                        sample.x, 
+                        sample.y, 
+                        sample.z, 
+                        lastSocTickDelta / 1000 // micro seconds 
+                        ); 
+            &#125; 
+            glastHupTick = pMagBuffer[i].VinylHupTicks; 
+            OutputDebugStringA(printString); 
+        &#125; 
+        gBatchCount++; 
+        pSensorMagFrame-&gt;Release(); 
+        return; 
+    &#125; 
+&#125; 
+</code></pre><h2 id="同意提示"><a class="anchor" href="#同意提示">#</a> 同意提示</h2><p>任何使用研究模式 API 访问摄像机或 imu 的 UWP 应用程序在打开流之前必须征得用户同意。根据用户的输入，应用程序应该进一步进行。<br>以下步骤概述了在 UWP 应用程序中添加同意提示所需的代码:</p><ul><li>为了让用户同意摄像头和 IMU 的访问，请确保在应用程序清单中声明以下功能：<figure class="highlight xml"><figcaption data-lang="XML"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DeviceCapability</span> <span class="token attr-name">Name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>webcam<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span> </pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DeviceCapability</span> <span class="token attr-name">Name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>backgroundSpatialPerception<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span></pre></td></tr></table></figure></li><li>查询 Research Mode API 中实现同意检测的 SensorDeviceConsent 接口：<pre><code class="language-c++">hr = m_pSensorDevice-&gt;QueryInterface(IID_PPV_ARGS(&amp;m_pSensorDeviceConsent)); 
+</code></pre></li><li>在流可以被打开 (OpenStream) 之前，必须获得同意。通过回调返回同意结果。将同意响应与 API 调用者同步的一种方法是在同意回调上设置事件。<pre><code class="language-c++">ResearchModeSensorConsent camAccessCheck; 
+HANDLE camConsentGiven; 
+
+camConsenGiven = CreateEvent(nullptr, true, false, nullptr); 
+</code></pre></li><li>在应用程序的主 UI 线程中注册相机和 / 或 IMU 同意回调。<pre><code class="language-c++">hr = m_pSensorDeviceConsent-&gt;RequestCamAccessAsync(CamAccessOnComplete); 
+</code></pre></li><li>定义捕获用户同意的回调函数，并设置为此操作创建的事件。<pre><code class="language-c++">void CamAccessOnComplete(ResearchModeConsent consent) 
+&#123; 
+camAccessCheck = consent; 
+SetEvent(camConsentGiven); 
+&#125;
+</code></pre></li><li>如果使用了工作线程，则等待回调，并寻找用户提供的同意，然后继续。</li></ul><pre><code class="language-c++">void CameraUpdateThread(SlateCameraRenderer* pSlateCameraRenderer, HANDLE camConsentGiven, Res
+earchModeSensorConsent *camAccessConsent) 
+&#123; 
+    HRESULT hr = S_OK; 
+    DWORD waitResult = WaitForSingleObject(camConsentGiven, INFINITE);   
+ 
+   // wait for the event to be set and check for the consent provided by the user. 
+ 
+    if (waitResult == WAIT_OBJECT_0) 
+    &#123; 
+        switch (*camAccessConsent) 
+        &#123; 
+        case ResearchModeSensorConsent::Allowed: 
+            OutputDebugString(L&quot;Access is granted&quot;); 
+            break; 
+        case ResearchModeSensorConsent::DeniedBySystem: 
+            OutputDebugString(L&quot;Access is denied by the system&quot;); 
+            hr = E_ACCESSDENIED; 
+            break; 
+        case ResearchModeSensorConsent::DeniedByUser: 
+            OutputDebugString(L&quot;Access is denied by the user&quot;); 
+            hr = E_ACCESSDENIED; 
+            break; 
+        case ResearchModeSensorConsent::NotDeclaredByApp: 
+            OutputDebugString(L&quot;Capability is not declared in the app manifest&quot;); 
+                        hr = E_ACCESSDENIED; 
+            break; 
+        case ResearchModeSensorConsent::UserPromptRequired: 
+            OutputDebugString(L&quot;Capability user prompt required&quot;); 
+            hr = E_ACCESSDENIED; 
+            break; 
+        default: 
+            OutputDebugString(L&quot;Access is denied by the system&quot;); 
+            hr = E_ACCESSDENIED; 
+            break; 
+        &#125; 
+    &#125; 
+    else 
+    &#123; 
+        hr = E_UNEXPECTED; 
+    &#125; 
+ 
+    if (SUCCEEDED(hr)) 
+    &#123;  
+         hr = pSlateCameraRenderer-&gt;m_pRMCameraSensor-&gt;OpenStream(); 
+    &#125;
+&#125;
+</code></pre><p>为了测试你的应用程序是否正确地执行了这些检查，请确保在应用程序输出之前，检查 camera 和 / 或 IMUs 的提示是否出现。而且，对于每个用户来说，提示只在第一次使用应用程序时出现。要撤销访问权限，在 “设置” 中修改以下内容：</p><ul><li>进入设置 -&gt; 隐私 -&gt; 相机→应用程序，并关闭相机的访问</li><li>进入设置 -&gt; 隐私→用户移动→应用程序，关闭 imu 的访问。</li></ul><h2 id="设置"><a class="anchor" href="#设置">#</a> 设置</h2><p><img data-src="http://image.aayu.today/2022/01/16/cdf099647ef4e.png" alt=""></p><p><img data-src="http://image.aayu.today/2022/01/16/dfd19314207a2.png" alt=""></p><h3 id="要求清单条目"><a class="anchor" href="#要求清单条目">#</a> 要求清单条目</h3><p>例子请看：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL21pY3Jvc29mdC9Ib2xvTGVuczJGb3JDVi9ibG9iL21haW4vU2FtcGxlcy9TZW5zb3JWaXN1YWxpemF0aW9uL1NlbnNvclZpc3VhbGl6YXRpb24vUGFja2FnZS5hcHB4bWFuaWZlc3Q=">https://github.com/microsoft/HoloLens2ForCV/blob/main/Samples/SensorVisualization/SensorVisualization/Package.appxmanifest</span></p><figure class="highlight xml"><figcaption data-lang="XML"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Capabilities</span><span class="token punctuation">></span></span> </pre></td></tr><tr><td data-num="2"></td><td><pre>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Capability</span> <span class="token attr-name">Name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>internetClient<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span> </pre></td></tr><tr><td data-num="3"></td><td><pre>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">uap:</span>Capability</span> <span class="token attr-name">Name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>documentsLibrary<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span> </pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">rescap:</span>Capability</span> <span class="token attr-name">Name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>perceptionSensorsExperimental<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span> </pre></td></tr><tr><td data-num="5"></td><td><pre>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DeviceCapability</span> <span class="token attr-name">Name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>webcam<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span> </pre></td></tr><tr><td data-num="6"></td><td><pre>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DeviceCapability</span> <span class="token attr-name">Name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>wifiControl<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span> </pre></td></tr><tr><td data-num="7"></td><td><pre>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DeviceCapability</span> <span class="token attr-name">Name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>backgroundSpatialPerception<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span> </pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Capabilities</span><span class="token punctuation">></span></span></pre></td></tr></table></figure><h2 id="api参考"><a class="anchor" href="#api参考">#</a> API 参考</h2><h3 id="设备接口"><a class="anchor" href="#设备接口">#</a> 设备接口</h3><pre><code class="language-c++">DECLARE_INTERFACE_IID_(IResearchModeSensorDevice, IUnknown, &quot;65E8CC3C-3A03-4006-AE0D-
+34E1150058CC&quot;) 
+&#123; 
+    STDMETHOD(DisableEyeSelection()) = 0; 
+    STDMETHOD(EnableEyeSelection()) = 0; 
+ 
+    STDMETHOD(GetSensorCount( 
+        _Out_ size_t *pOutCount)) = 0; 
+    STDMETHOD(GetSensorDescriptors( 
+        _Out_writes_(sensorCount) ResearchModeSensorDescriptor *pSensorDescriptorData, 
+        size_t sensorCount, 
+        _Out_ size_t *pOutCount)) = 0; 
+    STDMETHOD(GetSensor( 
+        ResearchModeSensorType sensorType, 
+        _Outptr_result_nullonfailure_ IResearchModeSensor **ppSensor)) = 0; 
+&#125;; 
+ 
+DECLARE_INTERFACE_IID_(IResearchModeSensorDevicePerception, IUnknown, &quot;C1678F4B-ECB4-
+47A8-B6FA-97DBF4417DB2&quot;) 
+&#123; 
+    STDMETHOD(GetRigNodeId( 
+        _Outptr_ GUID *pRigNodeId)) = 0; 
+&#125;; 
+ 
+DECLARE_INTERFACE_IID_(IResearchModeSensorDeviceConsent, IUnknown, &quot;EAB9D672-9A88-4E43-
+8A69-9BA8f23A4C76&quot;) 
+&#123; 
+    STDMETHOD_(HRESULT, RequestCamAccessAsync)(void  
+        (*camCallback)(ResearchModeSensorConsent))= 0; 
+    STDMETHOD_(HRESULT, RequestIMUAccessAsync)(void  
+        (*imuCallback)(ResearchModeSensorConsent)) = 0; 
+&#125;;
+</code></pre><h3 id="传感器接口"><a class="anchor" href="#传感器接口">#</a> 传感器接口</h3><pre><code class="language-c++">DECLARE_INTERFACE_IID_(IResearchModeSensor, IUnknown, &quot;4D4D1D4B-9FDD-4001-BA1E-
+F8FAB1DA14D0&quot;) 
+&#123; 
+    STDMETHOD(OpenStream()) = 0; 
+    STDMETHOD(CloseStream()) = 0; 
+    STDMETHOD_(LPCWSTR, GetFriendlyName)() = 0; 
+    STDMETHOD_(ResearchModeSensorType, GetSensorType)() = 0; 
+ 
+    STDMETHOD(GetSampleBufferSize( 
+        _Out_ size_t *pSampleBufferSize)) = 0; 
+    STDMETHOD(GetNextBuffer( 
+        _Outptr_result_nullonfailure_ IResearchModeSensorFrame **ppSensorFrame)) = 0; 
+&#125;; 
+ 
+DECLARE_INTERFACE_IID_(IResearchModeCameraSensor, IUnknown, &quot;3BDB4977-960B-4F5D-8CA3-
+D21E68F26E76&quot;) 
+&#123; 
+    STDMETHOD(MapImagePointToCameraUnitPlane( 
+        float (&amp;uv) [2], 
+        float (&amp;xy) [2])) = 0; 
+    STDMETHOD(MapCameraSpaceToImagePoint( 
+        float(&amp;xy)[2], 
+        float(&amp;uv)[2])) = 0; 
+    STDMETHOD(GetCameraExtrinsicsMatrix(DirectX::XMFLOAT4X4 *pCameraViewMatrix)) = 0; 
+&#125;; 
+ 
+DECLARE_INTERFACE_IID_(IResearchModeAccelSensor, IUnknown, &quot;627A7FAA-55EA-4951-B370-
+26186395AAB5&quot;) 
+&#123; 
+    STDMETHOD(GetExtrinsicsMatrix(DirectX::XMFLOAT4X4 *pAccel)) = 0; 
+&#125;; 
+ 
+DECLARE_INTERFACE_IID_(IResearchModeGyroSensor, IUnknown, &quot;E6E8B36F-E6E7-494C-B4A8-
+7CFA2561BEE7&quot;) 
+&#123; 
+    STDMETHOD(GetExtrinsicsMatrix(DirectX::XMFLOAT4X4 *pGyro)) = 0; 
+&#125;; 
+</code></pre><h3 id="传感器帧-2"><a class="anchor" href="#传感器帧-2">#</a> 传感器帧</h3><pre><code class="language-c++">DECLARE_INTERFACE_IID_(IResearchModeSensorVLCFrame, IUnknown, &quot;5C693123-3851-4FDC-A2D9-
+51C68AF53976&quot;) 
+&#123; 
+    STDMETHOD(GetBuffer( 
+        _Outptr_ const BYTE **ppBytes, 
+        _Out_ size_t *pBufferOutLength)) = 0; 
+    STDMETHOD(GetGain( 
+        _Out_ UINT32 *pGain)) = 0; 
+    STDMETHOD(GetExposure( 
+        _Out_ UINT64 *pExposure)) = 0; 
+&#125;; 
+ 
+DECLARE_INTERFACE_IID_(IResearchModeSensorDepthFrame, IUnknown, &quot;35167E38-E020-43D9-898E-
+6CB917AD86D3&quot;) 
+&#123; 
+    STDMETHOD(GetBuffer( 
+        _Outptr_ const UINT16 **ppBytes, 
+        _Out_ size_t *pBufferOutLength)) = 0; 
+    STDMETHOD(GetAbDepthBuffer( 
+        _Outptr_ const UINT16 **ppBytes, 
+        _Out_ size_t *pBufferOutLength)) = 0; 
+    STDMETHOD(GetSigmaBuffer( 
+        _Outptr_ const BYTE **ppBytes, 
+        _Out_ size_t *pBufferOutLength)) = 0; 
+&#125;; 
+ 
+DECLARE_INTERFACE_IID_(IResearchModeAccelFrame, IUnknown, &quot;42AA75F8-E3FE-4C25-88C6-
+F2ECE1E8A2C5&quot;) 
+&#123; 
+    STDMETHOD(GetCalibratedAccelaration( 
+        _Out_ DirectX::XMFLOAT3 *pAccel)) = 0; 
+    STDMETHOD(GetCalibratedAccelarationSamples( 
+        _Outptr_ const AccelDataStruct **ppAccelBuffer, 
+        _Out_ size_t *pBufferOutLength)) = 0; 
+&#125;; 
+ 
+DECLARE_INTERFACE_IID_(IResearchModeGyroFrame, IUnknown, &quot;4C0C5EE7-CBB8-4A15-A81F-
+943785F524A6&quot;) 
+&#123; 
+    STDMETHOD(GetCalibratedGyro( 
+        _Out_ DirectX::XMFLOAT3 *pGyro)) = 0; 
+    STDMETHOD(GetCalibratedGyroSamples( 
+        _Outptr_ const GyroDataStruct **ppAccelBuffer, 
+        _Out_ size_t *pBufferOutLength)) = 0; 
+&#125;; 
+ 
+DECLARE_INTERFACE_IID_(IResearchModeMagFrame, IUnknown, &quot;2376C9D2-7F3D-456E-A39E-
+3B7730DDA9E5&quot;) 
+&#123; 
+    STDMETHOD(GetMagnetometer( 
+        _Out_ DirectX::XMFLOAT3 *pMag)) = 0; 
+    STDMETHOD(GetMagnetometerSamples( 
+        _Outptr_ const MagDataStruct **ppMagBuffer, 
+        _Out_ size_t *pBufferOutLength)) = 0; 
+&#125;; 
+</code></pre><h3 id="同意接口"><a class="anchor" href="#同意接口">#</a> 同意接口</h3><pre><code class="language-c++">DECLARE_INTERFACE_IID_(IResearchModeSensorDeviceConsent, IUnknown, &quot;EAB9D672-9A88-4E43-
+8A69-9BA8f23A4C76&quot;) 
+&#123; 
+    STDMETHOD_(HRESULT, RequestCamAccessAsync)(void 
+        (*camCallback)(ResearchModeSensorConsent))= 0; 
+    STDMETHOD_(HRESULT, RequestIMUAccessAsync)(void  
+        (*imuCallback)(ResearchModeSensorConsent)) = 0; 
+&#125;; 
+</code></pre><div class="tags"><a href="/tags/HoloLens2/" rel="tag"><i class="ic i-tag"></i> HoloLens2</a></div></div><footer><div class="meta"><span class="item"><span class="icon"><i class="ic i-calendar-check"></i> </span><span class="text">更新于</span> <time title="修改时间：2022-03-12 11:19:27" itemprop="dateModified" datetime="2022-03-12T11:19:27+08:00">2022-03-12</time> </span><span id="feature/official-demo/20210307/" class="item leancloud_visitors" data-flag-title="Hololens2-研究模式API文档翻译" title="阅读次数"><span class="icon"><i class="ic i-eye"></i> </span><span class="text">阅读次数</span> <span class="leancloud-visitors-count"></span> <span class="text">次</span></span></div><div class="reward"><button><i class="ic i-heartbeat"></i> 赞赏</button><p>请我喝[茶]~(￣▽￣)~*</p><div id="qr"><div><img data-src="/images/wechatpay.png" alt="宇凌喵 微信支付"><p>微信支付</p></div><div><img data-src="/images/alipay.png" alt="宇凌喵 支付宝"><p>支付宝</p></div></div></div><div id="copyright"><ul><li class="author"><strong>本文作者： </strong>宇凌喵 <i class="ic i-at"><em>@</em></i>学无止境</li><li class="link"><strong>本文链接：</strong> <a href="https://blog.aayu.today/feature/official-demo/20210307/" title="Hololens2-研究模式API文档翻译">https://blog.aayu.today/feature/official-demo/20210307/</a></li><li class="license"><strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！</li></ul></div></footer></article></div><div class="post-nav"><div class="item left"><a href="/feature/unity/20210306/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipeyonbf9j20zk0m8e81.jpg" title="Hololens2-VS2019创建DLL项目供Unity调用"><span class="type">上一篇</span> <span class="category"><i class="ic i-flag"></i> Unity3D</span><h3>Hololens2-VS2019创建DLL项目供Unity调用</h3></a></div><div class="item right"><a href="/feature/unity/20210308/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclflwv2aj20zk0m84qp.jpg" title="Hololens2-Unity项目获取IMU传感器数据"><span class="type">下一篇</span> <span class="category"><i class="ic i-flag"></i> Unity3D</span><h3>Hololens2-Unity项目获取IMU传感器数据</h3></a></div></div><div class="wrap" id="comments"></div></div><div id="sidebar"><div class="inner"><div class="panels"><div class="inner"><div class="contents panel pjax" data-title="文章目录"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%BC%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">综述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E7%BA%B2"><span class="toc-number">2.</span> <span class="toc-text">大纲</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E4%BC%A0%E6%84%9F%E5%99%A8%E8%AF%BB%E5%8F%96%E5%BE%AA%E7%8E%AF"><span class="toc-number">3.</span> <span class="toc-text">主传感器读取循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%A0%E6%84%9F%E5%99%A8%E7%B1%BB%E5%9E%8B"><span class="toc-number">4.</span> <span class="toc-text">传感器类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B8%E6%9C%BA%E4%BC%A0%E6%84%9F%E5%99%A8"><span class="toc-number">4.1.</span> <span class="toc-text">相机传感器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%83%AF%E6%80%A7%E4%BC%A0%E6%84%9F%E5%99%A8"><span class="toc-number">4.2.</span> <span class="toc-text">惯性传感器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%A0%E6%84%9F%E5%99%A8%E5%9D%90%E6%A0%87%E5%B8%A7"><span class="toc-number">5.</span> <span class="toc-text">传感器坐标帧</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%A0%E6%84%9F%E5%99%A8"><span class="toc-number">6.</span> <span class="toc-text">传感器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%A0%E6%84%9F%E5%99%A8%E5%B8%A7"><span class="toc-number">6.1.</span> <span class="toc-text">传感器帧</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vlc%E5%B8%A7%E8%BD%BD%E8%8D%B7"><span class="toc-number">6.2.</span> <span class="toc-text">VLC 帧载荷</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ahat%E5%92%8C%E9%95%BF%E6%8A%9B%E6%91%84%E5%83%8F%E6%9C%BA%E5%B8%A7%E8%BD%BD%E8%8D%B7"><span class="toc-number">6.3.</span> <span class="toc-text">AHAT 和长抛摄像机帧载荷</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%95%BF%E6%8A%9B%E5%A4%B1%E6%95%88"><span class="toc-number">6.4.</span> <span class="toc-text">长抛失效</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ahat%E6%97%A0%E6%95%88"><span class="toc-number">6.5.</span> <span class="toc-text">AHAT 无效</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#imu%E5%B8%A7%E8%BD%BD%E8%8D%B7"><span class="toc-number">6.6.</span> <span class="toc-text">IMU 帧载荷</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8C%E6%84%8F%E6%8F%90%E7%A4%BA"><span class="toc-number">7.</span> <span class="toc-text">同意提示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE"><span class="toc-number">8.</span> <span class="toc-text">设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A6%81%E6%B1%82%E6%B8%85%E5%8D%95%E6%9D%A1%E7%9B%AE"><span class="toc-number">8.1.</span> <span class="toc-text">要求清单条目</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#api%E5%8F%82%E8%80%83"><span class="toc-number">9.</span> <span class="toc-text">API 参考</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E5%A4%87%E6%8E%A5%E5%8F%A3"><span class="toc-number">9.1.</span> <span class="toc-text">设备接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%A0%E6%84%9F%E5%99%A8%E6%8E%A5%E5%8F%A3"><span class="toc-number">9.2.</span> <span class="toc-text">传感器接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%A0%E6%84%9F%E5%99%A8%E5%B8%A7-2"><span class="toc-number">9.3.</span> <span class="toc-text">传感器帧</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8C%E6%84%8F%E6%8E%A5%E5%8F%A3"><span class="toc-number">9.4.</span> <span class="toc-text">同意接口</span></a></li></ol></li></ol></div><div class="related panel pjax" data-title="系列文章"><ul><li><a href="/feature/official-demo/20210304-1/" rel="bookmark" title="Hololens2-运行研究模式官方案例（SensorVisualization）">Hololens2-运行研究模式官方案例（SensorVisualization）</a></li><li><a href="/feature/official-demo/20210304-2/" rel="bookmark" title="Hololens2-运行研究模式官方案例（CalibrationVisualization）">Hololens2-运行研究模式官方案例（CalibrationVisualization）</a></li><li><a href="/feature/official-demo/20210304-3/" rel="bookmark" title="Hololens2-运行研究模式官方案例（CameraWithCVAndCalibration）">Hololens2-运行研究模式官方案例（CameraWithCVAndCalibration）</a></li><li><a href="/feature/official-demo/20210304-4/" rel="bookmark" title="Hololens2-运行研究模式官方案例（StreamRecorder）">Hololens2-运行研究模式官方案例（StreamRecorder）</a></li><li class="active"><a href="/feature/official-demo/20210307/" rel="bookmark" title="Hololens2-研究模式API文档翻译">Hololens2-研究模式API文档翻译</a></li></ul></div><div class="overview panel" data-title="站点概览"><div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"><img class="image" itemprop="image" alt="宇凌喵" data-src="/images/avatar.jpg"><p class="name" itemprop="name">宇凌喵</p><div class="description" itemprop="description">真理和热爱是吾永生的追求</div></div><nav class="state"><div class="item posts"><a href="/archives/"><span class="count">279</span> <span class="name">文章</span></a></div><div class="item categories"><a href="/categories/"><span class="count">77</span> <span class="name">分类</span></a></div><div class="item tags"><a href="/tags/"><span class="count">88</span> <span class="name">标签</span></a></div></nav><div class="social"><span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3lsc2lzbG92ZQ==" title="https:&#x2F;&#x2F;github.com&#x2F;ylsislove"><i class="ic i-github"></i></span> <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20veW91cm5hbWU=" title="https:&#x2F;&#x2F;weibo.com&#x2F;yourname"><i class="ic i-weibo"></i></span> <span class="exturl item email" data-url="bWFpbHRvOjkxNjQ5MTAxM0BxcS5jb20=" title="mailto:916491013@qq.com"><i class="ic i-envelope"></i></span></div><ul class="menu"><li class="item"><a href="/" rel="section"><i class="ic i-home"></i>首页</a></li><li class="item"><a href="/about/" rel="section"><i class="ic i-user"></i>关于</a></li><li class="item dropdown"><a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a><ul class="submenu"><li class="item"><a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a></li><li class="item"><a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a></li><li class="item"><a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a></li></ul></li><li class="item dropdown"><a href="javascript:void(0);"><i class="ic i-magic"></i>链环</a><ul class="submenu"><li class="item"><a href="/friends/" rel="section"><i class="ic i-heart"></i>友達</a></li><li class="item"><a href="/webstack/" rel="section"><i class="ic i-star"></i>网址</a></li></ul></li><li class="item"><span class="exturl" data-url="aHR0cHM6Ly9mb3JldmVyYmxvZy5jbi9nby5odG1s"><i class="ic i-paper-plane"></i>虫洞</span></li></ul></div></div></div><ul id="quick"><li class="prev pjax"><a href="/feature/unity/20210306/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a></li><li class="up"><i class="ic i-arrow-up"></i></li><li class="down"><i class="ic i-arrow-down"></i></li><li class="next pjax"><a href="/feature/unity/20210308/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a></li><li class="percent"></li></ul></div></div><div class="dimmer"></div></div></main><footer id="footer"><div class="inner"><div class="widgets"><div class="rpost pjax"><h2>随机文章</h2><ul><li class="item"><div class="breadcrumb"><a href="/categories/artificial-intelligence/" title="分类于 人工智能-迎接末日的审判吧">人工智能-迎接末日的审判吧</a> <i class="ic i-angle-right"></i> <a href="/categories/artificial-intelligence/webrtc/" title="分类于 WebRTC">WebRTC</a></div><span><a href="/artificial-intelligence/webrtc/20210331/" title="webrtc-coturn服务安装">webrtc-coturn服务安装</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/big-data/" title="分类于 大数据学习笔记">大数据学习笔记</a> <i class="ic i-angle-right"></i> <a href="/categories/big-data/hbase/" title="分类于 HBase">HBase</a></div><span><a href="/big-data/hbase/20200614-2/" title="HBase-API操作之DML">HBase-API操作之DML</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/back-end/" title="分类于 后端系列">后端系列</a> <i class="ic i-angle-right"></i> <a href="/categories/back-end/nodejs/" title="分类于 NodeJS">NodeJS</a></div><span><a href="/back-end/nodejs/20210404/" title="NodeJS-服务端解决跨域问题">NodeJS-服务端解决跨域问题</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/leisure/" title="分类于 清风明月">清风明月</a> <i class="ic i-angle-right"></i> <a href="/categories/leisure/forever/" title="分类于 永恒">永恒</a></div><span><a href="/leisure/forever/20200517/" title="梦开始的地方-DIY低配版谷歌眼镜成功">梦开始的地方-DIY低配版谷歌眼镜成功</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/front-end/" title="分类于 前端系列">前端系列</a> <i class="ic i-angle-right"></i> <a href="/categories/front-end/javascript/" title="分类于 JavaScript">JavaScript</a></div><span><a href="/front-end/javascript/20200603/" title="前端-JS中唯一自己不等于自己的值是谁？">前端-JS中唯一自己不等于自己的值是谁？</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/skill/" title="分类于 不看会后悔的实用技巧分享">不看会后悔的实用技巧分享</a> <i class="ic i-angle-right"></i> <a href="/categories/skill/environment-configuration/" title="分类于 环境配置">环境配置</a></div><span><a href="/skill/environment-configuration/20210330/" title="VS Nuget的使用">VS Nuget的使用</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/feature/" title="分类于 HoloLens2开发笔记">HoloLens2开发笔记</a> <i class="ic i-angle-right"></i> <a href="/categories/feature/unity/" title="分类于 Unity3D">Unity3D</a></div><span><a href="/feature/unity/20210308/" title="Hololens2-Unity项目获取IMU传感器数据">Hololens2-Unity项目获取IMU传感器数据</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/back-end/" title="分类于 后端系列">后端系列</a> <i class="ic i-angle-right"></i> <a href="/categories/back-end/golang/" title="分类于 Golang">Golang</a></div><span><a href="/back-end/golang/20210313-1/" title="golang-理解Golang中defer的使用">golang-理解Golang中defer的使用</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/skill/" title="分类于 不看会后悔的实用技巧分享">不看会后悔的实用技巧分享</a> <i class="ic i-angle-right"></i> <a href="/categories/skill/environment-configuration/" title="分类于 环境配置">环境配置</a></div><span><a href="/skill/environment-configuration/20210123/" title="重装系统后要干的几件事">重装系统后要干的几件事</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/big-data/" title="分类于 大数据学习笔记">大数据学习笔记</a> <i class="ic i-angle-right"></i> <a href="/categories/big-data/hbase/" title="分类于 HBase">HBase</a></div><span><a href="/big-data/hbase/20200615-1/" title="HBase-API操作之与MR交互（一）">HBase-API操作之与MR交互（一）</a></span></li></ul></div><div><h2>最新评论</h2><ul class="leancloud-recent-comment"></ul></div></div><div class="status"><div class="copyright">&copy; 2020 – <span itemprop="copyrightYear">2022</span> <span class="with-love"><i class="ic i-sakura rotate"></i> </span><span class="author" itemprop="copyrightHolder">宇凌喵 @ Aayu Yain</span></div><div class="count"><span class="post-meta-item-icon"><i class="ic i-chart-area"></i> </span><span title="站点总字数">552k 字</span> <span class="post-meta-divider">|</span> <span class="post-meta-item-icon"><i class="ic i-coffee"></i> </span><span title="站点阅读时长">8:22</span></div><div class="powered-by">基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span></div></div></div></footer></div><script data-config type="text/javascript">var LOCAL={path:"feature/official-demo/20210307/",favicon:{show:"（●´3｀●）やれやれだぜ",hide:"(´Д｀)大変だ！"},search:{placeholder:"文章搜索",empty:"关于 「 ${query} 」，什么也没搜到",stats:"${time} ms 内找到 ${hits} 条结果"},valine:!0,fancybox:!0,copyright:'复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',ignores:[function(e){return e.includes("#")},function(e){return new RegExp(LOCAL.path+"$").test(e)}]}</script><script src="https://cdn.polyfill.io/v2/polyfill.js"></script><script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script><script src="/js/app.js?v=0.2.5"></script></body></html><!-- rebuild by hrmmi -->

@@ -13,7 +13,7 @@
     <category term=" NAS" />
     <entry>
         <id>https://blog.aayu.today/hardware/raspberry-pi/20220516/</id>
-        <title>树莓派-树莓派4B安装向日葵踩坑笔记</title>
+        <title>树莓派4B安装向日葵踩坑笔记</title>
         <link rel="alternate" href="https://blog.aayu.today/hardware/raspberry-pi/20220516/"/>
         <content type="html">&lt;h2 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h2&gt;
 &lt;p&gt;近期在捣鼓树莓派，已经在树莓派上成功用 VNC 进行了远程桌面连接，那么便想尝试能否用向日葵连接树莓派，这一尝试便踩了不少坑，而且国内关于这方面的资料也挺少，于是便把自己的踩坑经历记录下来～&lt;/p&gt;

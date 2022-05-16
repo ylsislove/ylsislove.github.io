@@ -25,7 +25,7 @@
 &lt;pre&gt;&lt;code&gt;Linux raspberrypi 5.15.32-v8+ #1538 SMP PREEMPT Thu Mar 31 19:40:39 BST 2022 aarch64 GNU/Linux
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;下载安装包&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#下载安装包&#34;&gt;#&lt;/a&gt; 下载安装包&lt;/h2&gt;
-&lt;p&gt;去向日葵的官网下载 Linux 的安装包 「」&lt;/p&gt;
+&lt;p&gt;去向日葵的官网下载 Linux 的安装包&lt;/p&gt;
 &lt;p&gt;因为我们的系统是 arm64 位的，而向日葵的「UOS」和「麒麟」这两个应用平台提供 arm64 版本的架构，这里我选择「麒麟」应用平台的 arm64 版本安装包&lt;/p&gt;
 &lt;p&gt;下载完安装包后就可以在树莓派里用如下命令安装&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;sudo dpkg -i SunloginClient_11.0.1.44968_kylin_arm.deb

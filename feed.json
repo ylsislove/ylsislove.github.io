@@ -7,6 +7,18 @@
     "home_page_url": "https://blog.aayu.today",
     "items": [
         {
+            "id": "https://blog.aayu.today/hardware/raspberry-pi/20220516/",
+            "url": "https://blog.aayu.today/hardware/raspberry-pi/20220516/",
+            "title": "树莓派-树莓派4B安装向日葵踩坑笔记",
+            "date_published": "2022-05-15T16:00:00.000Z",
+            "content_html": "<h2 id=\"前言\"><a class=\"anchor\" href=\"#前言\">#</a> 前言</h2>\n<p>近期在捣鼓树莓派，已经在树莓派上成功用 VNC 进行了远程桌面连接，那么便想尝试能否用向日葵连接树莓派，这一尝试便踩了不少坑，而且国内关于这方面的资料也挺少，于是便把自己的踩坑经历记录下来～</p>\n<h2 id=\"环境\"><a class=\"anchor\" href=\"#环境\">#</a> 环境</h2>\n<p>我用的是完整版的 Raspberry Pi OS 64 位系统，注意是 64 位系统哦，可以用上海交通大学 SJTUG 镜像站下载，下载速度很快，链接如下～</p>\n<p><span class=\"exturl\" data-url=\"aHR0cHM6Ly9taXJyb3JzLnNqdHVnLnNqdHUuZWR1LmNuL3Jhc3BiZXJyeS1waS1vcy1pbWFnZXMvcmFzcGlvc19mdWxsX2FybTY0L2ltYWdlcy8=\">Raspberry Pi OS 64</span></p>\n<p>更多镜像的下载链接和介绍可以看这篇博文：<span class=\"exturl\" data-url=\"aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2E0OTYyOTg2ODUvYXJ0aWNsZS9kZXRhaWxzLzEwODkwOTkyNw==\">使用国内镜像站下载树莓派 Raspberry Pi OS 操作系统</span></p>\n<p>最终烧录好的系统如下</p>\n<pre><code>Linux raspberrypi 5.15.32-v8+ #1538 SMP PREEMPT Thu Mar 31 19:40:39 BST 2022 aarch64 GNU/Linux\n</code></pre>\n<h2 id=\"下载安装包\"><a class=\"anchor\" href=\"#下载安装包\">#</a> 下载安装包</h2>\n<p>去向日葵的官网下载 Linux 的安装包 「」</p>\n<p>因为我们的系统是 arm64 位的，而向日葵的「UOS」和「麒麟」这两个应用平台提供 arm64 版本的架构，这里我选择「麒麟」应用平台的 arm64 版本安装包</p>\n<p>下载完安装包后就可以在树莓派里用如下命令安装</p>\n<pre><code>sudo dpkg -i SunloginClient_11.0.1.44968_kylin_arm.deb\n</code></pre>\n<p>但会发现报错，报错如下</p>\n<p><img data-src=\"http://image.aayu.today/2022/05/16/b3fa5e9133894.png\" alt=\"\" /></p>\n<p>从报错信息中可以，缺少  <code>libappindicator3-1</code>  这个依赖包</p>\n<h2 id=\"解决缺少依赖问题\"><a class=\"anchor\" href=\"#解决缺少依赖问题\">#</a> 解决缺少依赖问题</h2>\n<p>首先尝试用  <code>sudo apt-get install libappindicator3-1</code>  去安装依赖，发现源里没有这个依赖包</p>\n<p>没办法，那就直接下载好这个依赖包然后手动安装吧，经过查阅资料，从 <span class=\"exturl\" data-url=\"aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTQ0NzQ3Ny9hcnRpY2xlL2RldGFpbHMvMTE1MTg4OTM4\">这篇博客中</span> 找到了相关的下载链接</p>\n<p><span class=\"exturl\" data-url=\"aHR0cDovL21pcnJvcnMudXN0Yy5lZHUuY24vZGViaWFuL3Bvb2wvbWFpbi9saWJhL2xpYmFwcGluZGljYXRvci8=\">libappindicator3-1 官方下载链接</span></p>\n<p>我们找到 arm64 架构的进行下载，如下图</p>\n<p><img data-src=\"http://image.aayu.today/2022/05/16/0ac959820f764.png\" alt=\"\" /></p>\n<p>下载完成后先用  <code>sudo apt --fix-broken install</code>  命令进行依赖包错误的修复，然后再用  <code>sudo dpkg -i libappindicator3-1_0.4.92-7_arm64.deb</code>  安装刚刚下载好的依赖包</p>\n<p>结果事与愿违，依然报错啦，报错截图如下</p>\n<p><img data-src=\"http://image.aayu.today/2022/05/16/fb0a62fe6909f.png\" alt=\"\" /></p>\n<p>可以看到还缺少了  <code>libdbusmenu-glib4</code> ， <code>libdbusmenu-gtk3-4</code> ， <code>libindicator3-7</code>  这三个依赖包</p>\n<p>好吧，那再次尝试把这三个依赖包看能不能安装上吧，还是先用  <code>sudo apt --fix-broken install</code>  命令进行依赖包错误的修复，然后尝试看本地源里有无依赖包，终于来好运了，本地源里有  <code>libdbusmenu-glib4</code> ， <code>libdbusmenu-gtk3-4</code>  这两个依赖包，用如下命令安装</p>\n<pre><code>sudo apt-get install libdbusmenu-glib4\nsudo apt-get install libdbusmenu-gtk3-4\n</code></pre>\n<p>在尝试用本地源安装  <code>libindicator3-7</code>  时发现没有，那就还是自己下载依赖包手动安装吧，下载链接如下</p>\n<p><span class=\"exturl\" data-url=\"aHR0cDovL21pcnJvcnMudXN0Yy5lZHUuY24vZGViaWFuL3Bvb2wvbWFpbi9saWJpL2xpYmluZGljYXRvci8=\">libindicator3-7 官方下载链接</span></p>\n<p>我们依然选择 arm64 架构的进行下载，如下图</p>\n<p><img data-src=\"http://image.aayu.today/2022/05/16/c8f687dd6d8f7.png\" alt=\"\" /></p>\n<p>下载好后就可以用  <code>sudo dpkg -i libindicator3-7_0.5.0-4_arm64.deb</code>  命令进行安装啦</p>\n<p>终于把这三个依赖包都安装好了，然后再次用  <code>sudo dpkg -i libappindicator3-1_0.4.92-7_arm64.deb</code>  安装最开始报错的依赖包，结果终于不报错啦，接下来终于可以尝试再次安装向日葵的安装包啦，安装命令如下</p>\n<pre><code>sudo dpkg -i SunloginClient_11.0.1.44968_kylin_arm.deb\n</code></pre>\n<p>终于，安装成功！结果如下</p>\n<p><img data-src=\"http://image.aayu.today/2022/05/16/c92d4247ba514.png\" alt=\"\" /></p>\n<h2 id=\"启动向日葵\"><a class=\"anchor\" href=\"#启动向日葵\">#</a> 启动向日葵</h2>\n<p>在树莓派上终于安好向日葵了，那向日葵怎么启动呢，可以在菜单栏里找到向日葵，如下</p>\n<p><img data-src=\"http://image.aayu.today/2022/05/16/907d31ab2f6c1.png\" alt=\"\" /></p>\n<p>成功运行向日葵，如下～～</p>\n<p><img data-src=\"http://image.aayu.today/2022/05/16/b2742e182bbd4.png\" alt=\"\" /></p>\n<h2 id=\"相关链接\"><a class=\"anchor\" href=\"#相关链接\">#</a> 相关链接</h2>\n<ul>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2E0OTYyOTg2ODUvYXJ0aWNsZS9kZXRhaWxzLzEwODkwOTkyNw==\">使用国内镜像站下载树莓派 Raspberry Pi OS 操作系统</span></li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTQ0NzQ3Ny9hcnRpY2xlL2RldGFpbHMvMTE1MTg4OTM4\">无法定位软件包：libappindicator3-1_libappindicator3-1 软件包安装失败</span></li>\n</ul>\n",
+            "tags": [
+                "硬件修炼手册",
+                "树莓派",
+                "RaspberryPi"
+            ]
+        },
+        {
             "id": "https://blog.aayu.today/skill/tools/20220510/",
             "url": "https://blog.aayu.today/skill/tools/20220510/",
             "title": "NoteExpress七个隐藏的实用技巧",
@@ -251,17 +263,6 @@
                 "物联网",
                 "IoT",
                 "ThingsBoard"
-            ]
-        },
-        {
-            "id": "https://blog.aayu.today/resources/20210923/",
-            "url": "https://blog.aayu.today/resources/20210923/",
-            "title": "机器学习实战(高清中文版PDF+高清英文版PDF+源代码)免密码版本",
-            "date_published": "2021-09-22T16:00:00.000Z",
-            "content_html": "<h2 id=\"前言\"><a class=\"anchor\" href=\"#前言\">#</a> 前言</h2>\n<p>我也真是服了，国内用百度搜索搜 PDF 书籍，跳出来一大堆 garbage，不是压缩包里带密码让你去网址上付个小钱的，就是让你关注些烂七八糟的公众号来获取密码的。咱也不缺那三五块钱，但你用别人的著作美名其曰的再挂个整理不易的幌头去收费，整理个 p 啊，就一 pdf 你整理到哪去啊，大家都是抱着学习的目的来的，但有些人的嘴脸是真的让人恶心，我也不想多说了。</p>\n<p>用 Google 搜索机器学习实战 pdf，第一条，就是 GitHub 上获取中文高清 pdf 的，第四条，就是高清中文版 PDF + 高清英文版 PDF + 源代码的，且压缩包无密码。看到这，我也只能感叹以后要搜索些学术上的东西，第一搜索还是直接用 Google 搜索吧，国内的环境就是被有些 garbage 败坏的。</p>\n<p><img data-src=\"http://image.aayu.today/2022/02/26/4ee9f3555a89d.png\" alt=\"\" /></p>\n<h2 id=\"资源\"><a class=\"anchor\" href=\"#资源\">#</a> 资源</h2>\n<p>这里放两种获取途径吧，一个是百度网盘的，一个是 GitHub 上的，注意无需密码也无需关注乱七八糟公众号！！！如果网络畅通，推荐直接去 GitHub 上下载，百度网盘的链接可能哪一天就会失效了。如果网络受到阻碍也想去 GitHub 上下载，可以看下我的 B 站视频：<span class=\"exturl\" data-url=\"aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vMTA2NDkxODM2\">程序猿实用技巧推荐</span>，里面手把手教你如何用自己的云服务器给我们的网络加速一下，从此畅通无阻～</p>\n<h3 id=\"百度网盘\"><a class=\"anchor\" href=\"#百度网盘\">#</a> 百度网盘</h3>\n<p>链接：<span class=\"exturl\" data-url=\"aHR0cHM6Ly9wYW4uYmFpZHUuY29tL3MvMVlWb2ExMG9taUtKTEJRQS1KMFRiYkE=\">https://pan.baidu.com/s/1YVoa10omiKJLBQA-J0TbbA</span><br />\n 提取码：rrnn</p>\n<h3 id=\"github\"><a class=\"anchor\" href=\"#github\">#</a> GitHub</h3>\n<p><span class=\"exturl\" data-url=\"aHR0cHM6Ly9naXRodWIuY29tL3lsc2lzbG92ZS9SZXNvdXJjZS1BcmNoaXZlL3RyZWUvbWFpbi9ib29rcy8lRTYlOUMlQkElRTUlOTklQTglRTUlQUQlQTYlRTQlQjklQTAlRTUlQUUlOUUlRTYlODglOTg=\">机器学习实战.pdf at master - GitHub</span></p>\n<h2 id=\"声明\"><a class=\"anchor\" href=\"#声明\">#</a> 声明</h2>\n<p>资源仅供学习使用，禁止二手转卖获取非法利益。人在做，天在看，好自为之。</p>\n<p><img data-src=\"http://image.aayu.today/2022/02/26/0e1e21e425f31.png\" alt=\"\" /></p>\n",
-            "tags": [
-                "资源",
-                "资源"
             ]
         }
     ]

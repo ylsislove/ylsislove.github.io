@@ -8,9 +8,27 @@
     <author>
       <name>宇凌喵</name>
     </author>
-    <updated>2022-07-23T16:00:00.000Z</updated>
+    <updated>2022-07-24T16:00:00.000Z</updated>
     <category term="HoloLens" />
     <category term=" NAS" />
+    <entry>
+        <id>https://blog.aayu.today/algorithm/dp/20220725/</id>
+        <title>动态规划：第N个泰波那契数</title>
+        <link rel="alternate" href="https://blog.aayu.today/algorithm/dp/20220725/"/>
+        <content type="html">&lt;h2 id=&#34;题目描述&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#题目描述&#34;&gt;#&lt;/a&gt; 题目描述&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/07/25/b08130d1eee33.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;思路与题解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#思路与题解&#34;&gt;#&lt;/a&gt; 思路与题解&lt;/h2&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;思路&#34;&gt;
+&lt;p&gt;和昨天的&lt;a href=&#34;https://blog.aayu.today/algorithm/dp/20220724/&#34;&gt;斐波那契数&lt;/a&gt;思路一样，用滚动数组的思想，关键点在于设置 p、q、t、r 的初值，我们知道，r = p + q + t，第一个要计算的值是 Fn (3)，T_3 = 0 + 1 + 1，这是滚动之后的，所以 p、q、t、r 的初值应该是 0、0、1、1，这样滚动过后才能变成 0、1、1，就能算出 Fn (3) = r = 0 + 1 + 1。Easy~&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;我的代码&#34;&gt;
+&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Solution&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;tribonacci&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; n&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;n &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; n&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;n &lt;span class=&#34;token operator&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; p &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; q &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; t &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; r &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;&amp;lt;=&lt;/span&gt; n&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;++&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            p &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; q&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            q &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; t&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            t &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; r&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            r &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; p &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; q &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; t&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; r&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/div&gt;
+</content>
+        <category term="数据结构与算法" scheme="https://blog.aayu.today/categories/algorithm/" />
+        <category term="动态规划" scheme="https://blog.aayu.today/categories/algorithm/dp/" />
+        <category term="动态规划" scheme="https://blog.aayu.today/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" />
+        <updated>2022-07-24T16:00:00.000Z</updated>
+    </entry>
     <entry>
         <id>https://blog.aayu.today/algorithm/dp/20220724/</id>
         <title>动态规划：斐波那契数</title>
@@ -1079,80 +1097,5 @@ $ docker run -d --name emqx -p 1883:1883 -p 8081:8081 -p 8083:8083 -p 8883:8883 
         <category term="STM32CubeMX" scheme="https://blog.aayu.today/tags/STM32CubeMX/" />
         <category term="RS485" scheme="https://blog.aayu.today/tags/RS485/" />
         <updated>2021-10-13T16:00:00.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://blog.aayu.today/hardware/bear-pi/20211010/</id>
-        <title>小熊派-按键控制LED灯亮灭（基于STM32CubeMX）</title>
-        <link rel="alternate" href="https://blog.aayu.today/hardware/bear-pi/20211010/"/>
-        <content type="html">&lt;h2 id=&#34;环境&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#环境&#34;&gt;#&lt;/a&gt; 环境&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;JRE（Java Runtime Environment）&lt;/li&gt;
-&lt;li&gt;STM32CubeMX v6.3.0&lt;/li&gt;
-&lt;li&gt;HAL 库 L4 v1.7.0&lt;/li&gt;
-&lt;li&gt;Keil5-MDK&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;环境搭建参考：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzU5OTM5MC9hcnRpY2xlL2RldGFpbHMvMTA2ODYzOTI5&#34;&gt;STM32CubeMX 学习记录 -- 安装配置与使用&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;如果不想去官网下，也可以从我的百度云分享里下载 STM32CubeMX 和 HAL 库&lt;/p&gt;
-&lt;p&gt;链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9wYW4uYmFpZHUuY29tL3MvMTBNS0dLUE5Rckl4Wm51TVp2Vktxa2c=&#34;&gt;https://pan.baidu.com/s/10MKGKPNQrIxZnuMZvVKqkg&lt;/span&gt;&lt;br /&gt;
- 提取码：zjor&lt;/p&gt;
-&lt;h2 id=&#34;创建工程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#创建工程&#34;&gt;#&lt;/a&gt; 创建工程&lt;/h2&gt;
-&lt;p&gt;打开 STM32CubeMX，选择新建一个工程，如下图&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/01/16/5f8fd595babc3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;在输入框中输入  &lt;code&gt;stm32l431rc&lt;/code&gt; ，选中，然后双击选择中间  &lt;code&gt;LQFP64&lt;/code&gt;  的这款，如下图&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/01/16/a0567b1553f35.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;配置时钟源，这里选择外部高速时钟，如下图&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/01/16/ee8ec2d56a83d.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;外设引脚对应表&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;MCU 引脚&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;引脚标注名&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;PC13&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;LED&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;PB2&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;KEY1&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;PB3&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;KEY2&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;按键原理图&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/01/16/812e52e63ab9b.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/01/16/cbaf5779e0697.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;配置时钟树。STM32L4 的最高主频可达到 80M，使  &lt;code&gt;HCLK = 80Mhz&lt;/code&gt; ，如下图&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/01/16/5212bdbc0b02e.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/01/16/3db26a836599c.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;配置 LED GPIO 引脚，并修改用户标签名（相当于取另一个新名字），如下图&lt;br /&gt;
-&lt;img data-src=&#34;http://image.aayu.today/2022/01/16/f0dc3bab38ca1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/01/16/3f2398316a609.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;配置 PB2 和 PB3 设置成上拉输入，如下图&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/01/16/fd84528e9ffd2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/01/16/dbec4b0aa98c0.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;最后配置生成工程设置，如下图&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/01/16/a28f464dd80d1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/01/16/6766e875243ac.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;最后选择右上角的  &lt;code&gt;GENERATE CODE&lt;/code&gt; ，即可完成工程的创建&lt;/p&gt;
-&lt;h2 id=&#34;在-keil5-mdk-中编写代码&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#在-keil5-mdk-中编写代码&#34;&gt;#&lt;/a&gt; 在 Keil5-MDK 中编写代码&lt;/h2&gt;
-&lt;p&gt;进入  &lt;code&gt;MDK-ARM&lt;/code&gt;  目录，打开工程，在  &lt;code&gt;main.c&lt;/code&gt;  中编写如下代码&lt;/p&gt;
-&lt;figure class=&#34;highlight c&#34;&gt;&lt;figcaption data-lang=&#34;c&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		&lt;span class=&#34;token comment&#34;&gt;/* USER CODE END WHILE */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;			&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		&lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;HAL_GPIO_ReadPin&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;KEY1_GPIO_Port&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; KEY1_Pin&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;			&lt;span class=&#34;token function&#34;&gt;HAL_Delay&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;			&lt;span class=&#34;token keyword&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;HAL_GPIO_ReadPin&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;KEY1_GPIO_Port&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; KEY1_Pin&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;			&lt;span class=&#34;token function&#34;&gt;HAL_Delay&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;			&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;			&lt;span class=&#34;token comment&#34;&gt;// filp LED status&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;			&lt;span class=&#34;token function&#34;&gt;HAL_GPIO_TogglePin&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;LED_GPIO_Port&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; LED_Pin&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;			&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;			&lt;span class=&#34;token comment&#34;&gt;// the above code is equivalent to the following&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;//			if (HAL_GPIO_ReadPin(LED_GPIO_Port, LED_Pin) == 0) &amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;//				HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, 1);&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;//			&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;//			else &amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;//				HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, 0);&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;//			&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;点击编译和烧录，烧录配置参考：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0FwcGxlX0NvY28vYXJ0aWNsZS9kZXRhaWxzLzEyMDY4MTk2Ng==&#34;&gt;小熊派开发笔记 - 点亮 LED 灯（基于 STM32CubeMX）&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;烧录成功如下图&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/01/16/abd3691d8df89.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;h2 id=&#34;实验结果&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#实验结果&#34;&gt;#&lt;/a&gt; 实验结果&lt;/h2&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/01/16/fb76e62cdc2e7.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</content>
-        <category term="硬件修炼手册" scheme="https://blog.aayu.today/categories/hardware/" />
-        <category term="小熊派" scheme="https://blog.aayu.today/categories/hardware/bear-pi/" />
-        <category term="BearPi" scheme="https://blog.aayu.today/tags/BearPi/" />
-        <category term="STM32CubeMX" scheme="https://blog.aayu.today/tags/STM32CubeMX/" />
-        <updated>2021-10-09T16:00:00.000Z</updated>
     </entry>
 </feed>

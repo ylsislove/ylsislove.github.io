@@ -10,10 +10,30 @@
         </author>
         <description>真理和热爱是吾永生的追求</description>
         <language>zh-CN</language>
-        <pubDate>Wed, 27 Jul 2022 19:29:24 +0800</pubDate>
-        <lastBuildDate>Wed, 27 Jul 2022 19:29:24 +0800</lastBuildDate>
+        <pubDate>Wed, 27 Jul 2022 20:08:12 +0800</pubDate>
+        <lastBuildDate>Wed, 27 Jul 2022 20:08:12 +0800</lastBuildDate>
         <category term="HoloLens" />
         <category term=" NAS" />
+        <item>
+            <guid isPermalink="true">https://blog.aayu.today/algorithm/dp/20220727-2/</guid>
+            <title>动态规划：跳跃游戏</title>
+            <link>https://blog.aayu.today/algorithm/dp/20220727-2/</link>
+            <category term="数据结构与算法" scheme="https://blog.aayu.today/categories/algorithm/" />
+            <category term="动态规划" scheme="https://blog.aayu.today/categories/algorithm/dp/" />
+            <category term="动态规划" scheme="https://blog.aayu.today/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" />
+            <pubDate>Wed, 27 Jul 2022 20:08:12 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;题目描述&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#题目描述&#34;&gt;#&lt;/a&gt; 题目描述&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/07/27/70c6e9786b6a9.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;思路与题解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#思路与题解&#34;&gt;#&lt;/a&gt; 思路与题解&lt;/h2&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;思路&#34;&gt;
+&lt;p&gt;经过前面几道题的熏陶，这类题感觉已经挺熟练了，动态规划就是先求解子问题，比如说一个长数组，我们先不要看那么多元素，可以就从有一个元素开始往后遍历求解，最后就可以求出一个复杂问题的答案了～～&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/07/27/6f3ec80ba5fb0.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;但是这题应该还有好多其他解法，比如说深度优先搜索应该也算一种，一直往前冲，冲不动了就回退，然后再往前冲～～&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;我的题解&#34;&gt;
+&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Solution&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;bool&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;canJump&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;vector&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&amp;amp;&lt;/span&gt; nums&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; n &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; nums&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;size&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; limit &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt; n&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;++&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;i &lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt; limit&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token boolean&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            limit &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;limit&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; nums&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; limit &lt;span class=&#34;token operator&#34;&gt;&gt;=&lt;/span&gt; n&lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;?&lt;/span&gt; &lt;span class=&#34;token boolean&#34;&gt;true&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token boolean&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/div&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://blog.aayu.today/algorithm/dp/20220727/</guid>
             <title>动态规划：打家劫舍 II</title>
@@ -792,103 +812,6 @@ sudo ./fixNetworkCard.sh
 &lt;p&gt;修改快捷键可以在 PicGo 的设置中设置，同时我还会开启  &lt;code&gt;开机自启&lt;/code&gt;  和  &lt;code&gt;时间戳重命名&lt;/code&gt;  这两个设置，时间戳重命名可以直接将刚刚用 QQ 截取的乱七八糟文件名改成当前的时间，看起来就舒服很多啦，设置如下图&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/01/15/2a7bd851eef7f.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;至此，我们的兰空图床（Lsky）搭配 PicGo 客户端进行图片快速上传就设置好啦，接下来愉快的玩耍吧～～&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://blog.aayu.today/nas/synology/20220111/</guid>
-            <title>黑群晖NAS搭建兰空图床（Lsky）</title>
-            <link>https://blog.aayu.today/nas/synology/20220111/</link>
-            <category term="我的NAS捣鼓笔记" scheme="https://blog.aayu.today/categories/nas/" />
-            <category term="群晖" scheme="https://blog.aayu.today/categories/nas/synology/" />
-            <category term="NAS" scheme="https://blog.aayu.today/tags/NAS/" />
-            <category term="Synology" scheme="https://blog.aayu.today/tags/Synology/" />
-            <category term="Lsky" scheme="https://blog.aayu.today/tags/Lsky/" />
-            <pubDate>Tue, 11 Jan 2022 00:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h2&gt;
-&lt;p&gt;真的是空了好长一段时间才来更新自己的博客了 hh。前段时间自己入了 NAS 的坑，看了好多关于 NAS 的博客文章和教程，自己也花了不到 800 搭建了自己的第一台 NAS 哈哈，又在多多上花了 800 多买了两块 4T 紫盘，终于开启了自己的 NAS 捣鼓之旅～～&lt;/p&gt;
-&lt;p&gt;补充一下哈哈，NAS 可以当作自己的私有存储空间，类似于百度网盘一样，但区别是百度网盘是第三方服务，存储空间都是人家的，而我们的 NAS 也就是一台小型电脑，但存储空间可以自己掌握，比如说我买了两块 4T 的机械硬盘，就相当于我有 8T 的存储空间，同时，又因为 NAS 类似于一个小型电脑，我们可以在上面部署自己的服务，如把自己的个人博客搭建在上面，把自己的图床放在上面等等～～&lt;/p&gt;
-&lt;p&gt;NAS 最吸引我的一点就是自己的数据自己掌握，自己的数据都放在自己的机械硬盘里，并且将硬盘组成一个 RAID 阵列，这个阵列可以把它当成一个数据保护措施，比如两块硬盘可以组一个 RAID1 阵列，当有一块硬盘由于未知原因损坏的时候，只要把坏的硬盘取下来，换上一个好的硬盘，数据就会自动进行恢复，最大程度上避免了数据丢失。与 RAID1 阵列类似的还有 RAID5 和 RAID10 阵列，它们的区别就是硬盘的可用空间不同&lt;sub&gt;感兴趣的可以自己去查阅相关资料呀&lt;/sub&gt;～&lt;/p&gt;
-&lt;p&gt;哈哈，现在自己在 NAS 的收获上真的很多，目前已经在 NAS 上完成了个人导航页、个人网盘、以及相册的部署～～&lt;/p&gt;
-&lt;p&gt;后续等这篇博客的图床在 NAS 搭建好以后，就可以把自己的个人博客也迁移到 NAS 上了～～&lt;/p&gt;
-&lt;p&gt;哦哦还有一个忘了说，NAS 还有一个很棒的功能就是自动备份手机的照片，当配置好以后，我们换手机就再也不用担心照片的问题了，也不用第三方的手机照片备份服务了，真的是又贵空间又小～&lt;/p&gt;
-&lt;p&gt;欢迎大家访问我的个人导航页～～&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hYXl1LnRvZGF5&#34;&gt;阿宇的导航页&lt;/span&gt;&lt;/p&gt;
-&lt;h2 id=&#34;环境&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#环境&#34;&gt;#&lt;/a&gt; 环境&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;处理器：J3455-itx&lt;/li&gt;
-&lt;li&gt;群晖系统：DSM 6.2.3-25426 Upload 3&lt;/li&gt;
-&lt;li&gt;产品型号：DS3617xs&lt;/li&gt;
-&lt;li&gt;存储空间：两块 4T 紫盘组 RAID1 阵列&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;安装教程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装教程&#34;&gt;#&lt;/a&gt; 安装教程&lt;/h2&gt;
-&lt;h3 id=&#34;搭建宝塔面板&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#搭建宝塔面板&#34;&gt;#&lt;/a&gt; 搭建宝塔面板&lt;/h3&gt;
-&lt;p&gt;首先在群晖的 docker 应用里面搜索 baota，选择  &lt;code&gt;pch18/baota&lt;/code&gt;  这个镜像，双击下载最新的 latest 版本的镜像&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/01/12/e7789a2be6329.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;下载好以后可以在镜像列表中看到，如下图，可以看到该容器的大小是真不小啊，占了 5GB 大小的空间&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/01/12/3d21f3bf28d50.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;选中该镜像，点击上方的启动，点击高级配置，设置存储空间映射如下图所示&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/01/12/6920258f5c87b.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;端口设置如下图所示&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/01/12/2715710220830.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;设置完成后，点击确定，等待稍微一段时间后，弹出命令创建失败，这时候别慌。我们可以用 ssh 连接到 NAS 里面，输入  &lt;code&gt;docker ps&lt;/code&gt; ，发现宝塔容器确实没有起来，再次敲击  &lt;code&gt;docker ps -a&lt;/code&gt;  可以查看所以运行过的容器，发现宝塔容器的状态是  &lt;code&gt;Created&lt;/code&gt; ，如下图&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/01/12/85c42971f05d3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;所以只需要用  &lt;code&gt;docker start 宝塔容器ID&lt;/code&gt; ，启动容器即可。容器启动以后，再次用  &lt;code&gt;docker ps&lt;/code&gt;  命令，就可以看到已经成功启动的宝塔容器了～～&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/01/12/3e1abcce3b028.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;启动完成以后，在浏览器中输入  &lt;code&gt;ip:18888&lt;/code&gt; ，可以看到成功进入宝塔的登陆界面啦，但用户名和密码我们需要通过重置才能获取到&lt;/p&gt;
-&lt;p&gt;在 NAS 后台管理界面，打开 docker 应用，可以看到我们的宝塔容器也确实启动成功了&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/01/12/2f0547340adf7.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;我们还是用 ssh 连接 NAS 系统，然后用  &lt;code&gt;docker exec -it 宝塔容器ID /bin/bash&lt;/code&gt;  进入容器内部系统，然后输入  &lt;code&gt;bt&lt;/code&gt;  即可对用户名和密码进行重置，如下图&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/01/12/5c0a8442abf54.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;重置完用户名和密码后，在容器内部按  &lt;code&gt;Ctrl + P + Q&lt;/code&gt;  即可在容器继续运行的情况下安全退出容器～&lt;/p&gt;
-&lt;p&gt;用新用户名和密码，即可成功登录宝塔面板啦～&lt;/p&gt;
-&lt;h3 id=&#34;安装兰空图床&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装兰空图床&#34;&gt;#&lt;/a&gt; 安装兰空图床&lt;/h3&gt;
-&lt;p&gt;首先进入主页面，点击 PHP-7.3，如下图&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/01/12/1ebfe72982cc2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;然后在安装扩展这里点击 fileinfo 扩展安装（因为我已经装过了，所以这里显示的是卸载）&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/01/12/ea3ab0f0c4f47.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;安装完成以后，点击网站，开始新建站点，配置如下图，注意在 IP 后面配置一个可以访问的端口，默认的 80 端口应该是使用不了的&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/01/12/0af4c3de78a55.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;然后在兰空图床的 GitHub 官网上下载最新的发行包，并上传到站点的根目录，然后解压，解压完成之后记得把解压之后的文件放在站点的根目录，如下图&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/01/12/b4b042cd16722.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;接下来点击站点名称，可以进行网站设置，如下图&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/01/12/6e4d58cbf32b4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;在网站目录下，设置运行目录为  &lt;code&gt;/public&lt;/code&gt; ，点击保存，如下图&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/01/12/4553770b23267.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;根据兰空图床&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cua2FuY2xvdWQuY24vd2lzcHgvbHNreS1wcm8vODgwMDQ0&#34;&gt;官网教程&lt;/span&gt;，nginx 需要设置伪静态，代码如下&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;location / &amp;#123;
-    if (!-e $request_filename) &amp;#123;
-    	rewrite ^(.*)$ /index.php?s=$1 last; break;
-    &amp;#125;
-&amp;#125;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;设置如下图&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/01/12/15a3203b8d92d.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;记得点击保存。这样我们的兰空图床的站点就配置好啦～～&lt;/p&gt;
-&lt;h3 id=&#34;初始化访问&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#初始化访问&#34;&gt;#&lt;/a&gt; 初始化访问&lt;/h3&gt;
-&lt;p&gt;在浏览器输入  &lt;code&gt;ip地址:10003&lt;/code&gt; ，后，博主发现了一个问题，访问这个端口失败 emmmm&lt;/p&gt;
-&lt;p&gt;在博主仔细检查了后发现，我们在最开始设置 docker 端口映射时，忘记映射我们这个  &lt;code&gt;10003&lt;/code&gt;  端口了，诶呀真是失策&lt;/p&gt;
-&lt;p&gt;所以接下来的操作就是，在 NAS 后台管理界面，进行 docker 应用，先把宝塔容器暂停运行，然后选择宝塔容器，点击上面的编辑，在端口设置里面添加  &lt;code&gt;10003&lt;/code&gt;  的端口映射，如下图&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/01/12/3be66807ee889.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;设置完之后，再把宝塔容器重新恢复运行，注意哦注意哦，这里我们重新刷新宝塔的访问界面，可以在首页发现 Nginx 服务是停止运行的，这就需要我们手动启动这个服务，这里是一个要注意的小地方&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/01/12/fb5479c4d1edc.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;当把以上这些都完成以后，再次在浏览器输入  &lt;code&gt;ip地址:10003&lt;/code&gt; ，终于出现了让人开心的界面，如下图&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/01/12/44d9065f8e998.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;我们点击下一步，这里的数据库名，用户名和密码可以在宝塔界面的数据库那里查看，如下图&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/01/12/c48e9e9c3998a.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;配置如下图&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/01/12/e387b7616a750.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;然后点击下一步，在接下来的界面配置一下管理员的邮箱和密码，如下图&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/01/12/707ac27baa7af.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;这样我们的图床就配置好啦，开心ヾ (≧▽≦*) o&lt;/p&gt;
-&lt;p&gt;我们可以在左侧点击登陆，进入图床后台进行详细查看，如下图&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/01/12/e62e686015c82.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;输入刚才设置的用户名和密码，就可以进入到图床后台了。在图床后台可以设置上传图片的大小等等，接下来就开始愉快的使用图床吧～～&lt;/p&gt;
-&lt;p&gt;后续我就会把我的个人博客也都迁移到我的 NAS 里面，啦啦～～&lt;/p&gt;
-&lt;h2 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cua2FuY2xvdWQuY24vd2lzcHgvbHNreS1wcm8vODgwMDQ0&#34;&gt;兰空图床官网教程&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuZGFuaWFvLm9yZy8xMDIyOS5odG1s&#34;&gt;宝塔面板安装 lsky-pro（ 兰空图床） – 一款安装简单、功能强大的图床程序&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9wb3N0LnNtemRtLmNvbS9wL2FscHp4enEwLyNjb21tZW50cw==&#34;&gt;NAS 篇：群晖 Docker 直接装宝塔面板一键部署建站系统&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
  ]]></description>
         </item>
     </channel>

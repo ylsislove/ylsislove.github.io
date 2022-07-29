@@ -8,9 +8,70 @@
     <author>
       <name>宇凌喵</name>
     </author>
-    <updated>2022-07-28T06:10:36.000Z</updated>
+    <updated>2022-07-29T08:36:44.000Z</updated>
     <category term="HoloLens" />
     <category term=" NAS" />
+    <entry>
+        <id>https://blog.aayu.today/algorithm/dp/20220729/</id>
+        <title>动态规划：乘积最大子数组</title>
+        <link rel="alternate" href="https://blog.aayu.today/algorithm/dp/20220729/"/>
+        <content type="html">&lt;h2 id=&#34;题目描述&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#题目描述&#34;&gt;#&lt;/a&gt; 题目描述&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/07/29/bb95c6f7d1edc.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;思路与题解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#思路与题解&#34;&gt;#&lt;/a&gt; 思路与题解&lt;/h2&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;思路&#34;&gt;
+&lt;p&gt;这道题很容易陷入一个死胡同，可惜，我就陷入了～&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;[2,-5,-2,-4,3]&lt;/code&gt;  这组测试数据就很那啥，如果以我们人脑来思考，我们可以在大脑里运算一遍得出最大乘机是 24，但如果要写代码的话，在从左往右遍历的过程中，又该如何判断要放弃次最大的 20，也就是  &lt;code&gt;2,-5,-2&lt;/code&gt; ，从而选择  &lt;code&gt;-2,-4,3&lt;/code&gt;  呢，这不就只能用暴力求解吗，我就陷入了这样的死胡同&lt;/p&gt;
+&lt;p&gt;看了官方题解后，我才明白关键的点在哪里，就是要分情况讨论啊，啊啊啊，因为有负号的干扰，所以我们还要多考虑一种情况，就是当前 i 如果是一个负数的话，那我就要找 i 前面的最小值，负负得正，从而也有可能问鼎最大值，所以就要维护最大子数组值和最小子数组值，这才是本题的关键呐！&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;我的题解&#34;&gt;
+&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Solution&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;maxProduct&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;vector&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&amp;amp;&lt;/span&gt; nums&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; prev &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; mx &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; nums&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; mn &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&lt;/span&gt;x &lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; nums&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; t &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;x&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;prev &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt; x&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; mn &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt; x&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token comment&#34;&gt;// 此题的关键就在于要维护一个最小的子数组乘机&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            mn &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;min&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;x&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;min&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;prev &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt; x&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; mn &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt; x&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            mx &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;mx&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; t&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            prev &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; t&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; mx&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/div&gt;
+</content>
+        <category term="数据结构与算法" scheme="https://blog.aayu.today/categories/algorithm/" />
+        <category term="动态规划" scheme="https://blog.aayu.today/categories/algorithm/dp/" />
+        <category term="动态规划" scheme="https://blog.aayu.today/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" />
+        <updated>2022-07-29T08:36:44.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://blog.aayu.today/algorithm/dp/20220728-3/</id>
+        <title>动态规划：环形子数组的最大和</title>
+        <link rel="alternate" href="https://blog.aayu.today/algorithm/dp/20220728-3/"/>
+        <content type="html">&lt;h2 id=&#34;题目描述&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#题目描述&#34;&gt;#&lt;/a&gt; 题目描述&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/07/29/62151223a64ec.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;思路与题解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#思路与题解&#34;&gt;#&lt;/a&gt; 思路与题解&lt;/h2&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;思路&#34;&gt;
+&lt;p&gt;真的是不得不服，我只能想到双重 for 循环滚动求解环形数组，结果果不其然，时间是超时的，我真的想不出其他思路了，只能去求助官方题解了，谁知官方题解不说人话，就在我继续逛评论区时，看到惊为天人的思路，真的是不得不服，再次感叹呐&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;直接两种情况，1：最大数组和在中间，和平时一样解法 2：最大数组和是跨越头尾，回头了， 麻烦第二种，从两边出发往中间靠拢必须都是最大，那就说明中间段就是最小，找最小不就行了&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;学无止境，自己要学的东西还有很多啊～&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;惊为天人的题解&#34;&gt;
+&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Solution&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;maxSubarraySumCircular&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;vector&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&amp;amp;&lt;/span&gt; nums&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;// 情况 1 最大段就在中间&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; prev &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; mx &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; nums&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&lt;/span&gt;x &lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; nums&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            prev &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;x&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; prev &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; x&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            mx &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;mx&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; prev&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        prev &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;// 情况 2 最大段跨越首位，那就说明最小段在中间，太牛逼了这个想法，真的顶礼膜拜&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; sum &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; mi &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; nums&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&lt;/span&gt;x &lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; nums&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            prev &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;min&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;x&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; prev &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; x&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            mi &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;min&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;mi&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; prev&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            sum &lt;span class=&#34;token operator&#34;&gt;+=&lt;/span&gt; x&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; mx2 &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; sum &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt; mi&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;// 返回最大值，我还是笨呐，这里要判断 mx2 是否为 0 了，如果为 0，就表示全是负数，那就返回 mx&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; mx2 &lt;span class=&#34;token operator&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;?&lt;/span&gt; mx &lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;mx&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; mx2&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/div&gt;
+</content>
+        <category term="数据结构与算法" scheme="https://blog.aayu.today/categories/algorithm/" />
+        <category term="动态规划" scheme="https://blog.aayu.today/categories/algorithm/dp/" />
+        <category term="动态规划" scheme="https://blog.aayu.today/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" />
+        <updated>2022-07-28T16:32:01.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://blog.aayu.today/algorithm/dp/20220728-2/</id>
+        <title>动态规划：最大子数组和</title>
+        <link rel="alternate" href="https://blog.aayu.today/algorithm/dp/20220728-2/"/>
+        <content type="html">&lt;h2 id=&#34;问题描述&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#问题描述&#34;&gt;#&lt;/a&gt; 问题描述&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/07/28/99a09f0daa35d.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;思路与题解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#思路与题解&#34;&gt;#&lt;/a&gt; 思路与题解&lt;/h2&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;思路&#34;&gt;
+&lt;p&gt;这个题真是我的克星啊，不知道为什么，我脑子一直转不过弯来，总是会想着，要是中间有个小的负数把可以合成一个更大的连续数组隔开了怎么办，该怎么判断，我就一直死脑筋卡在这里了，感觉我也是有点笨笨的，呜呜呜～&lt;/p&gt;
+&lt;p&gt;但言归正传，看了官方题解后，发现我就真是没转过那个弯来，你就管他是不是一个小负数会把更大的数组隔开，反正只要判断当前数的前面，前面数组的连续和是否对该数有帮助不就行了，有帮助我就收为我有（nums [i] + prev），没有帮助我就另起炉灶（nums [i]），然后再判断我另起炉灶的数和已知的最大和谁大，不断更新最大和就行了，啊啊啊啊，我真是笨呐，为什么这个弯我就没有转过来，我需要老婆的安慰呜呜呜～&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;我的题解&#34;&gt;
+&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Solution&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;maxSubArray&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;vector&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&amp;amp;&lt;/span&gt; nums&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;// return dp(nums);&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;greedy&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;nums&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;private&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;dp&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;vector&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&amp;amp;&lt;/span&gt; nums&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; n &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; nums&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;size&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt; n&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;++&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;nums&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; nums&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+=&lt;/span&gt; nums&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; mx &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; nums&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&lt;/span&gt;x &lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; nums&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; mx &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;mx&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; x&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; mx&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;greedy&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;vector&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&amp;amp;&lt;/span&gt; nums&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;//prev 是轮询连续数组&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;//mx 维护最大的一个连续数组&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; prev &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; mx &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; nums&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&lt;/span&gt;x &lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; nums&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            prev &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;x&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; prev &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; x&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            mx &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;mx&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; prev&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;27&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; mx&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;28&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;29&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/div&gt;
+</content>
+        <category term="数据结构与算法" scheme="https://blog.aayu.today/categories/algorithm/" />
+        <category term="动态规划" scheme="https://blog.aayu.today/categories/algorithm/dp/" />
+        <category term="动态规划" scheme="https://blog.aayu.today/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" />
+        <updated>2022-07-28T15:34:32.000Z</updated>
+    </entry>
     <entry>
         <id>https://blog.aayu.today/algorithm/dp/20220728/</id>
         <title>动态规划：删除并获得点数</title>
@@ -579,221 +640,5 @@ Module not found: Error: Package path ./Source/Cesium is not exported from packa
         <category term="Ubuntu" scheme="https://blog.aayu.today/categories/linux/ubuntu/" />
         <category term="Ubuntu" scheme="https://blog.aayu.today/tags/Ubuntu/" />
         <updated>2022-03-12T11:15:00.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://blog.aayu.today/linux/ubuntu/20220312-2/</id>
-        <title>Ubuntu18.04更换国内源</title>
-        <link rel="alternate" href="https://blog.aayu.today/linux/ubuntu/20220312-2/"/>
-        <content type="html">&lt;h2 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h2&gt;
-&lt;p&gt;Ubuntu 本身的源使用的是国外的源，下载速度比较慢，不像 CentOS 一样 yum 安装的时候对镜像站点进项选择，所以选择了更换成国内的源。&lt;/p&gt;
-&lt;p&gt;以下内容整合自网络&lt;/p&gt;
-&lt;h2 id=&#34;操作步骤&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#操作步骤&#34;&gt;#&lt;/a&gt; 操作步骤&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;备份 /etc/apt/sources.list 文件&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;mv /etc/apt/sources.list /etc/apt/sourses.list.backup
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;新建 /etc/apt/sources.list 文件并添加以下内容&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;#163源
-deb http://mirrors.163.com/ubuntu/ bionic main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ bionic-security main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ bionic-updates main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ bionic-proposed main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ bionic-backports main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ bionic main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ bionic-security main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ bionic-updates main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ bionic-proposed main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ bionic-backports main restricted universe multiverse
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;更改完成之后执行以下命令&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;# apt update
-# apt upgrade
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;其他的一些apt命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#其他的一些apt命令&#34;&gt;#&lt;/a&gt; 其他的一些 apt 命令&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;sudo apt-get update  更新源
-sudo apt-get install package 安装包
-sudo apt-get remove package 删除包
-sudo apt-cache search package 搜索软件包
-sudo apt-cache show package  获取包的相关信息，如说明、大小、版本等
-sudo apt-get install package --reinstall  重新安装包
-sudo apt-get -f install  修复安装
-sudo apt-get remove package --purge 删除包，包括配置文件等
-sudo apt-get build-dep package 安装相关的编译环境
-sudo apt-get upgrade 更新已安装的包
-sudo apt-get dist-upgrade 升级系统
-sudo apt-cache depends package 了解使用该包依赖那些包
-sudo apt-cache rdepends package 查看该包被哪些包依赖
-sudo apt-get source package  下载该包的源代码
-sudo apt-get clean &amp;amp;&amp;amp; sudo apt-get autoclean 清理无用的包
-sudo apt-get check 检查是否有损坏的依赖
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;其他几个国内的源&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#其他几个国内的源&#34;&gt;#&lt;/a&gt; 其他几个国内的源&lt;/h2&gt;
-&lt;h3 id=&#34;中科大源&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#中科大源&#34;&gt;#&lt;/a&gt; 中科大源&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;#中科大源
-deb https://mirrors.ustc.edu.cn/ubuntu/ bionic main restricted universe multiverse
-deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
-deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
-deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
-deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
-deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic main restricted universe multiverse
-deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
-deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
-deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
-deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;阿里云源&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#阿里云源&#34;&gt;#&lt;/a&gt; 阿里云源&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;清华源&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#清华源&#34;&gt;#&lt;/a&gt; 清华源&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
-deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
-deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
-deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
-deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
-deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
-deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
-deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
-deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
-deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
-&lt;/code&gt;&lt;/pre&gt;
-</content>
-        <category term="Linux进阶之路" scheme="https://blog.aayu.today/categories/linux/" />
-        <category term="Ubuntu" scheme="https://blog.aayu.today/categories/linux/ubuntu/" />
-        <category term="Ubuntu" scheme="https://blog.aayu.today/tags/Ubuntu/" />
-        <updated>2022-03-12T11:10:00.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://blog.aayu.today/linux/ubuntu/20220312/</id>
-        <title>Ubuntu-解决2.5G网卡驱动问题</title>
-        <link rel="alternate" href="https://blog.aayu.today/linux/ubuntu/20220312/"/>
-        <content type="html">&lt;h2 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h2&gt;
-&lt;p&gt;由于 2.5G 网卡较新，各 linux 发行版的通用驱动已不适用，新装的系统会出现无法上网问题，由于国内网络环境去 Realtek 官网很难下载到驱动文件，故本文提供 github 上的 2.5G Ethernet LINUX driver r8125 for kernel up to 5.6 的版本驱动文件 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL1ZpdG8tVHUvcjgxMjU=&#34;&gt;r8125-9.003.05.tar.bz2&lt;/span&gt; 各位可以自行下载，并结合此教程安装。&lt;/p&gt;
-&lt;h2 id=&#34;本机环境&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#本机环境&#34;&gt;#&lt;/a&gt; 本机环境&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Ubuntu 18.04&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;安装步骤&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装步骤&#34;&gt;#&lt;/a&gt; 安装步骤&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;准备编译环境&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;sudo apt-get install --reinstall linux-headers-$(uname -r) linux-headers-generic build-essential dkms
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;解压源码到目录 /usr/src&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;sudo tar xvf r8125-9.003.05.tar.bz2 -C /usr/src
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;添加一个 dkms.conf 到 /usr/src/r8125-9.003.05/ 目录&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;# 先进入目录，方便后续操作
-cd /usr/src/r8125-9.003.05/
-# 创建dkms配置文件
-touch dkms.conf
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;编辑 dkms.conf 文件添加如下内容&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;PACKAGE_NAME=Realtek_r8125
-PACKAGE_VERSION=9.003.05
- 
-DEST_MODULE_LOCATION=/updates/dkms
-BUILT_MODULE_NAME=r8125
-BUILT_MODULE_LOCATION=src/
- 
-MAKE=&amp;quot;&#39;make&#39; -C src/ all&amp;quot;
-CLEAN=&amp;quot;&#39;make&#39; -C src/ clean&amp;quot;
-AUTOINSTALL=&amp;quot;yes&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&#34;5&#34;&gt;
-&lt;li&gt;编译安装&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;sudo dkms add -m r8125 -v 9.003.05
-sudo dkms build -m r8125 -v 9.003.05
-sudo dkms install -m r8125 -v 9.003.05
-sudo depmod -a
-sudo modprobe r8125
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;验证安装结果，运行如下命令即可看到 enxxx 的有线网接口&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;ifconfig -a
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;后记：这种方法安装完后，后续如果有内核版本升级，仍需重新编译安装，否则驱动无法运行。执行下方代码重新安装&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo dkms remove r8125/9.003.05 --all
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;但每次出问题都去执行代码太过繁琐，建议在安装目录下（本文是 /usr/src/r8125-9.003.05/）将命令打包成可执行文件 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2ZpeE5ldHdvcmtDYXJkLnNo&#34;&gt;fixNetworkCard.sh&lt;/span&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;创建文件，赋予可执行权限，并切链接到用户目录～方便使用&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;# 确保在安装目录
-cd /usr/src/r8125-9.003.05/
-# 创建文件名授权
-touch fixNetWorkCard.sh
-chmod 777 fixNetWorkCard.sh
-# 回到用户目录创建软连接
-cd ~
-ln -s /usr/src/r8125-9.003.05/fixNetWorkCard.sh ./
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;编辑 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2ZpeE5ldHdvcmtDYXJkLnNo&#34;&gt;fixNetworkCard.sh&lt;/span&gt; 文件粘贴以下内容&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;dkms remove r8125/9.003.05 --all
-dkms install -m r8125 -v 9.003.05
-depmod -a
-modprobe r8125
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;下次网卡驱动失效时，进行快速修复&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;cd ~
-sudo ./fixNetworkCard.sh
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;可能出现的问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#可能出现的问题&#34;&gt;#&lt;/a&gt; 可能出现的问题&lt;/h2&gt;
-&lt;h3 id=&#34;modprobe-加载模块时-出现权限不允许提醒operation-not-permitted&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#modprobe-加载模块时-出现权限不允许提醒operation-not-permitted&#34;&gt;#&lt;/a&gt; modprobe 加载模块时 出现权限不允许提醒；Operation not permitted&lt;/h3&gt;
-&lt;p&gt;这是由于 secure boot 的原因。如果 secure boot 是开启状态，内核不能安装自己定制的模块。&lt;/p&gt;
-&lt;p&gt;解决方法：我们进入 BIOS 把 secure boot 选项关掉；secure boot 大概的作用时为了保护内核的启动安全。&lt;/p&gt;
-&lt;p&gt;linux secure boot 状态查询：mokutil --sb-state&lt;br /&gt;
-&lt;img data-src=&#34;http://image.aayu.today/2022/03/12/3501b5b09bf75.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;h2 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RodW5kZXJfay9hcnRpY2xlL2RldGFpbHMvMTA2NDk0NTEx&#34;&gt;Ubuntu 安装 Realtek R8125 驱动&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bvb3JndXlfYW9zL2FydGljbGUvZGV0YWlscy8xMDgyNTA4Mzg=&#34;&gt;解决 linux 2.5G 网卡驱动问题&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuY25ibG9ncy5jb20veHV5YW93ZW4vcC9saW51eC1zZWN1cmUtYm9vdC1kaXNhYmxlLmh0bWw=&#34;&gt;modprobe 加载模块时 出现权限不允许提醒；Operation not permitted&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-        <category term="Linux进阶之路" scheme="https://blog.aayu.today/categories/linux/" />
-        <category term="Ubuntu" scheme="https://blog.aayu.today/categories/linux/ubuntu/" />
-        <category term="Ubuntu" scheme="https://blog.aayu.today/tags/Ubuntu/" />
-        <updated>2022-03-12T11:00:00.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://blog.aayu.today/basic-subjects/mathematics/advanced-mathematics/20220312/</id>
-        <title>高等数学-常用公式</title>
-        <link rel="alternate" href="https://blog.aayu.today/basic-subjects/mathematics/advanced-mathematics/20220312/"/>
-        <content type="html">&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/03/05/e8f45bd5ba680.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/03/12/f4c3e2d6045a0.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/03/12/186c8c62e410f.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/03/12/60421e57c4f60.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/03/12/aa7d9101fe782.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;http://image.aayu.today/2022/03/12/52bbf53b0c6ea.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</content>
-        <category term="基础学科" scheme="https://blog.aayu.today/categories/basic-subjects/" />
-        <category term="数学" scheme="https://blog.aayu.today/categories/basic-subjects/mathematics/" />
-        <category term="高等数学" scheme="https://blog.aayu.today/categories/basic-subjects/mathematics/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/" />
-        <category term="高等数学" scheme="https://blog.aayu.today/tags/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/" />
-        <updated>2022-03-11T16:00:00.000Z</updated>
     </entry>
 </feed>

@@ -13,7 +13,7 @@
     <category term=" NAS" />
     <entry>
         <id>https://blog.aayu.today/nas/zspace/20220822-2/</id>
-        <title>手拉手教你在极空间Docker上安装Gitea并实现SSH提交2</title>
+        <title>手拉手教你在极空间Docker上安装Gitea并实现SSH提交代码</title>
         <link rel="alternate" href="https://blog.aayu.today/nas/zspace/20220822-2/"/>
         <content type="html">&lt;h2 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h2&gt;
 &lt;p&gt;踩坑不容易啊，终于把这个需求实现了，这样我就可以把我的&lt;a href=&#34;&#34;&gt;博客小站&lt;/a&gt;通过 Git 部署到极空间上了，也可以把自己一些好玩的代码仓库上传到极空间上，再也不用担心 GitHub 的龟速访问，以及 Gitee 莫名其妙的代码审查了～～&lt;/p&gt;

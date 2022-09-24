@@ -148,7 +148,7 @@ AT+QMTPUB=,,,,&amp;quot;&amp;quot; After “&amp;gt;” is responded, input the 
 &lt;/ul&gt;
 &lt;h2 id=&#34;电子电路基础&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#电子电路基础&#34;&gt;#&lt;/a&gt; 电子电路基础&lt;/h2&gt;
 &lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;科普&#34;&gt;
-&lt;ul&gt;
+&lt;ul class=&#34;task-list&#34;&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWFhNDExZzc2VQ==&#34;&gt;电子电路入门没你想的那么简（复）单（杂）&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWszNDExVzdxeA==&#34;&gt;新手如何入门硬件 一本正经的电子电路入门&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMXFnNDExUzdWRw==&#34;&gt;锂电池充电的同时也能放电吗？&lt;/span&gt;&lt;/li&gt;
@@ -156,6 +156,9 @@ AT+QMTPUB=,,,,&amp;quot;&amp;quot; After “&amp;gt;” is responded, input the 
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMW81NHkxcDd4bw==&#34;&gt;OLED 和 LCD 屏幕最本质的区别，一个视频让你彻底搞懂！&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMW02NHkxRDdnYg==&#34;&gt;逆变！逆变！直流电如何变为交流电，一分钟动画让你看懂！&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMUZxNHkxNzd3bQ==&#34;&gt;数码管如何工作？超形象动画让你一看就懂&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMXJWNDExczdlWQ==&#34;&gt;从 1 万纳米到 5 纳米，只用了 50 年！平面晶体管和三维立体场效应管的区别？&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMVRLNHkxZzdHUA==&#34;&gt;6 年了，问世即巅峰的雷电 3 为何还不普及？&lt;/span&gt;&lt;/li&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_5&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_5&#34;&gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMVRoNDExaDc5eQ==&#34;&gt;火线零线和地线到底有什么区别？接地接到哪了？&lt;/span&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;基础元器件&#34;&gt;
@@ -164,13 +167,18 @@ AT+QMTPUB=,,,,&amp;quot;&amp;quot; After “&amp;gt;” is responded, input the 
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWt2NDExNTc0WQ==&#34;&gt;三极管是如何导电？超形象动画让你一看就懂！&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMUpxNHkxRTdRWg==&#34;&gt;三极管的饱和与放大&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMTM0NHkxNjdxbQ==&#34;&gt;Mos 管的工作原理&lt;/span&gt;&lt;/li&gt;
-&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_5&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_5&#34;&gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMTQ4NHkxYzdMdA==&#34;&gt;为什么芯片都是 CMOS 的呢？CMOS 和 TTL 有什么区别？TTL 与 CMOS 的高低电平的标准是多少（5V 为例）？&lt;/span&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_6&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_6&#34;&gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMTQ4NHkxYzdMdA==&#34;&gt;为什么芯片都是 CMOS 的呢？CMOS 和 TTL 有什么区别？TTL 与 CMOS 的高低电平的标准是多少（5V 为例）？&lt;/span&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;电路设计&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMUh2NHkxZjd3aA==&#34;&gt;芯片虽然复杂，但是内部电路不难、一看就懂&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMTExNHkxczdTWg==&#34;&gt;如何设计一个锂电池充电电路&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMXQ2NHkxYjd3Nw==&#34;&gt;怎么把 12V 电降到 5V？直流线性稳压降压电源原理&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMTY0NHkxcTc0dw==&#34;&gt;直流电 12V 变 5V 开关电源的工作原理 DC DC 降压稳压电路的基本原理&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWlNNHkxSzdpRw==&#34;&gt;怎么把 5V 电升到 12V？开关电源 BOOST 升压原理&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMVlRNHkxZjdQMQ==&#34;&gt;最简单，只要一个元器件，把 12V 降到 5V&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMXhYNHkxRjdMcA==&#34;&gt;电荷泵升压原理&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;面试相关&#34;&gt;

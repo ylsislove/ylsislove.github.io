@@ -22,9 +22,11 @@
 &lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_0&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_0&#34;&gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWszNHkxbTdMeQ==&#34;&gt;即时设计（1/14）&lt;/span&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;ps&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ps&#34;&gt;#&lt;/a&gt; PS&lt;/h2&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;技巧篇&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWllNHkxbzdMNg==&#34;&gt;1 分钟用 PS，你能把这张脸磨皮磨到吹弹可破吗？&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
 </content>
         <category term="FPV" scheme="https://blog.aayu.today/tags/FPV/" />
         <updated>2022-10-17T12:37:51.000Z</updated>

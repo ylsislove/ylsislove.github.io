@@ -8,9 +8,284 @@
     <author>
       <name>宇凌喵</name>
     </author>
-    <updated>2022-09-20T15:38:07.000Z</updated>
+    <updated>2022-10-17T12:37:51.000Z</updated>
     <category term="HoloLens" />
     <category term=" NAS" />
+    <entry>
+        <id>https://blog.aayu.today/resources/20221017/</id>
+        <title>🎨设计创作类资源汇总~</title>
+        <link rel="alternate" href="https://blog.aayu.today/resources/20221017/"/>
+        <content type="html">&lt;h2 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h2&gt;
+&lt;p&gt;我宣布，B 站是最好的学习平台 😎，但在 B 站上用收藏夹管理学习的知识总是不方便，各种分类啊什么的，收藏夹一多，就更乱了。既然我有博客，我为啥不在博客里列个目录呢，完全可以按照自己的想法分类和整理，所以便有了本篇博客，也方便后期自己进行回顾～～&lt;/p&gt;
+&lt;h2 id=&#34;正在学习&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#正在学习&#34;&gt;#&lt;/a&gt; 正在学习&lt;/h2&gt;
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_0&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_0&#34;&gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWszNHkxbTdMeQ==&#34;&gt;即时设计（1/14）&lt;/span&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;ps&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ps&#34;&gt;#&lt;/a&gt; PS&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWllNHkxbzdMNg==&#34;&gt;1 分钟用 PS，你能把这张脸磨皮磨到吹弹可破吗？&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="FPV" scheme="https://blog.aayu.today/tags/FPV/" />
+        <updated>2022-10-17T12:37:51.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://blog.aayu.today/resources/20221016/</id>
+        <title>🛩️无人机资源汇总~</title>
+        <link rel="alternate" href="https://blog.aayu.today/resources/20221016/"/>
+        <content type="html">&lt;h2 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h2&gt;
+&lt;p&gt;我宣布，B 站是最好的学习平台 😎，但在 B 站上用收藏夹管理学习的知识总是不方便，各种分类啊什么的，收藏夹一多，就更乱了。既然我有博客，我为啥不在博客里列个目录呢，完全可以按照自己的想法分类和整理，所以便有了本篇博客，也方便后期自己进行回顾～～&lt;/p&gt;
+&lt;h2 id=&#34;穿越机专栏&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#穿越机专栏&#34;&gt;#&lt;/a&gt; 穿越机专栏&lt;/h2&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;装机&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMThMNHkxQTdYdg==&#34;&gt;【教程】怪象 25 装机教程&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;接收机&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMXpMNDExajd3Zw==&#34;&gt;ELRS 高频头选配 + 接线 + 对频 + 调参 + 资源下载&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuZXhwcmVzc2xycy5vcmcvMi4wL3F1aWNrLXN0YXJ0L3RyYW5zbWl0dGVycy9sdWEtaG93dG8v&#34;&gt;ELRS LUA 脚本官方文档&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3JlYWQvY3YxMjg5MjAyNw==&#34;&gt;【讲解】ExpressLRS 讲解&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMUJRNHkxcjd3ZQ==&#34;&gt;【讲解】ELRS 高频头&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2ZwdmJhbmcuY29tL2ZvcnVtLnBocD9tb2Q9dmlld3RocmVhZCZhbXA7dGlkPTIxNzU=&#34;&gt;【教程】ELRS 固件刷写更新&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;遥控器&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMUQ2NHkxZTdDVA==&#34;&gt;机长风 - 空姐播报语音包&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMXRlNDExVzdDTD9wPTI=&#34;&gt;遥控器声音改成萌妹子教程&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMUJONDExOTdCOA==&#34;&gt;开源遥控器基础设定设置：开启通道映射，设置拨杆开关语音&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;地面站&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3JlYWQvY3YzNTU0NTEwLw==&#34;&gt;Betaflight 各种模式详解&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</content>
+        <category term="FPV" scheme="https://blog.aayu.today/tags/FPV/" />
+        <updated>2022-10-16T12:31:20.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://blog.aayu.today/english/grammar/20221005/</id>
+        <title>英语语法学习（3）：动词时态</title>
+        <link rel="alternate" href="https://blog.aayu.today/english/grammar/20221005/"/>
+        <content type="html">&lt;h2 id=&#34;视频讲解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#视频讲解&#34;&gt;#&lt;/a&gt; 视频讲解&lt;/h2&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMVhZNDExSjdhRz9wPTQ=&#34;&gt;【英语兔】英语语法精讲合集 (全面，通俗，有趣 | 从零打造系统语法体系)：动词时态&lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&#34;一表总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#一表总结&#34;&gt;#&lt;/a&gt; 一表总结&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;一般&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;进行&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;完成&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;完成进行&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;现在&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;一般现在时态 eat/eats&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;现在进行时态 am/is/are eating&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;现在完成时态 has/have eaten&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;现在完成进行时态 has/have been eating&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;过去&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;一般过去时态 ate&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;过去进行时态 was/were eating&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;过去完成时态 had eaten&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;过去完成进行时态 had been eating&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;将来&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;一般将来时态 will eat&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;将来进行时态 will be eating&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;将来完成时态 will have eaten&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;将来完成进行时态 will have been eating&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;过去将来&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;一般过去将来时态 would eat&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;过去将来进行时态 would be eating&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;过去将来完成时态 would have eaten&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;过去将来完成进行时态 would have been eating&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;note primary&#34;&gt;
+&lt;p&gt;will 往往也可以用 shall，有微妙区别，此处略过&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;基本概念&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基本概念&#34;&gt;#&lt;/a&gt; 基本概念&lt;/h2&gt;
+&lt;p&gt;&lt;span class=&#34;green&#34;&gt;时&lt;/span&gt;&lt;span class=&#34;orange&#34;&gt;态&lt;/span&gt; = 动作的&lt;span class=&#34;green&#34;&gt;时间&lt;/span&gt; + 动作的&lt;span class=&#34;orange&#34;&gt;状态&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&#34;动词时间&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#动词时间&#34;&gt;#&lt;/a&gt; 动词时间&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;现在&lt;/li&gt;
+&lt;li&gt;过去&lt;/li&gt;
+&lt;li&gt;将来&lt;/li&gt;
+&lt;li&gt;过去将来&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;过去将来&lt;/code&gt; 时态对应现实中的🌰： &lt;code&gt;前天我认为后天不会下雨&lt;/code&gt; 。这里就是以前自己感觉中的将来。&lt;/p&gt;
+&lt;h3 id=&#34;动词状态&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#动词状态&#34;&gt;#&lt;/a&gt; 动词状态&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;进行态。举个🌰：这只兔子正在吃着胡萝卜&lt;/li&gt;
+&lt;li&gt;完成态。举个🌰：这兔子吃掉了胡萝卜&lt;/li&gt;
+&lt;li&gt;完成进行态。举个🌰：这兔子从早上就开始吃胡萝卜，现在还没停呢&lt;/li&gt;
+&lt;li&gt;一般态。可以用来描述客观事实&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;过去将来完成进行&lt;/code&gt; 时态对应现实中的🌰： &lt;code&gt;老板上周叫我这周至少做完10页，我这不正加班赶着呢吗&lt;/code&gt; 。&lt;/p&gt;
+&lt;h2 id=&#34;时态的四大难点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#时态的四大难点&#34;&gt;#&lt;/a&gt; 时态的四大难点&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;难点 1：时＆态未分清&lt;/li&gt;
+&lt;li&gt;难点 2：动词变位&lt;/li&gt;
+&lt;li&gt;难点 3：助动词&lt;/li&gt;
+&lt;li&gt;难点 4：与其他语法概念混合&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;排列组合开始&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#排列组合开始&#34;&gt;#&lt;/a&gt; 排列组合开始&lt;/h2&gt;
+&lt;h3 id=&#34;现在时态&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#现在时态&#34;&gt;#&lt;/a&gt; 现在时态&lt;/h3&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;现在进行时&#34;&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;现在进行时（Present Progressive Tense）&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;这兔子现在正在吃胡萝卜&lt;/p&gt;
+&lt;p&gt;谓语动词：&lt;/p&gt;
+&lt;p&gt;举个🌰：&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;现在完成时&#34;&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;现在完成时（Present Perfect Tense）&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;这兔子现在已经吃完了胡萝卜&lt;/p&gt;
+&lt;p&gt;谓语动词：&lt;/p&gt;
+&lt;p&gt;举个🌰：&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;现在完成进行时&#34;&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;现在完成进行时（Present Perfect Progressive Tense）&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;这兔子现在已经吃完了胡萝卜，还要继续吃&lt;/p&gt;
+&lt;p&gt;谓语动词：&lt;/p&gt;
+&lt;p&gt;举个🌰：&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;现在一般时&#34;&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;现在一般时（Persent Simple Tense），或称 &lt;code&gt;一般现在时态&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;谓语动词：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;动词原形&lt;/li&gt;
+&lt;li&gt;动词原形 + s（第三人称单数）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;举个🌰：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I/You/We eat carrots.&lt;/li&gt;
+&lt;li&gt;She eat&lt;span class=&#34;orange&#34;&gt;s&lt;/span&gt; carrots.&lt;/li&gt;
+&lt;li&gt;The rabbit eat&lt;span class=&#34;orange&#34;&gt;s&lt;/span&gt; carrot.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;note warning&#34;&gt;
+&lt;p&gt;易错点： &lt;code&gt;现在&lt;/code&gt; 表示时间，不能和 &lt;code&gt;进行&lt;/code&gt; 状态搞混&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;一般现在时常见的三种情况：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;表达事实
+&lt;ul&gt;
+&lt;li&gt;I eat carrot&lt;span class=&#34;orange&#34;&gt;s&lt;/span&gt;. 我吃胡萝卜：我是吃胡萝卜这种食物的（这个是&lt;span class=&#34;orange&#34;&gt;事实&lt;/span&gt;陈述）&lt;/li&gt;
+&lt;li&gt;The rabbit eats carrot&lt;span class=&#34;orange&#34;&gt;s&lt;/span&gt;. 兔子吃胡萝卜：兔子是吃胡萝卜的动物（也是&lt;span class=&#34;orange&#34;&gt;事实&lt;/span&gt;陈述）&lt;/li&gt;
+&lt;li&gt;The sun rises in the east. 太阳从东边升起&lt;/li&gt;
+&lt;li&gt;The earth revolves around the sun. 地球绕太阳转&lt;/li&gt;
+&lt;li&gt;You like Papa Rabbit. 你喜欢兔老爹&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;表达习惯 / 重复的动作
+&lt;ul&gt;
+&lt;li&gt;I play basketball. 我打篮球（我有这个习惯）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;表示预计发生的事
+&lt;ul&gt;
+&lt;li&gt;The bus leaves at 8PM &lt;span class=&#34;green&#34;&gt;every day&lt;/span&gt;. 公车&lt;span class=&#34;green&#34;&gt;每晚&lt;/span&gt;八点离站。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;过去时态&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#过去时态&#34;&gt;#&lt;/a&gt; 过去时态&lt;/h3&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id2&#34; data-title=&#34;过去进行时&#34;&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;过去进行时（Past Progressive Tense）&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;这兔子昨天下午 3 点那个时候正在吃胡萝卜&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id2&#34; data-title=&#34;过去完成时&#34;&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;过去完成时（Past Perfect Tense）&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;这兔子昨天下午 3 点那个时候已经吃完了胡萝卜&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id2&#34; data-title=&#34;过去完成进行时&#34;&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;过去完成进行时（Past Perfect Progressive Tense）&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;这兔子昨天下午 3 点那个时候已经吃完了胡萝卜，还要继续吃&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id2&#34; data-title=&#34;过去一般时&#34;&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;过去一般时（Past Simple Tense）&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;或称 &lt;code&gt;一般过去时&lt;/code&gt; 。兔子过去吃胡萝卜&lt;/p&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;将来时态&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#将来时态&#34;&gt;#&lt;/a&gt; 将来时态&lt;/h3&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id3&#34; data-title=&#34;将来进行时&#34;&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;将来进行时（Future Progressive Tense）&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;这兔子明天下午 3 点那个时候会正在吃胡萝卜&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id3&#34; data-title=&#34;将来完成时&#34;&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;将来完成时（Future Perfect Tense）&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;这兔子明天下午 3 点那个时候会已经吃完了胡萝卜&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id3&#34; data-title=&#34;将来完成进行时&#34;&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;将来完成进行时（Future Perfect Progressive Tense）&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;这兔子明天下午 3 点那个时候已经吃完了一些胡萝卜，还要继续吃&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id3&#34; data-title=&#34;将来一般时&#34;&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;将来一般时（Future Simple Tense）&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;或称 &lt;code&gt;一般将来时&lt;/code&gt; 。兔子将来吃胡萝卜&lt;/p&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;过去时态-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#过去时态-2&#34;&gt;#&lt;/a&gt; 过去时态&lt;/h3&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id4&#34; data-title=&#34;过去将来进行时&#34;&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;过去将来进行时（Past Future Tense）&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id4&#34; data-title=&#34;过去将来完成时&#34;&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;过去将来完成时（Past Future Perfect Tense）&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id4&#34; data-title=&#34;过去将来完成进行时态&#34;&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;过去将来完成进行时态（Past Future Perfect Progressive Tense）&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id4&#34; data-title=&#34;过去将来一般时态&#34;&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;过去将来一般时态（Past Future Simple Tense）&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+        <category term="英语学习之路" scheme="https://blog.aayu.today/categories/english/" />
+        <category term="语法学习" scheme="https://blog.aayu.today/categories/english/%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/" />
+        <category term="英语语法学习" scheme="https://blog.aayu.today/tags/%E8%8B%B1%E8%AF%AD%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/" />
+        <updated>2022-10-04T17:07:04.000Z</updated>
+    </entry>
     <entry>
         <id>https://blog.aayu.today/hardware/iot/20220920/</id>
         <title>移远BC28模块连接华为云IoT平台</title>
@@ -129,7 +404,7 @@ AT+QMTPUB=,,,,&amp;quot;&amp;quot; After “&amp;gt;” is responded, input the 
     </entry>
     <entry>
         <id>https://blog.aayu.today/resources/20220919/</id>
-        <title>知识的海洋~</title>
+        <title>🌌知识的海洋~</title>
         <link rel="alternate" href="https://blog.aayu.today/resources/20220919/"/>
         <content type="html">&lt;h2 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h2&gt;
 &lt;p&gt;我宣布，B 站是最好的学习平台 😎，但在 B 站上用收藏夹管理学习的知识总是不方便，各种分类啊什么的，收藏夹一多，就更乱了。既然我有博客，我为啥不在博客里列个目录呢，完全可以按照自己的想法分类和整理，所以便有了本篇博客，也方便后期自己进行回顾～～&lt;/p&gt;
@@ -181,10 +456,6 @@ AT+QMTPUB=,,,,&amp;quot;&amp;quot; After “&amp;gt;” is responded, input the 
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMVFmNHkxNjdoNg==&#34;&gt;10 道题看你能答对 2 道，大多数只能答对 1 道题，硬件工程师面试真题&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;h2 id=&#34;ps&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ps&#34;&gt;#&lt;/a&gt; PS&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWllNHkxbzdMNg==&#34;&gt;1 分钟用 PS，你能把这张脸磨皮磨到吹弹可破吗？&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </content>
         <category term="FPGA" scheme="https://blog.aayu.today/tags/FPGA/" />
         <updated>2022-09-19T12:19:14.000Z</updated>
@@ -1122,65 +1393,5 @@ proxy_set_header Connection &#39;Upgrade&#39;;
         <category term="动态规划" scheme="https://blog.aayu.today/categories/algorithm/dp/" />
         <category term="动态规划" scheme="https://blog.aayu.today/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" />
         <updated>2022-07-26T11:31:14.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://blog.aayu.today/algorithm/dp/20220726/</id>
-        <title>动态规划：使用最小花费爬楼梯</title>
-        <link rel="alternate" href="https://blog.aayu.today/algorithm/dp/20220726/"/>
-        <content type="html">&lt;h2 id=&#34;题目描述&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#题目描述&#34;&gt;#&lt;/a&gt; 题目描述&lt;/h2&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2022/08/22/035f513090ae2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;h2 id=&#34;思路与题解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#思路与题解&#34;&gt;#&lt;/a&gt; 思路与题解&lt;/h2&gt;
-&lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;思路&#34;&gt;
-&lt;p&gt;这个题目描述的比较绕，如果有纸和笔的话，在纸上画一画会好很多，比如我胡乱画的如下&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2022/08/22/4416d31f461c5.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;看了官方题解，思路才比较清晰了&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2022/08/22/6e507951fe249.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;上述代码的时间复杂度和空间复杂度都是 O (n)。但也可以用滚动数组的方式将空间复杂度优化到 O (1)&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;我的题解&#34;&gt;
-&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Solution&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;minCostClimbingStairs&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;vector&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&amp;amp;&lt;/span&gt; cost&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; n &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; cost&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;size&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; res&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;n&lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        res&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; res&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        res&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; cost&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt; cost&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;?&lt;/span&gt; cost&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; cost&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; r1&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; r2&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt; n&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;++&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            r1 &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; res&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; cost&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token comment&#34;&gt;//r2 = res[i-1] + cost[i-1] + cost[i];&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            r2 &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; res&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; cost&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; cost&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            res&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; r1 &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt; r2 &lt;span class=&#34;token operator&#34;&gt;?&lt;/span&gt; r1 &lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; r2&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; res&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;n&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;官方题解&#34;&gt;
-&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Solution&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;minCostClimbingStairs&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;vector&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&amp;amp;&lt;/span&gt; cost&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; n &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; cost&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;size&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; prev &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; curr &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;&amp;lt;=&lt;/span&gt; n&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;++&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; next &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;min&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;curr &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; cost&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; prev &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; cost&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            prev &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; curr&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            curr &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; next&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; curr&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/div&gt;
-</content>
-        <category term="数据结构与算法" scheme="https://blog.aayu.today/categories/algorithm/" />
-        <category term="动态规划" scheme="https://blog.aayu.today/categories/algorithm/dp/" />
-        <category term="动态规划" scheme="https://blog.aayu.today/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" />
-        <updated>2022-07-25T16:00:00.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://blog.aayu.today/algorithm/dp/20220725-2/</id>
-        <title>动态规划：爬楼梯</title>
-        <link rel="alternate" href="https://blog.aayu.today/algorithm/dp/20220725-2/"/>
-        <content type="html">&lt;h2 id=&#34;题目描述&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#题目描述&#34;&gt;#&lt;/a&gt; 题目描述&lt;/h2&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2022/08/22/73d3d92e4a44c.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;h2 id=&#34;思路与题解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#思路与题解&#34;&gt;#&lt;/a&gt; 思路与题解&lt;/h2&gt;
-&lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;思路&#34;&gt;
-&lt;p&gt;n 阶，可以看成是 n-2 阶爬 2 阶后到达，也可以看成是 n-1 阶爬 1 阶后到达，所以就是 n-2 阶的爬取数 + n-1 阶的爬取数，翻译过来就是斐波那契数，easy~&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;我的题解&#34;&gt;
-&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Solution&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;climbStairs&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; n&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;//n 阶，可以看成是 n-2 阶爬 2 阶后到达&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;// 也可以看成是 n-1 阶爬 1 阶后到达&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;// 所以就是 n-2 阶的爬取数 + n-1 阶的爬取数&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;// 翻译过来就是斐波那契数，easy&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;n &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; n&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; p &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; q &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; r &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;&amp;lt;=&lt;/span&gt; n&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;++&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            p &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; q&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            q &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; r&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            r &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; p &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; q&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; r&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/div&gt;
-</content>
-        <category term="数据结构与算法" scheme="https://blog.aayu.today/categories/algorithm/" />
-        <category term="动态规划" scheme="https://blog.aayu.today/categories/algorithm/dp/" />
-        <category term="动态规划" scheme="https://blog.aayu.today/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" />
-        <updated>2022-07-24T16:00:00.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://blog.aayu.today/algorithm/dp/20220725/</id>
-        <title>动态规划：第N个泰波那契数</title>
-        <link rel="alternate" href="https://blog.aayu.today/algorithm/dp/20220725/"/>
-        <content type="html">&lt;h2 id=&#34;题目描述&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#题目描述&#34;&gt;#&lt;/a&gt; 题目描述&lt;/h2&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2022/08/22/b08130d1eee33.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;h2 id=&#34;思路与题解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#思路与题解&#34;&gt;#&lt;/a&gt; 思路与题解&lt;/h2&gt;
-&lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;思路&#34;&gt;
-&lt;p&gt;和昨天的&lt;a href=&#34;https://blog.aayu.today/algorithm/dp/20220724/&#34;&gt;斐波那契数&lt;/a&gt;思路一样，用滚动数组的思想，关键点在于设置 p、q、t、r 的初值，我们知道，r = p + q + t，第一个要计算的值是 Fn (3)，T_3 = 0 + 1 + 1，这是滚动之后的，所以 p、q、t、r 的初值应该是 0、0、1、1，这样滚动过后才能变成 0、1、1，就能算出 Fn (3) = r = 0 + 1 + 1。Easy~&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;我的代码&#34;&gt;
-&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Solution&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;tribonacci&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; n&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;n &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; n&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;n &lt;span class=&#34;token operator&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; p &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; q &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; t &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; r &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;&amp;lt;=&lt;/span&gt; n&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;++&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            p &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; q&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            q &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; t&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            t &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; r&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            r &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; p &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; q &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; t&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; r&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/div&gt;
-</content>
-        <category term="数据结构与算法" scheme="https://blog.aayu.today/categories/algorithm/" />
-        <category term="动态规划" scheme="https://blog.aayu.today/categories/algorithm/dp/" />
-        <category term="动态规划" scheme="https://blog.aayu.today/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" />
-        <updated>2022-07-24T16:00:00.000Z</updated>
     </entry>
 </feed>

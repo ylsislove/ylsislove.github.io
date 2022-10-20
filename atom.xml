@@ -19,7 +19,7 @@
 &lt;p&gt;我宣布，B 站是最好的学习平台 😎，但在 B 站上用收藏夹管理学习的知识总是不方便，各种分类啊什么的，收藏夹一多，就更乱了。既然我有博客，我为啥不在博客里列个目录呢，完全可以按照自己的想法分类和整理，所以便有了本篇博客，也方便后期自己进行回顾～～&lt;/p&gt;
 &lt;h2 id=&#34;正在学习&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#正在学习&#34;&gt;#&lt;/a&gt; 正在学习&lt;/h2&gt;
 &lt;ul class=&#34;task-list&#34;&gt;
-&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_0&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_0&#34;&gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWszNHkxbTdMeQ==&#34;&gt;即时设计（1/14）&lt;/span&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_0&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_0&#34;&gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWszNHkxbTdMeQ==&#34;&gt;即时设计（2/14）&lt;/span&gt;&lt;/label&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;ps&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ps&#34;&gt;#&lt;/a&gt; PS&lt;/h2&gt;
 &lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;技巧篇&#34;&gt;
@@ -52,16 +52,27 @@
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2ZwdmJhbmcuY29tL2ZvcnVtLnBocD9tb2Q9dmlld3RocmVhZCZhbXA7dGlkPTIxNzU=&#34;&gt;【教程】ELRS 固件刷写更新&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;图传&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2poZW1jdS9GQy1FU0MtRmlybXdhcmUvYmxvYi9tYWluL1ZUWDIwLTYwMC9WVFgyMC02MDAlMjBKU09OLnJhcg==&#34;&gt;VTX20-600 图传 JSON 表&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 &lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;遥控器&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMUQ2NHkxZTdDVA==&#34;&gt;机长风 - 空姐播报语音包&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMXRlNDExVzdDTD9wPTI=&#34;&gt;遥控器声音改成萌妹子教程&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMUJONDExOTdCOA==&#34;&gt;开源遥控器基础设定设置：开启通道映射，设置拨杆开关语音&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWk1NDExbTdxaw==&#34;&gt;穿越机打杆讲解&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;地面站&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3JlYWQvY3YzNTU0NTEwLw==&#34;&gt;Betaflight 各种模式详解&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;充电器&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMUI0NDExdjdTSA==&#34;&gt;IMAX B6 智能平衡充电器使用教程&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 </content>

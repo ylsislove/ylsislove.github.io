@@ -7,6 +7,18 @@
     "home_page_url": "https://blog.aayu.today",
     "items": [
         {
+            "id": "https://blog.aayu.today/android/20230207/",
+            "url": "https://blog.aayu.today/android/20230207/",
+            "title": "Android Studio和Unity3D联合开发环境配置",
+            "date_published": "2023-02-06T17:27:40.000Z",
+            "content_html": "<h2 id=\"android-sdk配置\"><a class=\"anchor\" href=\"#android-sdk配置\">#</a> Android SDK 配置</h2>\n<div class=\"note info\">\n<p>如果发现自己 Android SDK 无法刷新出新的东西，表明自己的网络可能不太行。推荐大家去「 <span class=\"exturl\" data-url=\"aHR0cHM6Ly94bi0tNGdxNjJmNTJnZHNzLmNvbS8jL3JlZ2lzdGVyP2NvZGU9RHlkSkJ1dlc=\">一元机场</span> 」平台订阅，每月 500G 流量月均 0.9 元，性价比拉满～</p>\n</div>\n<p>代理配置的过程，可以根据平台教程配置好「 Clash for Windows 」，配置好主程序默认端口，如下图，然后在 Android Studio 上配置好代理，如下图，即可～</p>\n<p class=\"gallery\" data-height=\"240\"><img data-src=\"https://image.aayu.today/uploads/2023/02/07/202302070143758.png\" alt=\"\" /><br />\n<img data-src=\"https://image.aayu.today/uploads/2023/02/07/202302070146621.png\" alt=\"\" /></p>\n<p>可以点击 Check connection 测试下 <code>https://dl.google.com/android/repository/repository2-3.xml</code>  能否访问成功，可以的话就表示代理没问题～</p>\n<p>确认自己手机的 Android 版本，例如，手机的 Android 版本是 10，就勾选这几项<br />\n<img data-src=\"https://image.aayu.today/uploads/2023/02/07/202302070130739.png\" alt=\"\" width=\"800px\" /></p>\n<div class=\"note warning\">\n<p>注意，默认安装的 Android SDK（例如 Android SDK Platform 33）不能删除，否则可能会有未知 Bug</p>\n</div>\n<p>然后在 SDK Tools，安装如下几项，可保后面与 Unity3D 联调不出奇奇怪怪的 Bug~</p>\n<p class=\"gallery\" data-height=\"240\"><img data-src=\"https://image.aayu.today/uploads/2023/02/07/202302070137372.png\" alt=\"\" /><br />\n<img data-src=\"https://image.aayu.today/uploads/2023/02/07/202302070139356.png\" alt=\"\" /><br />\n<img data-src=\"https://image.aayu.today/uploads/2023/02/07/202302070139818.png\" alt=\"\" /><br />\n<img data-src=\"https://image.aayu.today/uploads/2023/02/07/202302070140863.png\" alt=\"\" /></p>\n<p>创建一个空项目，当下方进度条的 Gradle 显示 Successful，表明 Android Studio 的配置可以初告一个段落了～</p>\n<h2 id=\"unity3d配置\"><a class=\"anchor\" href=\"#unity3d配置\">#</a> Unity3D 配置</h2>\n<p>以安装 2021 最新稳定版为例，在 Unity Hub 上安装如下</p>\n<p><img data-src=\"https://image.aayu.today/uploads/2023/02/07/202302070203190.png\" alt=\"\" width=\"800px\" /></p>\n<p>创建一个新项目，首先在「 File -&gt; Build Settings -&gt; Player Settings 」里设置下公司名和项目名，如下，unity 会自动组合成包名</p>\n<p class=\"gallery\" data-height=\"300\"><img data-src=\"https://image.aayu.today/uploads/2023/02/07/202302070217872.png\" alt=\"\" /><br />\n<img data-src=\"https://image.aayu.today/uploads/2023/02/07/202302070218601.png\" alt=\"\" /></p>\n<p>然后在「 Editor -&gt; Preference 」里正确设置 JDK，Android SDK 和 NDK，然后打开下 Gradle 的路径，记住 Unity 的 Gradle 的版本是多少，后面 Android Studio 联调时，需要和 Unity 保持一致</p>\n<p><img data-src=\"https://image.aayu.today/uploads/2023/02/07/202302070221586.png\" alt=\"\" width=\"800px\" /></p>\n<h2 id=\"创建android密钥文件\"><a class=\"anchor\" href=\"#创建android密钥文件\">#</a> 创建 Android 密钥文件</h2>\n<figure class=\"highlight bash\"><figcaption data-lang=\"bash\"></figcaption><table><tr><td data-num=\"1\"></td><td><pre>keytool -genkey -alias 密钥库名称 -keyalg RSA -validity 有效时间 -keystore 密钥库文件名</pre></td></tr></table></figure><p><img data-src=\"https://image.aayu.today/uploads/2023/02/07/202302070238825.png\" alt=\"\" /></p>\n<p>密钥文件将生成在运行命令的所在目录下～</p>\n",
+            "tags": [
+                "Android",
+                "Unity3D",
+                "Android Studio"
+            ]
+        },
+        {
             "id": "https://blog.aayu.today/front-end/basic/vue3+vite+ts%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/",
             "url": "https://blog.aayu.today/front-end/basic/vue3+vite+ts%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/",
             "title": "vue3+vite+ts学习笔记",
@@ -235,19 +247,6 @@
                 "英语学习之路",
                 "语法学习",
                 "英语语法学习"
-            ]
-        },
-        {
-            "id": "https://blog.aayu.today/nas/zspace/20220903/",
-            "url": "https://blog.aayu.today/nas/zspace/20220903/",
-            "title": "极空间上Docker迁移日记",
-            "date_published": "2022-09-03T14:26:15.000Z",
-            "content_html": "<p>今天买的固态硬盘终于到了，970 EVO Plus 1T，拿来做高速存储，实话说，Docker 升级前我还满忐忑的，因为看说明，Docker 升级会把所有的镜像和容器清空，所以我就连夜写了篇博客（<a href=\"https://blog.aayu.today/nas/zspace/20220902/\">极空间上常用 Docker 应用推荐 - 可玩性 +++</a>）把 Docker 容器的配置全部记录下来，把数据库都做了备份，才敢去安装固态硬盘作为高速存储，升级 Docker，结果很舒适，Docker 升级后，镜像的下载速度和容器的启动速度提高太多了，以 kangkang 大佬的宝塔镜像为例，升级前我记得镜像光下载就下载了 10 到 20 分钟左右吧，启动宝塔镜像也要花个十几分钟。在 Docker 升级后，宝塔镜像下载 1 分钟左右就下载好了，容器启动更快，几乎秒启，一两秒就启动了，这波升级真可以～</p>\n<p>但目前把文件夹映射到高速存储里好像还存在一些 bug，在容器的环境里不能指定其他用户，只能用 root 用户，否则挂载的文件夹就会找不到。比如我的 gitea 容器，在环境里指定了 git 用户去运行 gitea 程序，容器启动后，如果用 git 用户登录 SSH，是找不到挂载在高速存储里的文件夹，这个问题不知道极空间的开发人员是否有遇到。</p>\n<p>捣鼓了一中午，发现把 gitea 程序用 chown 命令设置成 root 用户，然后编辑 app.ini，也指定成 root 用户，虽然 gitea 程序能启动了，之前保存的代码仓库也能访问了，但之前配置成功的 SSH 提交代码就不行了，还是有一堆问题，所以木得办法，只能把 gitea 容器里的文件夹映射再改回去了，不用高速存储了</p>\n<p>还有其他问题，就是之前论坛里也有人提到的，nginx 的配置文件映射到高速存储，也是因为权限问题，不行，只能改为不用高速存储了</p>\n<p>kangkang 大佬的 mariadb 数据库镜像的文件映射到高速缓存里也会出问题，会导致数据库无法删除，再放回机械硬盘，就能删除不用的数据库了，只能说目前极空间的 Dokcer 还有很多 bug 要修复呀</p>\n<p>其他容器还在测试，后续如果发现其他问题再补充～</p>\n",
-            "tags": [
-                "我的NAS捣鼓笔记",
-                "极空间",
-                "NAS",
-                "极空间"
             ]
         }
     ]

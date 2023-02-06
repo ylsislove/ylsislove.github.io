@@ -22,7 +22,11 @@
             <category term="Unity3D" scheme="https://blog.aayu.today/tags/Unity3D/" />
             <category term="Android Studio" scheme="https://blog.aayu.today/tags/Android-Studio/" />
             <pubDate>Tue, 07 Feb 2023 01:27:40 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;android-sdk配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#android-sdk配置&#34;&gt;#&lt;/a&gt; Android SDK 配置&lt;/h2&gt;
+            <description><![CDATA[ &lt;h2 id=&#34;android-studio安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#android-studio安装&#34;&gt;#&lt;/a&gt; Android Studio 安装&lt;/h2&gt;
+&lt;p&gt;这里我使用的版本是 2021.2.1.15。放个百度网盘链接，需要的自取&lt;/p&gt;
+&lt;p&gt;链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9wYW4uYmFpZHUuY29tL3MvMUxGcEhXUXRRM1JCWXNZeHpMZ1FFd3c=&#34;&gt;https://pan.baidu.com/s/1LFpHWQtQ3RBYsYxzLgQEww&lt;/span&gt;&lt;br /&gt;
+ 提取码：wfjq&lt;/p&gt;
+&lt;h2 id=&#34;android-sdk配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#android-sdk配置&#34;&gt;#&lt;/a&gt; Android SDK 配置&lt;/h2&gt;
 &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;如果发现自己 Android SDK 无法刷新出新的东西，表明自己的网络可能不太行。推荐大家去「 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly94bi0tNGdxNjJmNTJnZHNzLmNvbS8jL3JlZ2lzdGVyP2NvZGU9RHlkSkJ1dlc=&#34;&gt;一元机场&lt;/span&gt; 」平台订阅，每月 500G 流量月均 0.9 元，性价比拉满～&lt;/p&gt;
 &lt;/div&gt;
@@ -38,9 +42,11 @@
 &lt;p&gt;然后在 SDK Tools，安装如下几项，可保后面与 Unity3D 联调不出奇奇怪怪的 Bug~&lt;/p&gt;
 &lt;p class=&#34;gallery&#34; data-height=&#34;240&#34;&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/02/07/202302070137372.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
 &lt;img data-src=&#34;https://image.aayu.today/uploads/2023/02/07/202302070139356.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
-&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/02/07/202302070139818.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/02/07/202302070413902.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
 &lt;img data-src=&#34;https://image.aayu.today/uploads/2023/02/07/202302070140863.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;创建一个空项目，当下方进度条的 Gradle 显示 Successful，表明 Android Studio 的配置可以初告一个段落了～&lt;/p&gt;
+&lt;p&gt;哦补充一个，在下图这里记得设置 JDK 为 8&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/02/07/202302070336910.png&#34; alt=&#34;&#34; width=&#34;800px&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;unity3d配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#unity3d配置&#34;&gt;#&lt;/a&gt; Unity3D 配置&lt;/h2&gt;
 &lt;p&gt;以安装 2021 最新稳定版为例，在 Unity Hub 上安装如下&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/02/07/202302070203190.png&#34; alt=&#34;&#34; width=&#34;800px&#34; /&gt;&lt;/p&gt;

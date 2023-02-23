@@ -8,9 +8,43 @@
     <author>
       <name>宇凌喵</name>
     </author>
-    <updated>2023-02-06T17:27:40.000Z</updated>
+    <updated>2023-02-23T18:55:49.000Z</updated>
     <category term="HoloLens" />
     <category term=" NAS" />
+    <entry>
+        <id>https://blog.aayu.today/nas/zspace/20230224/</id>
+        <title>自助编译极空间Z4思源笔记（siyuan）Docker项目</title>
+        <link rel="alternate" href="https://blog.aayu.today/nas/zspace/20230224/"/>
+        <content type="html">&lt;h2 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h2&gt;
+&lt;p&gt;最近入了思源笔记的坑，想好好的捣鼓捣鼓。去年在自己的极空间 NAS 上部署了思源笔记的 Docker 版，但版本已经跟不上了（D 大和 V 姐的更新太频繁了🤣），借助极空间论坛里大佬的帮助，我们自己也可以编译适配极空间 Z4 的最新版思源笔记 Docker 镜像了，于是在此记录下编译的过程～&lt;/p&gt;
+&lt;h2 id=&#34;编译环境&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#编译环境&#34;&gt;#&lt;/a&gt; 编译环境&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Ubuntu：Ubuntu 20.04.4 LTS x86_64&lt;/li&gt;
+&lt;li&gt;Docker&lt;/li&gt;
+&lt;li&gt;Git&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;步骤&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#步骤&#34;&gt;#&lt;/a&gt; 步骤&lt;/h2&gt;
+&lt;h3 id=&#34;拉取思源笔记最新源码&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#拉取思源笔记最新源码&#34;&gt;#&lt;/a&gt; 拉取思源笔记最新源码&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; clone https://github.com/siyuan-note/siyuan.git&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;拉取大佬的zsource仓库&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#拉取大佬的zsource仓库&#34;&gt;#&lt;/a&gt; 拉取大佬的 zsource 仓库&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; clone https://github.com/zs0urce/zsource.git&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;浏览了下大佬的 &lt;code&gt;Dockerfile.z4&lt;/code&gt;  文件，发现大佬主要是将 &lt;code&gt;addgroup --gid 1000 siyuan &amp;amp;&amp;amp; adduser --uid 1000 --ingroup siyuan --disabled-password siyuan&lt;/code&gt;  这个创建普通用户的命令去掉了，然后将 &lt;code&gt;USER siyuan&lt;/code&gt;  这个指定用户的命令也去掉了，这样就可以使用 root 用户了，从而解决极空间 Z4 上的权限问题了&lt;/p&gt;
+&lt;h3 id=&#34;拷贝&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#拷贝&#34;&gt;#&lt;/a&gt; 拷贝&lt;/h3&gt;
+&lt;p&gt;拷贝大佬项目中 siyuan 目录下的所有文件到思源笔记仓库代码目录中&lt;/p&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;国内的网络环境真的是太恶劣了，为了解决环境问题，深夜踩坑了一晚上，在更改了下 &lt;code&gt;Dockerfile.z4&lt;/code&gt;  文件后，终于解决了，欣慰啊&lt;br /&gt;
+文件中需要更改的地方我都已经高亮标出了～&lt;/p&gt;
+&lt;/div&gt;
+&lt;figure class=&#34;highlight dockerfile&#34;&gt;&lt;figcaption data-lang=&#34;Docker&#34;&gt;&lt;span&gt;Dockerfile.z4&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token instruction&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;FROM&lt;/span&gt; node:16 &lt;span class=&#34;token keyword&#34;&gt;as&lt;/span&gt; NODE_BUILD&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token instruction&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;WORKDIR&lt;/span&gt; /go/src/github.com/siyuan-note/siyuan/&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token instruction&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;ADD&lt;/span&gt; . /go/src/github.com/siyuan-note/siyuan/&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&#34;marked&#34;&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token instruction&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;RUN&lt;/span&gt; cd app &amp;amp;&amp;amp; npm install -g pnpm &amp;amp;&amp;amp; ELECTRON_MIRROR=https://cnpmjs.org/mirrors/electron/ pnpm install electron@21.4.1 -D &amp;amp;&amp;amp; pnpm install &amp;amp;&amp;amp; pnpm run build&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token instruction&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;FROM&lt;/span&gt; golang:1.19-alpine &lt;span class=&#34;token keyword&#34;&gt;as&lt;/span&gt; GO_BUILD&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token instruction&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;WORKDIR&lt;/span&gt; /go/src/github.com/siyuan-note/siyuan/&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token instruction&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;COPY&lt;/span&gt; &lt;span class=&#34;token options&#34;&gt;&lt;span class=&#34;token property&#34;&gt;--from&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;NODE_BUILD&lt;/span&gt;&lt;/span&gt; /go/src/github.com/siyuan-note/siyuan/ /go/src/github.com/siyuan-note/siyuan/&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token instruction&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;ENV&lt;/span&gt; GO111MODULE=on&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token instruction&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;ENV&lt;/span&gt; CGO_ENABLED=1&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&#34;marked&#34;&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token instruction&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;ENV&lt;/span&gt; GOPROXY=https://goproxy.cn,direct&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&#34;marked&#34;&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token instruction&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;RUN&lt;/span&gt; apk add --no-cache gcc musl-dev git &amp;amp;&amp;amp; &lt;span class=&#34;token operator&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&#34;marked&#34;&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    git config --global http.https://github.com.proxy socks5://192.168.1.101:10808 &amp;amp;&amp;amp; git config --global https.https://github.com.proxy socks5://192.168.1.101:10808 &amp;amp;&amp;amp; &lt;span class=&#34;token operator&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    cd kernel &amp;amp;&amp;amp; go build --tags fts5 -v -ldflags &lt;span class=&#34;token string&#34;&gt;&#34;-s -w -X github.com/siyuan-note/siyuan/kernel/util.Mode=prod&#34;&lt;/span&gt; &amp;amp;&amp;amp; &lt;span class=&#34;token operator&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    mkdir /opt/siyuan/ &amp;amp;&amp;amp; &lt;span class=&#34;token operator&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    mv /go/src/github.com/siyuan-note/siyuan/app/appearance/ /opt/siyuan/ &amp;amp;&amp;amp; &lt;span class=&#34;token operator&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    mv /go/src/github.com/siyuan-note/siyuan/app/stage/ /opt/siyuan/ &amp;amp;&amp;amp; &lt;span class=&#34;token operator&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    mv /go/src/github.com/siyuan-note/siyuan/app/guide/ /opt/siyuan/ &amp;amp;&amp;amp; &lt;span class=&#34;token operator&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    mv /go/src/github.com/siyuan-note/siyuan/kernel/kernel /opt/siyuan/ &amp;amp;&amp;amp; &lt;span class=&#34;token operator&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    find /opt/siyuan/ -name .git | xargs rm -rf&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token instruction&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;FROM&lt;/span&gt; ghcr.io/linuxserver/baseimage-alpine:3.16&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token instruction&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;LABEL&lt;/span&gt; maintainer=&lt;span class=&#34;token string&#34;&gt;&#34;wangyu&amp;lt;wangyu0814@foxmail.com&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token instruction&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;WORKDIR&lt;/span&gt; /opt/siyuan/&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token instruction&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;COPY&lt;/span&gt; &lt;span class=&#34;token options&#34;&gt;&lt;span class=&#34;token property&#34;&gt;--from&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;GO_BUILD&lt;/span&gt;&lt;/span&gt; /opt/siyuan/ /opt/siyuan/&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;27&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;28&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token instruction&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;RUN&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;29&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  apk add --no-cache &lt;span class=&#34;token operator&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;30&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    ca-certificates &lt;span class=&#34;token operator&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;31&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    tzdata &amp;amp;&amp;amp; &lt;span class=&#34;token operator&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;32&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  echo &lt;span class=&#34;token string&#34;&gt;&#34;**** cleanup ****&#34;&lt;/span&gt; &amp;amp;&amp;amp; &lt;span class=&#34;token operator&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;33&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  rm -rf &lt;span class=&#34;token operator&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;34&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      /root/.cache &lt;span class=&#34;token operator&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;35&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      /tmp/* &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;36&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;37&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# copy local files&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;38&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token instruction&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;COPY&lt;/span&gt; root/ /&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;39&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;40&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token instruction&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;ENV&lt;/span&gt; TZ=Asia/Shanghai&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;41&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token instruction&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;ENV&lt;/span&gt; WORKSPACE=/siyuan/workspace/&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;42&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token instruction&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;ENV&lt;/span&gt; ACCESSAUTHCODE=&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;43&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token instruction&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;ENV&lt;/span&gt; PUID=0&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;44&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token instruction&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;ENV&lt;/span&gt; PGID=0&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;45&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token instruction&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;VOLUME&lt;/span&gt; /siyuan/workspace/&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;46&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token instruction&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;EXPOSE&lt;/span&gt; 6806&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;编译&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#编译&#34;&gt;#&lt;/a&gt; 编译&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;sh&lt;/span&gt; ./build_z4.sh&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;成功之后，就可以参考我之前的文章【&lt;a href=&#34;https://blog.aayu.today/nas/zspace/20220902/&#34;&gt;极空间上常用 Docker 应用推荐 - 可玩性 +++&lt;/a&gt;】进行部署啦，bingo~&lt;/p&gt;
+&lt;p&gt;在此放一张编译成功，以及成功部署后的图吧，镇帖 (๑・̀ㅂ・́)و✧&lt;/p&gt;
+&lt;p class=&#34;gallery&#34; data-height=&#34;240&#34;&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/02/24/202302240658460.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/02/24/202302240659155.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</content>
+        <category term="我的NAS捣鼓笔记" scheme="https://blog.aayu.today/categories/nas/" />
+        <category term="极空间" scheme="https://blog.aayu.today/categories/nas/%E6%9E%81%E7%A9%BA%E9%97%B4/" />
+        <category term="NAS" scheme="https://blog.aayu.today/tags/NAS/" />
+        <category term="极空间" scheme="https://blog.aayu.today/tags/%E6%9E%81%E7%A9%BA%E9%97%B4/" />
+        <updated>2023-02-23T18:55:49.000Z</updated>
+    </entry>
     <entry>
         <id>https://blog.aayu.today/android/20230207/</id>
         <title>Android Studio和Unity3D联合开发环境配置</title>
@@ -1360,256 +1394,5 @@ AT+QMTPUB=,,,,&amp;quot;&amp;quot; After “&amp;gt;” is responded, input the 
         <category term="语法学习" scheme="https://blog.aayu.today/categories/english/%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/" />
         <category term="英语语法学习" scheme="https://blog.aayu.today/tags/%E8%8B%B1%E8%AF%AD%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/" />
         <updated>2022-09-17T12:09:21.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://blog.aayu.today/english/grammar/20220911/</id>
-        <title>英语语法学习（1）：语法综述</title>
-        <link rel="alternate" href="https://blog.aayu.today/english/grammar/20220911/"/>
-        <content type="html">&lt;h2 id=&#34;视频讲解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#视频讲解&#34;&gt;#&lt;/a&gt; 视频讲解&lt;/h2&gt;
-&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMVhZNDExSjdhRz9wPTI=&#34;&gt;【英语兔】英语语法精讲合集 (全面，通俗，有趣 | 从零打造系统语法体系)：英语语法综述&lt;/span&gt;&lt;/p&gt;
-&lt;h2 id=&#34;简单句&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简单句&#34;&gt;#&lt;/a&gt; 简单句&lt;/h2&gt;
-&lt;p&gt;概括为 &lt;code&gt;什么 + 怎么样&lt;/code&gt; ，对应两个句子成分： &lt;code&gt;主语 + 谓语&lt;/code&gt; ，即  &lt;code&gt;人/物 + 动作/发生了什么事&lt;/code&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;可以独立完成的动作： &lt;code&gt;主语 + 不及物动词&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;举个🌰：Papa Rabbit sleeps. 兔老爹睡觉&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;有 1 个动作的承受者： &lt;code&gt;主语 + 单及物动词 + 宾语&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;举个🌰：Papa Rabbit likes you. 兔老爹喜欢你&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;有 2 个动作承受者： &lt;code&gt;主语 + 双及物动词 + 间接宾语 + 直接宾语&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;举个🌰：Papa Rabbit teaches you English. 兔老爹教你英语。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;只有 1 个动作承受者（但需补充）： &lt;code&gt;主语 + 复杂及物动词 + 宾语 + （宾语）补语&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;举个🌰：Papa Rabbit considers you smart. 兔老爹认为你聪明&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;非动词： &lt;code&gt;主语 + 系动词 + （主语）补语/表语&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;举个🌰：Papa Rabbit is tall. 兔老爹是高的.&lt;/li&gt;
-&lt;li&gt;举个🌰：Papa Rabbit looks tall. 兔老爹看起来高.&lt;/li&gt;
-&lt;li&gt;举个🌰：Papa Rabbit smells nice. 兔老爹闻上去香.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;第 5 类句子的动词被称为 &lt;code&gt;连系动词 Linking Verbs&lt;/code&gt; ，即我们耳熟能详的 &lt;code&gt;系动词&lt;/code&gt; ～&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;note primary&#34;&gt;
-&lt;p&gt;还有一种 &lt;code&gt;八大句型&lt;/code&gt; 的分类，即在 &lt;code&gt;五大句型&lt;/code&gt; 基础上增加：&lt;br /&gt;
-6.  &lt;code&gt;There be&lt;/code&gt;  句型，如：There is a rabbit. 可理解为第五种句型 &lt;code&gt;主语 + 系动词 + 表语&lt;/code&gt; 的倒装&lt;br /&gt;
- 7.  &lt;code&gt;主语 + 谓语动词 + 状语&lt;/code&gt; ，如：I live in China. 可理解为第一种句型 &lt;code&gt;主语 + 谓语动词&lt;/code&gt; 的延伸（虽然这里的状语很重要）&lt;br /&gt;
-8.  &lt;code&gt;主语 + 谓语动词 + 宾语 + 状语&lt;/code&gt; ，如：I put the carrot on the table. 可理解为第四种句型 &lt;code&gt;主语 + 谓语动词 + 宾语 + 宾语补语&lt;/code&gt; 的延伸。&lt;/p&gt;
-&lt;/div&gt;
-&lt;h2 id=&#34;句子成分&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#句子成分&#34;&gt;#&lt;/a&gt; 句子成分&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;主语&lt;/li&gt;
-&lt;li&gt;谓语动词
-&lt;ul&gt;
-&lt;li&gt;谓语动词 ≠ 谓语， &lt;code&gt;谓语动词是谓语的一部分&lt;/code&gt; 。谓语动词按如上简单句可以分为 5 类：&lt;/li&gt;
-&lt;li&gt;可以独立完成的动作： &lt;code&gt;不及物动词&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;有一个动作的承受者： &lt;code&gt;单及物动词&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;有二个动作承受者： &lt;code&gt;双及物动词&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;只有一个动作承受者： &lt;code&gt;复杂及物动词&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;非动词： &lt;code&gt;系动词&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;宾语&lt;/li&gt;
-&lt;li&gt;宾语补语&lt;/li&gt;
-&lt;li&gt;主语补语（表语）&lt;/li&gt;
-&lt;li&gt;定语
-&lt;ul&gt;
-&lt;li&gt;主要用来修饰主语或宾语&lt;/li&gt;
-&lt;li&gt;举个🌰：The little white rabbit ate a large carrot. 这只小白兔吃了一根大胡萝卜&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;状语
-&lt;ul&gt;
-&lt;li&gt;主要用来修饰谓语动词&lt;/li&gt;
-&lt;li&gt;举个🌰：The rabbit ate quickly. 兔子快速地吃&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;同位语
-&lt;ul&gt;
-&lt;li&gt;主要用来再把主语或宾语重复一遍&lt;/li&gt;
-&lt;li&gt;举个🌰：Papa Rabbit, an English teacher, eats carrots. 兔老爹，一个英语老师，吃胡萝卜&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;你可能听过 &lt;code&gt;插入语&lt;/code&gt; ，如：This carrot, I think（插入语）, is very tasty. 但是插入语是独立的，不作句子成分&lt;/p&gt;
-&lt;/div&gt;
-&lt;h2 id=&#34;复合句compound-sentence&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#复合句compound-sentence&#34;&gt;#&lt;/a&gt; 复合句（Compound Sentence）&lt;/h2&gt;
-&lt;p&gt;或并列句，句子的简单叠加，也称并列复合句&lt;/p&gt;
-&lt;h2 id=&#34;复杂句complex-sentence&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#复杂句complex-sentence&#34;&gt;#&lt;/a&gt; 复杂句（Complex Sentence）&lt;/h2&gt;
-&lt;p&gt;从属关系，也称主从复合句，此处并不禁止套娃 😎&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;简单句，作主语，是主语从句&lt;/li&gt;
-&lt;li&gt;简单句，作宾语，是宾语从句&lt;/li&gt;
-&lt;li&gt;简单句，作主语补语（表语），是表语从句&lt;/li&gt;
-&lt;li&gt;简单句，作同位语，是同位语从句&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;以上这几种从句都具有名词的性质，所以又合称为名词性从句&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;简单句还可以&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;作定语，即定语从句&lt;/li&gt;
-&lt;li&gt;作状语，即状语从句&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;词性词类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#词性词类&#34;&gt;#&lt;/a&gt; 词性（词类）&lt;/h2&gt;
-&lt;p&gt;两个句子的句型相同，但包含的词类不一定相同，同一类句子成分里可能有不同的词类，词类可分为以下几类&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;名词，nouns，表人和物&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;举个🌰：Papa Rabbit is a  &lt;code&gt;rabbit&lt;/code&gt; . 兔老爹是只兔子&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;冠词，articles，英语中说明人和事物&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;如上个例子中的  &lt;code&gt;a&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;代词，pronouns，替代人和物&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;举个🌰： &lt;code&gt;I&lt;/code&gt;  am a rabbit. 我是只兔子&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;形容词，adjective，形容人和物&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;举个🌰：I am a  &lt;code&gt;smart&lt;/code&gt;  rabbit. 我是只聪明的兔子&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;数词，numerals，表数量&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;举个🌰：I ate  &lt;code&gt;two&lt;/code&gt;  carrots. 我吃了两根胡萝卜&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;副词，adverbs，修饰动词或形容词等等&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;举个🌰：I ate two carrots  &lt;code&gt;quickly&lt;/code&gt; . 我很快地吃了两根胡萝卜&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;介词，prepositions，表示和其他词关系的词&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;举个🌰：I ate two carrots  &lt;code&gt;with&lt;/code&gt;  chopsticks. 我用筷子吃了两根胡萝卜&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;叹词，interjections，表感叹&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;举个🌰： &lt;code&gt;Ah&lt;/code&gt; , the carrot is tasty! 啊，胡萝卜好美味！&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;连词，conjunctions，连接词和句&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;举个🌰：I ate two carrots and a potato,  &lt;code&gt;because&lt;/code&gt;  I was hungry. 我吃了两根胡萝卜和一个马铃薯，因为我饿了&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;以上九类和 &lt;code&gt;动词（verbs）&lt;/code&gt; 一起，便是英语的十大词类！&lt;/p&gt;
-&lt;div class=&#34;note primary&#34;&gt;
-&lt;p&gt;句子成分 ≠ 词类。句子成分和句子中的词类是完全不同的概念，如下图，除了谓语动词是动词，其他句子成分都可能包含不同的词类～&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2022/09/12/202209120213626.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;h3 id=&#34;谓语动词&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#谓语动词&#34;&gt;#&lt;/a&gt; 谓语动词&lt;/h3&gt;
-&lt;p&gt;谓语动词的三大本领&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;动作 &lt;code&gt;时&lt;/code&gt; 间
-&lt;ul&gt;
-&lt;li&gt;现在&lt;/li&gt;
-&lt;li&gt;过去&lt;/li&gt;
-&lt;li&gt;将来&lt;/li&gt;
-&lt;li&gt;过去将来&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;动作状 &lt;code&gt;态&lt;/code&gt;
-&lt;ul&gt;
-&lt;li&gt;一般&lt;/li&gt;
-&lt;li&gt;完成&lt;/li&gt;
-&lt;li&gt;进行&lt;/li&gt;
-&lt;li&gt;完成进行&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;以上时态进行排列组合，理论上有 16 种可能的时态（噔噔咚），如下图&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2022/09/12/202209120224828.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;动作假设，情感，也成为动词的 &lt;code&gt;语气&lt;/code&gt;
-&lt;ul&gt;
-&lt;li&gt;虚拟语气：If I were a rabbit ...&lt;/li&gt;
-&lt;li&gt;陈述语气：I ate a carrot and ...&lt;/li&gt;
-&lt;li&gt;祈使语气：Eat this carrot and ...&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id=&#34;助动词auxiliary-verbs&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#助动词auxiliary-verbs&#34;&gt;#&lt;/a&gt; 助动词（Auxiliary Verbs）&lt;/h4&gt;
-&lt;p&gt;谓语动词往往需要搭配助动词才能完成以上本领，以及表否定、可能性、必须性等意思&lt;/p&gt;
-&lt;p&gt;如动词 &lt;code&gt;吃：eat&lt;/code&gt; ，可以和助动词结合如下：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;（协助）表示 &lt;code&gt;吃过了（完成）&lt;/code&gt;  =&amp;gt; have =&amp;gt; have eaten&lt;/li&gt;
-&lt;li&gt;（协助）表示 &lt;code&gt;正在吃（进行）&lt;/code&gt;  =&amp;gt; be =&amp;gt; is eating&lt;/li&gt;
-&lt;li&gt;（协助）表示 &lt;code&gt;被吃&lt;/code&gt;  =&amp;gt; be =&amp;gt; be eaten&lt;/li&gt;
-&lt;li&gt;（协助）表示 &lt;code&gt;有能力吃&lt;/code&gt;  =&amp;gt; can =&amp;gt; can eat&lt;/li&gt;
-&lt;li&gt;（协助）表示 &lt;code&gt;有可能吃&lt;/code&gt;  =&amp;gt; might =&amp;gt; might eat&lt;/li&gt;
-&lt;li&gt;（协助）表示 &lt;code&gt;有义务吃&lt;/code&gt;  =&amp;gt; must =&amp;gt; must eaten&lt;/li&gt;
-&lt;li&gt;（协助）表示 &lt;code&gt;不吃（否定）&lt;/code&gt;  =&amp;gt; do =&amp;gt; do not eat&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;非谓语动词&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#非谓语动词&#34;&gt;#&lt;/a&gt; 非谓语动词&lt;/h3&gt;
-&lt;p&gt;非谓语动词可以取代几乎所有的从句，从而简化句子，需要结合上下文才能区分是谓语动词还是非谓语动词，如下&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;动词不定式，长得和谓语动词原形一样&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Rabbits  &lt;code&gt;eat&lt;/code&gt;  carrots.（谓语动词）&lt;/li&gt;
-&lt;li&gt;To  &lt;code&gt;eat&lt;/code&gt;  or not to eat?（非谓语动词 - 动词不定式）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;现在分词&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;动名词，长得和谓语动词进行状态一样&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;The rabbit is  &lt;code&gt;eating&lt;/code&gt; .（谓语动词）&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Eating&lt;/code&gt;  everything, I survived.（非谓语动词 - 现在分词）&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Eating&lt;/code&gt;  carrots is healthy.（非谓语动词 - 动名词）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;过去分词，长得和谓语动词的完成状态一样&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;The rabbit has  &lt;code&gt;eaten&lt;/code&gt; .（谓语动词）&lt;/li&gt;
-&lt;li&gt;This is a half- &lt;code&gt;eaten&lt;/code&gt;  carrot.（非谓语动词 - 过去分词）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; 总结&lt;/h2&gt;
-&lt;p&gt;英语语法的核心就是动词！&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2022/09/12/202209120258266.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</content>
-        <category term="英语学习之路" scheme="https://blog.aayu.today/categories/english/" />
-        <category term="语法学习" scheme="https://blog.aayu.today/categories/english/%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/" />
-        <category term="英语语法学习" scheme="https://blog.aayu.today/tags/%E8%8B%B1%E8%AF%AD%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/" />
-        <updated>2022-09-11T13:45:10.000Z</updated>
     </entry>
 </feed>

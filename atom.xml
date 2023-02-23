@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.aayu.today</id>
     <title>学无止境</title>
-    <subtitle>世界上大部分事，都没太大意义。真理与热爱除外。</subtitle>
+    <subtitle>世界上大部分事，都没太大意义。真理与热爱除外</subtitle>
     <icon>https://blog.aayu.today/images/favicon.ico</icon>
     <link href="https://blog.aayu.today" />
     <author>

@@ -29,7 +29,7 @@
             <pubDate>Tue, 28 Feb 2023 21:22:51 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h2&gt;
 &lt;p&gt;之前我写了一篇博客：&lt;a href=&#34;https://blog.aayu.today/artificial-intelligence/basic/20221217/&#34;&gt;Win11 安装 WSL2 和 Nvidia 驱动&lt;/a&gt;，记录了在 WSL2 里安装 CUDA，当时我选择了第二种安装方式，即用 WSL2 里的 MiniConda 去安装的 PyTorch 和 CUDA 等相关库，最近在使用中发现了这种方式的不足，即使用 &lt;code&gt;cuda&lt;/code&gt;  和 &lt;code&gt;nvcc&lt;/code&gt;  等命令时都要切换到 conda 相关环境下才能使用。比如我之前在 &lt;code&gt;py38&lt;/code&gt;  环境下安装的，当我进入终端处于 &lt;code&gt;base&lt;/code&gt;  环境下，nvcc 命令是不能使用哒&lt;/p&gt;
-&lt;p&gt;最近也在跟着恩培老师学 TensorRT，担忧用 MiniConda 安装的 CUDA 等库导致 TensorRT 安装失败，所以这次就试试直接在 &lt;code&gt;base&lt;/code&gt;  环境下用上一篇博客的第一种方式安装 &lt;code&gt;cuda&lt;/code&gt; 、 &lt;code&gt;cudnn&lt;/code&gt;  和 &lt;code&gt;tensorrt&lt;/code&gt;  吧～&lt;/p&gt;
+&lt;p&gt;最近也在跟着恩培老师学 TensorRT，担忧用 MiniConda 安装的 CUDA 等库可能导致 TensorRT 安装失败，所以这次就试试直接在 &lt;code&gt;base&lt;/code&gt;  环境下用上一篇博客的第一种方式安装 &lt;code&gt;cuda&lt;/code&gt; 、 &lt;code&gt;cudnn&lt;/code&gt;  和 &lt;code&gt;tensorrt&lt;/code&gt;  吧～&lt;/p&gt;
 &lt;p&gt;结果也是很顺利的安装成功啦，便在此记录下来哈哈～&lt;/p&gt;
 &lt;h2 id=&#34;tensorrt介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tensorrt介绍&#34;&gt;#&lt;/a&gt; TensorRT 介绍&lt;/h2&gt;
 &lt;ul&gt;

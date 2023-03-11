@@ -10,10 +10,83 @@
         </author>
         <description>真理和热爱是吾永生的追求</description>
         <language>zh-CN</language>
-        <pubDate>Tue, 28 Feb 2023 21:22:51 +0800</pubDate>
-        <lastBuildDate>Tue, 28 Feb 2023 21:22:51 +0800</lastBuildDate>
+        <pubDate>Sat, 11 Mar 2023 16:16:27 +0800</pubDate>
+        <lastBuildDate>Sat, 11 Mar 2023 16:16:27 +0800</lastBuildDate>
         <category term="HoloLens" />
         <category term=" NAS" />
+        <item>
+            <guid isPermalink="true">https://blog.aayu.today/nas/zspace/20230311/</guid>
+            <title>Docker版思源笔记加ChatGPT的超强搭配使用~</title>
+            <link>https://blog.aayu.today/nas/zspace/20230311/</link>
+            <category term="我的NAS捣鼓笔记" scheme="https://blog.aayu.today/categories/nas/" />
+            <category term="极空间" scheme="https://blog.aayu.today/categories/nas/%E6%9E%81%E7%A9%BA%E9%97%B4/" />
+            <category term="NAS" scheme="https://blog.aayu.today/tags/NAS/" />
+            <category term="极空间" scheme="https://blog.aayu.today/tags/%E6%9E%81%E7%A9%BA%E9%97%B4/" />
+            <category term="思源笔记" scheme="https://blog.aayu.today/tags/%E6%80%9D%E6%BA%90%E7%AC%94%E8%AE%B0/" />
+            <pubDate>Sat, 11 Mar 2023 16:16:27 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h2&gt;
+&lt;p&gt;前几天捣鼓了&lt;a href=&#34;https://blog.aayu.today/nas/zspace/20230224/&#34;&gt;自助编译极空间 Z4 思源笔记（siyuan）Docker 项目&lt;/a&gt;，思源笔记的开发者 D 大和 V 姐更新真的是太频繁了，几乎每周都会有新的功能和特性，最让我感动的是我凌晨去 GitHub 的 Issues 上给他们提了些&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3NpeXVhbi1ub3RlL3NpeXVhbi9pc3N1ZXMvNzYxNQ==&#34;&gt;改进意见&lt;/span&gt;，结果当天就把功能完善了，所以真的很想让我吹一波🤣&lt;/p&gt;
+&lt;p&gt;最新版本的思源笔记已经更新到&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3NpeXVhbi1ub3RlL3NpeXVhbi9yZWxlYXNlcy90YWcvdjIuNy45&#34;&gt; v2.7.9&lt;/span&gt; 了，在该版本中完善了 &lt;code&gt;针对内容块的人工智能辅助支持&lt;/code&gt; ，对，就是可以在思源笔记里使用 OpenAI 的 Chat API 对笔记内容：&lt;/p&gt;
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_0&#34; checked=&#34;true&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_0&#34;&gt; 续写&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_1&#34; checked=&#34;true&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_1&#34;&gt; 翻译&lt;/label&gt;
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_2&#34; checked=&#34;true&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_2&#34;&gt; 中文&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_3&#34; checked=&#34;true&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_3&#34;&gt; 日文&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_4&#34; checked=&#34;true&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_4&#34;&gt; 韩文&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_5&#34; checked=&#34;true&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_5&#34;&gt; 英文&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_6&#34; checked=&#34;true&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_6&#34;&gt; 西班牙文&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_7&#34; checked=&#34;true&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_7&#34;&gt; 法文&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_8&#34; checked=&#34;true&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_8&#34;&gt; 德文&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_9&#34; checked=&#34;true&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_9&#34;&gt; 提取摘要&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_10&#34; checked=&#34;true&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_10&#34;&gt; 头脑风暴&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_11&#34; checked=&#34;true&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_11&#34;&gt; 修正语法和拼写&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_12&#34; checked=&#34;true&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_12&#34;&gt; 自定义操作...&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;note primary&#34;&gt;
+&lt;p&gt;有了这些功能后，我觉得思源笔记已经很适合进行学术论文的归纳和整理了，真的是未来可期啊～&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;使用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用&#34;&gt;#&lt;/a&gt; 使用&lt;/h2&gt;
+&lt;p&gt;我也紧跟思源笔记官方的脚步，从 v2.7.6 开始每个发行版本我都会把它编译成适配于极空间 Z4 的&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9odWIuZG9ja2VyLmNvbS9yZXBvc2l0b3J5L2RvY2tlci95bHNpc2xvdmUvc2l5dWFu&#34;&gt; Docker 镜像&lt;/span&gt;，所以如果有小伙伴也用的是极空间 Z4，就可以用我编译好的镜像去尝试一下啦～&lt;/p&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;其他的部署环境可以直接用思源笔记官方的 Docker 镜像就行：b3log/siyuan:latest&lt;br /&gt;
+ 本人编译的镜像只适合极空间 Z4 设备哦&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;拉取最新的 v2.7.9 镜像版本，容器配置如下&lt;/p&gt;
+&lt;p class=&#34;gallery&#34; data-height=&#34;240&#34;&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/03/11/202303111602935.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/03/11/202303111603901.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/03/11/202303111603755.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/03/11/202303111604932.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/03/11/202303111604137.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/03/11/202303111608817.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;国内使用 openai api key 是需要点手段的，可以通过配置 &lt;code&gt;SIYUAN_OPENAI_API_BASE_URL&lt;/code&gt;  或 &lt;code&gt;SIYUAN_OPENAI_API_PROXY&lt;/code&gt;  环境变量来解决，这两个环境变量使用一个就行，不然多层代理后网络响应时间会变长。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SIYUAN_OPENAI_API_BASE_URL：默认值为 &lt;code&gt;https://api.openai.com/v1&lt;/code&gt; ，可以配置成 &lt;code&gt;https://你的代理域名/v1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;SIYUAN_OPENAI_API_PROXY：如果自己会挂代理，就可以配置成诸如 &lt;code&gt;socks5://127.0.0.1:10808&lt;/code&gt;  的值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;p&gt;以上配置好后，应用容器即可开始愉快的玩耍啦～&lt;/p&gt;
+&lt;h2 id=&#34;体验&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#体验&#34;&gt;#&lt;/a&gt; 体验&lt;/h2&gt;
+&lt;h3 id=&#34;续写&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#续写&#34;&gt;#&lt;/a&gt; 续写&lt;/h3&gt;
+&lt;p class=&#34;gallery&#34; data-height=&#34;240&#34;&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/03/11/202303111623782.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/03/11/202303111624662.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;翻译和提取摘要&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#翻译和提取摘要&#34;&gt;#&lt;/a&gt; 翻译和提取摘要&lt;/h3&gt;
+&lt;p class=&#34;gallery&#34; data-height=&#34;240&#34;&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/03/11/202303111632566.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/03/11/202303111634737.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;头脑风暴&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#头脑风暴&#34;&gt;#&lt;/a&gt; 头脑风暴&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/03/11/202303111636897.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;修正语法和拼写&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#修正语法和拼写&#34;&gt;#&lt;/a&gt; 修正语法和拼写&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/03/11/202303111643940.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;自定义操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#自定义操作&#34;&gt;#&lt;/a&gt; 自定义操作&lt;/h3&gt;
+&lt;p class=&#34;gallery&#34; data-height=&#34;240&#34;&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/03/11/202303111644804.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/03/11/202303111645273.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; 总结&lt;/h2&gt;
+&lt;p&gt;未来可期～&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://blog.aayu.today/artificial-intelligence/basic/20230208/</guid>
             <title>Win11基于WSL2安装CUDA、cuDNN和TensorRT</title>
@@ -1329,122 +1402,6 @@
 &lt;p&gt;过去将来一般时态（Past Future Simple Tense）&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://blog.aayu.today/hardware/iot/20220920/</guid>
-            <title>移远BC28模块连接华为云IoT平台</title>
-            <link>https://blog.aayu.today/hardware/iot/20220920/</link>
-            <category term="硬件修炼手册" scheme="https://blog.aayu.today/categories/hardware/" />
-            <category term="物联网" scheme="https://blog.aayu.today/categories/hardware/iot/" />
-            <category term="IoT" scheme="https://blog.aayu.today/tags/IoT/" />
-            <category term="BC28" scheme="https://blog.aayu.today/tags/BC28/" />
-            <pubDate>Tue, 20 Sep 2022 23:38:07 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;基础命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基础命令&#34;&gt;#&lt;/a&gt; 基础命令&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;命令&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;说明&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;AT+CFUN=1&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;开启射频（全功能模式）。如果关闭了自动连接默认 + CFUN:0，需要手动开启&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;AT+NCCID&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;读取 SIM 卡 ID，如果能返回 + NCCID: 开头的一串 ID，证明 SIM 与 NB-IoT 设备的物理连接没问题（不能排除卡欠费等问题）&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;AT+CGATT=1&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;让 NB-IoT 设备去附着网络&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;AT+CSQ&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;查询卡信号，如果是 + CSQ:99,99，表示当前没信号&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;AT+CGSN=1&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;返回 IMEI（国际移动设备识别码）&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;AT+CIMI&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;获得 IMSI。用来读取或者识别 SIM 卡的 IMSI（国际移动签署者标识），识别移动设备附带的 SIM 卡标识。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;AT+CEREG?&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;查询 NB 网络注册状态，+CEREG:0,1 表示已注册到归属网络&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;连接教程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#连接教程&#34;&gt;#&lt;/a&gt; 连接教程&lt;/h2&gt;
-&lt;p&gt;待更，先放一个大概步骤吧，后续有空再整理&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;AT&lt;/li&gt;
-&lt;li&gt;AT+CFUN? 是否开启了频射&lt;/li&gt;
-&lt;li&gt;AT+CFUN=1 开启频射&lt;/li&gt;
-&lt;li&gt;AT+CGATT? 是否附着网络&lt;/li&gt;
-&lt;li&gt;AT+CGATT=1 附着网络&lt;/li&gt;
-&lt;li&gt;AT+CSQ 查询信号强度&lt;/li&gt;
-&lt;li&gt;AT+NCCID 物联网卡是否正常接入&lt;/li&gt;
-&lt;li&gt;AT+CGSN=1 查询设备标识码&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;查看配置项&lt;br /&gt;
- AT+QMTCFG=?&lt;br /&gt;
-AT+QMTCFG=&amp;quot;version&amp;quot;,0&lt;/p&gt;
-&lt;/div&gt;
-&lt;ol start=&#34;9&#34;&gt;
-&lt;li&gt;AT+QMTCFG=&amp;quot;version&amp;quot;,0,4 设置 MQTT 版本为 3.1.1&lt;/li&gt;
-&lt;li&gt;AT+QMTOPEN=0,&amp;quot;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovLzNmOWU4NWI0MGEuaW90LW1xdHRzLmNuLW5vcnRoLTQubXlodWF3ZWljbG91ZC5jb20=&#34;&gt;3f9e85b40a.iot-mqtts.cn-north-4.myhuaweicloud.com&lt;/span&gt;&amp;quot;,1883&lt;/li&gt;
-&lt;li&gt;AT+QMTCONN=0,&amp;quot;&amp;lt;ClientId&amp;gt;&amp;quot;,&amp;quot;&amp;lt;Username&amp;gt;&amp;quot;,&amp;quot;&amp;lt;Password&amp;gt;&amp;quot;&lt;/li&gt;
-&lt;li&gt;AT+QMTSUB=0,1,&amp;quot;$oc/devices/&amp;lt;device_id&amp;gt;/user/messages/up&amp;quot;,0 订阅消息&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;note warning&#34;&gt;
-&lt;p&gt;华为云物联网平台不能直接订阅预设的 Topic：AT+QMTSUB=0,1,&amp;quot;$oc/devices/&amp;lt;device_id&amp;gt;/sys/messages/up&amp;quot;,0&lt;/p&gt;
-&lt;/div&gt;
-&lt;ol start=&#34;13&#34;&gt;
-&lt;li&gt;AT+QMTPUB=0,0,0,0,&amp;quot;$oc/devices/&amp;lt;device_id&amp;gt;/user/messages/up&amp;quot; 发布消息&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;此处被坑惨了&lt;/p&gt;
-&lt;/div&gt;
-&lt;h2 id=&#34;被坑笔记&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#被坑笔记&#34;&gt;#&lt;/a&gt; 被坑笔记&lt;/h2&gt;
-&lt;p&gt;哇，真的是被坑惨了，我用的是 BC28 模块，整个 MQTT 连接流程走下来，就一直卡在用  &lt;code&gt;AT+QMTPUB=&lt;/code&gt;  命令发布消息这里，我这里参考了  &lt;code&gt;Quectel_BC26BC20_MQTT_应用指导_V1.0&lt;/code&gt;  BC26 的 MQTT 应用指导手册，其中对  &lt;code&gt;AT+QMTPUB=&lt;/code&gt;  命令的介绍如下图&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2022/09/21/202209210236879.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;我死活无法用  &lt;code&gt;AT+QMTPUB=&amp;lt;TCP_connectID&amp;gt;,&amp;lt;msgID&amp;gt;,&amp;lt;qos&amp;gt;,&amp;lt;retain&amp;gt;,&amp;quot;&amp;lt;topic&amp;gt;&amp;quot;,&amp;quot;&amp;lt;msg&amp;gt;&amp;quot;&lt;/code&gt;  这个命令来直接发布消息，QCOM 客户端直接给我返回  &lt;code&gt;ERROR&lt;/code&gt; ，看到这个 ERROR 我都要欲哭无泪了，为啥啊，为啥我不能一次性发布消息，如果用上图所示的  &lt;code&gt;进入数据模式&lt;/code&gt;  发布消息，我又咋在代码里面按  &lt;code&gt;Ctrl+Z&lt;/code&gt;  结束发送呢，哭死&lt;/p&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;在找资料过程中的一个意外收获，在出现 &amp;gt; 这个符号后，发送完自己想发送的数据后，直接用（HEX String）模式（针对 QCOM 客户端），也是就 16 进制模式发送 1A 字符串，就可以结束发送啦，这样用代码也就可以实现了  &lt;code&gt;进入数据模式&lt;/code&gt;  的发布消息命令了，真的是最后一根稻草了&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;我就找啊找，找啊找，根本就在网上找不到相关的帖子说 BC28 模块的  &lt;code&gt;AT+QMTPUB=&lt;/code&gt;  命令报错，呜呜呜，但天无绝人之路，就在我以为是我的 BC28 模块的固件版本太老，想升级固件，用  &lt;code&gt;BC28JAR01A08&lt;/code&gt;  为关键字在 Bing 上搜索，终于让我找到一个相关的帖子：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9mb3J1bXMucXVlY3RlbC5jb20vdC9iYzI2LW1xdHQtb2stYmMyOC1mYWlsLzQxNDg=&#34;&gt;BC26 MQTT OK BC28 Fail&lt;/span&gt; 说这事了，真的流泪了&lt;/p&gt;
-&lt;p&gt;移远的技术支持也好心的回复了这个帖子&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;BC28 Special characters are not supported.&lt;br /&gt;
-You can use the following modes to publish messages.&lt;br /&gt;
-AT+QMTPUB=,,,,&amp;quot;&amp;quot; After “&amp;gt;” is responded, input the data to be sent. Tap “CTRL+Z” to send, and tap “ESC” to cancel the operation.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;原来真的是 BC28 不支持直接发布消息的命令啊，知道真相的我眼泪掉下来。总之，这个坑也真的是让我花了一晚上的时间去查找资料，还是很有必要在这记录下来的，生活不易，猫猫叹气&lt;/p&gt;
-&lt;h2 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYnMuaHVhd2VpY2xvdWQuY29tL2Jsb2dzLzE5MTcwNg==&#34;&gt;BC35/BC28 无法入网的原因及排错方法&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9mb3J1bXMucXVlY3RlbC5jb20vdC9iYzI2LW1xdHQtb2stYmMyOC1mYWlsLzQxNDg=&#34;&gt;BC26 MQTT OK BC28 Fail&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vYXNuYWlsL3AvMTI4MTAzNTkuaHRtbA==&#34;&gt;BC26 之 MQTT 协议 AT 命令&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RpYW50YW5nbW9rZS9hcnRpY2xlL2RldGFpbHMvOTI3ODk4MDE=&#34;&gt;BC28 使用 MQTT 协议 连接 OneNET 平台的流程解析&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYnMuaHVhd2VpY2xvdWQuY29tL2ZvcnVtL3RocmVhZC0xOTU2MDAtMS0xLmh0bWw=&#34;&gt;为什么 NB-IOT 模组在华为云平台一直显示未激活？&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9jeHltbS5uZXQvYXJ0aWNsZS9xcV80MTI5ODI0NS8xMDY4MDMyOTg=&#34;&gt;BC28_MQTT 调试笔记&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hlbHBpbmZvL2FydGljbGUvZGV0YWlscy8xMTkzNDE5NTE=&#34;&gt;移远 BC20 连接 MQTT 服务器小记&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ3NTQ4NDEvYXJ0aWNsZS9kZXRhaWxzLzg0NTczMTc4&#34;&gt;物联网 - 移远 M26 模块 MQTT 开发（AT 命令）&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYnMuaHVhd2VpY2xvdWQuY29tL2ZvcnVtL3RocmVhZC0xOTAxNTQtMS0xLmh0bWw=&#34;&gt;【BC28】【注册网络】AT+NMSTATUS 查询出现的状态分别代表什么意思&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;低功耗模式相关问题链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#低功耗模式相关问题链接&#34;&gt;#&lt;/a&gt; 低功耗模式相关问题链接&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYnMuaHVhd2VpY2xvdWQuY29tL2ZvcnVtL3RocmVhZC0xNjY5My0xLTEuaHRtbA==&#34;&gt;BC35-G 模块的初始化流程，基于 COAP 协议，怎么优化更好？&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYnMuaHVhd2VpY2xvdWQuY29tL2ZvcnVtL3RocmVhZC0xODU2Mi0xLTEuaHRtbA==&#34;&gt;BC28 PSM 进入问题&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYnMuaHVhd2VpY2xvdWQuY29tL2ZvcnVtL3RocmVhZC0zNDMxMy0xLTEuaHRtbA==&#34;&gt;你们的移动 NB 卡，PSM 模式下 54 分钟会自动唤醒一次吗？&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYnMuaHVhd2VpY2xvdWQuY29tL2ZvcnVtL3RocmVhZC0xMjMzMzAtMS0xLmh0bWw=&#34;&gt;移远 BC28 模块进入 PSM 模式后功耗较大，且还能进行 AT 指令的回复&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
  ]]></description>
         </item>
     </channel>

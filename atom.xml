@@ -8,9 +8,35 @@
     <author>
       <name>宇凌喵</name>
     </author>
-    <updated>2023-03-11T08:16:27.000Z</updated>
+    <updated>2023-03-29T13:00:51.000Z</updated>
     <category term="HoloLens" />
     <category term=" NAS" />
+    <entry>
+        <id>https://blog.aayu.today/skill/tools/20230329/</id>
+        <title>如何用New Bing进行辅助科研</title>
+        <link rel="alternate" href="https://blog.aayu.today/skill/tools/20230329/"/>
+        <content type="html">&lt;h2 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h2&gt;
+&lt;p&gt;多说无益，直接上图&lt;/p&gt;
+&lt;h2 id=&#34;技巧&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#技巧&#34;&gt;#&lt;/a&gt; 技巧&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/03/29/202303292102800.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/03/29/202303292102843.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/03/29/202303292102842.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/03/29/202303292102850.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/03/29/202303292103596.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/03/29/202303292103856.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/03/29/202303292104293.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/03/29/202303292104472.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/03/29/202303292104688.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;我是真的被震撼到了，这篇论文中我之前一直有一个点没搞懂，就是如何判断敲击事件的发生的，woc 今天让 new bing 去读，能给我详细的解释清论文的原理，还能给我写出示例代码 😱&lt;/p&gt;
+&lt;p&gt;就给人一种感觉就是，有一个导师能给你详细的讲解论文。最后还尝试了下 new bing 能不能读公式，依旧牛逼，虽然公式找错了，但它是真能读懂公式啊&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/03/29/202303292105534.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;最后想感慨就是，限制 new bing 或 chatgpt 的已经不是模型能力问题了，而是我的想象力和提问方式 😑&lt;/p&gt;
+</content>
+        <category term="不看会后悔的实用技巧分享" scheme="https://blog.aayu.today/categories/skill/" />
+        <category term="工具篇" scheme="https://blog.aayu.today/categories/skill/tools/" />
+        <category term="New Bing" scheme="https://blog.aayu.today/tags/New-Bing/" />
+        <updated>2023-03-29T13:00:51.000Z</updated>
+    </entry>
     <entry>
         <id>https://blog.aayu.today/nas/zspace/20230311/</id>
         <title>Docker版思源笔记加ChatGPT的超强搭配使用~</title>
@@ -1180,225 +1206,5 @@
 </content>
         <category term="FPV" scheme="https://blog.aayu.today/tags/FPV/" />
         <updated>2022-10-16T12:31:20.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://blog.aayu.today/english/grammar/20221005/</id>
-        <title>英语语法学习（3）：动词时态</title>
-        <link rel="alternate" href="https://blog.aayu.today/english/grammar/20221005/"/>
-        <content type="html">&lt;h2 id=&#34;视频讲解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#视频讲解&#34;&gt;#&lt;/a&gt; 视频讲解&lt;/h2&gt;
-&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMVhZNDExSjdhRz9wPTQ=&#34;&gt;【英语兔】英语语法精讲合集 (全面，通俗，有趣 | 从零打造系统语法体系)：动词时态&lt;/span&gt;&lt;/p&gt;
-&lt;h2 id=&#34;一表总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#一表总结&#34;&gt;#&lt;/a&gt; 一表总结&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;一般&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;进行&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;完成&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;完成进行&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;现在&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;一般现在时态 eat/eats&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;现在进行时态 am/is/are eating&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;现在完成时态 has/have eaten&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;现在完成进行时态 has/have been eating&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;过去&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;一般过去时态 ate&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;过去进行时态 was/were eating&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;过去完成时态 had eaten&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;过去完成进行时态 had been eating&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;将来&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;一般将来时态 will eat&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;将来进行时态 will be eating&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;将来完成时态 will have eaten&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;将来完成进行时态 will have been eating&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;过去将来&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;一般过去将来时态 would eat&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;过去将来进行时态 would be eating&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;过去将来完成时态 would have eaten&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;过去将来完成进行时态 would have been eating&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;div class=&#34;note primary&#34;&gt;
-&lt;p&gt;will 往往也可以用 shall，有微妙区别，此处略过&lt;/p&gt;
-&lt;/div&gt;
-&lt;h2 id=&#34;基本概念&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基本概念&#34;&gt;#&lt;/a&gt; 基本概念&lt;/h2&gt;
-&lt;p&gt;&lt;span class=&#34;green&#34;&gt;时&lt;/span&gt;&lt;span class=&#34;orange&#34;&gt;态&lt;/span&gt; = 动作的&lt;span class=&#34;green&#34;&gt;时间&lt;/span&gt; + 动作的&lt;span class=&#34;orange&#34;&gt;状态&lt;/span&gt;&lt;/p&gt;
-&lt;h3 id=&#34;动词时间&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#动词时间&#34;&gt;#&lt;/a&gt; 动词时间&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;现在&lt;/li&gt;
-&lt;li&gt;过去&lt;/li&gt;
-&lt;li&gt;将来&lt;/li&gt;
-&lt;li&gt;过去将来&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;过去将来&lt;/code&gt; 时态对应现实中的🌰： &lt;code&gt;前天我认为后天不会下雨&lt;/code&gt; 。这里就是以前自己感觉中的将来。&lt;/p&gt;
-&lt;h3 id=&#34;动词状态&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#动词状态&#34;&gt;#&lt;/a&gt; 动词状态&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;进行态。举个🌰：这只兔子正在吃着胡萝卜&lt;/li&gt;
-&lt;li&gt;完成态。举个🌰：这兔子吃掉了胡萝卜&lt;/li&gt;
-&lt;li&gt;完成进行态。举个🌰：这兔子从早上就开始吃胡萝卜，现在还没停呢&lt;/li&gt;
-&lt;li&gt;一般态。可以用来描述客观事实&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;过去将来完成进行&lt;/code&gt; 时态对应现实中的🌰： &lt;code&gt;老板上周叫我这周至少做完10页，我这不正加班赶着呢吗&lt;/code&gt; 。&lt;/p&gt;
-&lt;h2 id=&#34;时态的四大难点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#时态的四大难点&#34;&gt;#&lt;/a&gt; 时态的四大难点&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;难点 1：时＆态未分清&lt;/li&gt;
-&lt;li&gt;难点 2：动词变位&lt;/li&gt;
-&lt;li&gt;难点 3：助动词&lt;/li&gt;
-&lt;li&gt;难点 4：与其他语法概念混合&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;排列组合开始&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#排列组合开始&#34;&gt;#&lt;/a&gt; 排列组合开始&lt;/h2&gt;
-&lt;h3 id=&#34;现在时态&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#现在时态&#34;&gt;#&lt;/a&gt; 现在时态&lt;/h3&gt;
-&lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;现在进行时&#34;&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;现在进行时（Present Progressive Tense）&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;这兔子现在正在吃胡萝卜&lt;/p&gt;
-&lt;p&gt;谓语动词：&lt;/p&gt;
-&lt;p&gt;举个🌰：&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;现在完成时&#34;&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;现在完成时（Present Perfect Tense）&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;这兔子现在已经吃完了胡萝卜&lt;/p&gt;
-&lt;p&gt;谓语动词：&lt;/p&gt;
-&lt;p&gt;举个🌰：&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;现在完成进行时&#34;&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;现在完成进行时（Present Perfect Progressive Tense）&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;这兔子现在已经吃完了胡萝卜，还要继续吃&lt;/p&gt;
-&lt;p&gt;谓语动词：&lt;/p&gt;
-&lt;p&gt;举个🌰：&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;现在一般时&#34;&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;现在一般时（Persent Simple Tense），或称 &lt;code&gt;一般现在时态&lt;/code&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;谓语动词：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;动词原形&lt;/li&gt;
-&lt;li&gt;动词原形 + s（第三人称单数）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;举个🌰：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;I/You/We eat carrots.&lt;/li&gt;
-&lt;li&gt;She eat&lt;span class=&#34;orange&#34;&gt;s&lt;/span&gt; carrots.&lt;/li&gt;
-&lt;li&gt;The rabbit eat&lt;span class=&#34;orange&#34;&gt;s&lt;/span&gt; carrot.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;note warning&#34;&gt;
-&lt;p&gt;易错点： &lt;code&gt;现在&lt;/code&gt; 表示时间，不能和 &lt;code&gt;进行&lt;/code&gt; 状态搞混&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;一般现在时常见的三种情况：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;表达事实
-&lt;ul&gt;
-&lt;li&gt;I eat carrot&lt;span class=&#34;orange&#34;&gt;s&lt;/span&gt;. 我吃胡萝卜：我是吃胡萝卜这种食物的（这个是&lt;span class=&#34;orange&#34;&gt;事实&lt;/span&gt;陈述）&lt;/li&gt;
-&lt;li&gt;The rabbit eats carrot&lt;span class=&#34;orange&#34;&gt;s&lt;/span&gt;. 兔子吃胡萝卜：兔子是吃胡萝卜的动物（也是&lt;span class=&#34;orange&#34;&gt;事实&lt;/span&gt;陈述）&lt;/li&gt;
-&lt;li&gt;The sun rises in the east. 太阳从东边升起&lt;/li&gt;
-&lt;li&gt;The earth revolves around the sun. 地球绕太阳转&lt;/li&gt;
-&lt;li&gt;You like Papa Rabbit. 你喜欢兔老爹&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;表达习惯 / 重复的动作
-&lt;ul&gt;
-&lt;li&gt;I play basketball. 我打篮球（我有这个习惯）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;表示预计发生的事
-&lt;ul&gt;
-&lt;li&gt;The bus leaves at 8PM &lt;span class=&#34;green&#34;&gt;every day&lt;/span&gt;. 公车&lt;span class=&#34;green&#34;&gt;每晚&lt;/span&gt;八点离站。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;h3 id=&#34;过去时态&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#过去时态&#34;&gt;#&lt;/a&gt; 过去时态&lt;/h3&gt;
-&lt;div class=&#34;tab&#34; data-id=&#34;id2&#34; data-title=&#34;过去进行时&#34;&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;过去进行时（Past Progressive Tense）&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;这兔子昨天下午 3 点那个时候正在吃胡萝卜&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;tab&#34; data-id=&#34;id2&#34; data-title=&#34;过去完成时&#34;&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;过去完成时（Past Perfect Tense）&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;这兔子昨天下午 3 点那个时候已经吃完了胡萝卜&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;tab&#34; data-id=&#34;id2&#34; data-title=&#34;过去完成进行时&#34;&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;过去完成进行时（Past Perfect Progressive Tense）&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;这兔子昨天下午 3 点那个时候已经吃完了胡萝卜，还要继续吃&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;tab&#34; data-id=&#34;id2&#34; data-title=&#34;过去一般时&#34;&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;过去一般时（Past Simple Tense）&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;或称 &lt;code&gt;一般过去时&lt;/code&gt; 。兔子过去吃胡萝卜&lt;/p&gt;
-&lt;/div&gt;
-&lt;h3 id=&#34;将来时态&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#将来时态&#34;&gt;#&lt;/a&gt; 将来时态&lt;/h3&gt;
-&lt;div class=&#34;tab&#34; data-id=&#34;id3&#34; data-title=&#34;将来进行时&#34;&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;将来进行时（Future Progressive Tense）&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;这兔子明天下午 3 点那个时候会正在吃胡萝卜&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;tab&#34; data-id=&#34;id3&#34; data-title=&#34;将来完成时&#34;&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;将来完成时（Future Perfect Tense）&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;这兔子明天下午 3 点那个时候会已经吃完了胡萝卜&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;tab&#34; data-id=&#34;id3&#34; data-title=&#34;将来完成进行时&#34;&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;将来完成进行时（Future Perfect Progressive Tense）&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;这兔子明天下午 3 点那个时候已经吃完了一些胡萝卜，还要继续吃&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;tab&#34; data-id=&#34;id3&#34; data-title=&#34;将来一般时&#34;&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;将来一般时（Future Simple Tense）&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;或称 &lt;code&gt;一般将来时&lt;/code&gt; 。兔子将来吃胡萝卜&lt;/p&gt;
-&lt;/div&gt;
-&lt;h3 id=&#34;过去时态-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#过去时态-2&#34;&gt;#&lt;/a&gt; 过去时态&lt;/h3&gt;
-&lt;div class=&#34;tab&#34; data-id=&#34;id4&#34; data-title=&#34;过去将来进行时&#34;&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;过去将来进行时（Past Future Tense）&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;tab&#34; data-id=&#34;id4&#34; data-title=&#34;过去将来完成时&#34;&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;过去将来完成时（Past Future Perfect Tense）&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;tab&#34; data-id=&#34;id4&#34; data-title=&#34;过去将来完成进行时态&#34;&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;过去将来完成进行时态（Past Future Perfect Progressive Tense）&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;tab&#34; data-id=&#34;id4&#34; data-title=&#34;过去将来一般时态&#34;&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;过去将来一般时态（Past Future Simple Tense）&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</content>
-        <category term="英语学习之路" scheme="https://blog.aayu.today/categories/english/" />
-        <category term="语法学习" scheme="https://blog.aayu.today/categories/english/%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/" />
-        <category term="英语语法学习" scheme="https://blog.aayu.today/tags/%E8%8B%B1%E8%AF%AD%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/" />
-        <updated>2022-10-04T17:07:04.000Z</updated>
     </entry>
 </feed>

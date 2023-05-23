@@ -2028,8 +2028,8 @@ base_url 可以参考 https://github.com/Ice-Hazymoon/openai-scf-proxy 这个教
             <title>Android Studio和Unity3D联合开发环境配置</title>
             <link>https://blog.aayu.today/android/20230207/</link>
             <category term="Android" scheme="https://blog.aayu.today/categories/Android/" />
-            <category term="Unity3D" scheme="https://blog.aayu.today/tags/Unity3D/" />
             <category term="Android Studio" scheme="https://blog.aayu.today/tags/Android-Studio/" />
+            <category term="Unity3D" scheme="https://blog.aayu.today/tags/Unity3D/" />
             <pubDate>Tue, 07 Feb 2023 01:27:40 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;android-studio安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#android-studio安装&#34;&gt;#&lt;/a&gt; Android Studio 安装&lt;/h2&gt;
 &lt;p&gt;这里我使用的版本是 2021.2.1.15。放个百度网盘链接，需要的自取&lt;/p&gt;

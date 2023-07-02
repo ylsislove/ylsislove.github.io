@@ -10,10 +10,44 @@
         </author>
         <description>真理和热爱是吾永生的追求</description>
         <language>zh-CN</language>
-        <pubDate>Tue, 23 May 2023 22:26:38 +0800</pubDate>
-        <lastBuildDate>Tue, 23 May 2023 22:26:38 +0800</lastBuildDate>
+        <pubDate>Sun, 02 Jul 2023 21:31:45 +0800</pubDate>
+        <lastBuildDate>Sun, 02 Jul 2023 21:31:45 +0800</lastBuildDate>
         <category term="HoloLens" />
         <category term=" NAS" />
+        <item>
+            <guid isPermalink="true">https://blog.aayu.today/skill/miscellaneous/20230702/</guid>
+            <title>机械臂学习笔记</title>
+            <link>https://blog.aayu.today/skill/miscellaneous/20230702/</link>
+            <category term="不看会后悔的实用技巧分享" scheme="https://blog.aayu.today/categories/skill/" />
+            <category term="杂七杂八" scheme="https://blog.aayu.today/categories/skill/miscellaneous/" />
+            <category term="SolidWorks" scheme="https://blog.aayu.today/tags/SolidWorks/" />
+            <pubDate>Sun, 02 Jul 2023 21:31:45 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;临摹相同尺寸草图图片&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#临摹相同尺寸草图图片&#34;&gt;#&lt;/a&gt; 临摹相同尺寸草图图片&lt;/h2&gt;
+&lt;p&gt;在草图编辑状态，点击「 工具 」-&amp;gt;「 草图工具 」-&amp;gt;「 草图图片 」即可导入草图，然后根据尺寸确定缩放关系，将草图移至原点即可&lt;/p&gt;
+&lt;h2 id=&#34;尺寸链&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#尺寸链&#34;&gt;#&lt;/a&gt; 尺寸链&lt;/h2&gt;
+&lt;p&gt;水平尺寸链或竖直尺寸链，先点击构造线确定原点，再点击其他线确定尺寸。&lt;/p&gt;
+&lt;p&gt;右击添加到尺寸链，可以再次打开上次的尺寸链继续添加&lt;/p&gt;
+&lt;h2 id=&#34;尺寸圆弧条件修改&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#尺寸圆弧条件修改&#34;&gt;#&lt;/a&gt; 尺寸圆弧条件修改&lt;/h2&gt;
+&lt;p&gt;先点击圆弧尺寸，左侧属性栏选择第二栏「 引线 」，在下方修改圆弧条件即可&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/07/02/202307022133282.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;鼠标笔势由-4-笔势改为-8-笔势&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#鼠标笔势由-4-笔势改为-8-笔势&#34;&gt;#&lt;/a&gt; 鼠标笔势由 4 笔势改为 8 笔势&lt;/h2&gt;
+&lt;p&gt;点击「 工具 」-&amp;gt; 「 自定义 」-&amp;gt;「 鼠标笔势 」即可切换 4 笔势或 8 笔势，左侧功能列表直接拖拽到右侧即可自定义笔势功能。&lt;/p&gt;
+&lt;h2 id=&#34;制作草图块&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#制作草图块&#34;&gt;#&lt;/a&gt; 制作草图块&lt;/h2&gt;
+&lt;p&gt;点击「 工具 」-&amp;gt;「 块 」-&amp;gt;「 制作 」，将草图线段框选，即可做成草图块。按住 Ctrl 键拖动块，即可复制一份块&lt;/p&gt;
+&lt;h2 id=&#34;给草图块添加颜色&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#给草图块添加颜色&#34;&gt;#&lt;/a&gt; 给草图块添加颜色&lt;/h2&gt;
+&lt;p&gt;点击「 编辑 」-&amp;gt;「 外观 」-&amp;gt;「 草图 / 曲线颜色 」&lt;/p&gt;
+&lt;h2 id=&#34;快速完成定义草图&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#快速完成定义草图&#34;&gt;#&lt;/a&gt; 快速完成定义草图&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/07/02/202307022134230.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;分割零件并另存为&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分割零件并另存为&#34;&gt;#&lt;/a&gt; 分割零件并另存为&lt;/h2&gt;
+&lt;p&gt;点击「 插入 」-&amp;gt;「 特征 」-&amp;gt;「 分割 」，选择切割线，点击被切割的两个实体，确认即可&lt;/p&gt;
+&lt;p&gt;在实体上右击，选择「 删除 / 保留实体 」，对两个零件进行另存为&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/07/02/202307022134252.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;装配体插入零件时的固定与浮动&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#装配体插入零件时的固定与浮动&#34;&gt;#&lt;/a&gt; 装配体插入零件时的固定与浮动&lt;/h2&gt;
+&lt;p&gt;插入第一个零件时，直接点击确定键，这样可以使第一个零件的坐标系与装配体坐标系一致，零件会被固定且无法移动&lt;/p&gt;
+&lt;p&gt;插入第二个零件直接选中零件再拖动到装配体视窗中，这样插入的零件就是浮动的，即可以被拖动&lt;/p&gt;
+&lt;p&gt;持续更新中...&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://blog.aayu.today/skill/tools/20230523/</guid>
             <title>Docker部署chatgpt_academic</title>
@@ -2091,73 +2125,6 @@ base_url 可以参考 https://github.com/Ice-Hazymoon/openai-scf-proxy 这个教
 &lt;h2 id=&#34;学习链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#学习链接&#34;&gt;#&lt;/a&gt; 学习链接&lt;/h2&gt;
 &lt;ul class=&#34;task-list&#34;&gt;
 &lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_0&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_0&#34;&gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWRTNHkxeTd2ZA==&#34;&gt;Vue3 + vite + Ts + pinia + 实战 + 源码 +electron（82/111）&lt;/span&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;/ul&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://blog.aayu.today/artificial-intelligence/machine-learning/basic/20230103/</guid>
-            <title>召回率（recall）和精度（precision）</title>
-            <link>https://blog.aayu.today/artificial-intelligence/machine-learning/basic/20230103/</link>
-            <category term="人工智能" scheme="https://blog.aayu.today/categories/artificial-intelligence/" />
-            <category term="机器学习" scheme="https://blog.aayu.today/categories/artificial-intelligence/machine-learning/" />
-            <category term="基础知识" scheme="https://blog.aayu.today/categories/artificial-intelligence/machine-learning/basic/" />
-            <category term="召回率" scheme="https://blog.aayu.today/tags/%E5%8F%AC%E5%9B%9E%E7%8E%87/" />
-            <category term="精度" scheme="https://blog.aayu.today/tags/%E7%B2%BE%E5%BA%A6/" />
-            <pubDate>Tue, 03 Jan 2023 16:09:33 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h2&gt;
-&lt;p&gt;识别精度主要是由 &lt;code&gt;召回率（recall）和精度（precision）&lt;/code&gt; 表示的，通过绘制 precision-recall 曲线，该曲线下方的面积越大，识别精度也就越高，反之越低。&lt;/p&gt;
-&lt;h2 id=&#34;数据定义&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据定义&#34;&gt;#&lt;/a&gt; 数据定义&lt;/h2&gt;
-&lt;p&gt;在一个数据集检测中，会产生四类检测结果：TP、TN、FP、FN&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;T：true 表示正确&lt;/li&gt;
-&lt;li&gt;F：false 表示错误&lt;/li&gt;
-&lt;li&gt;P：positive 表示积极的，看成正例&lt;/li&gt;
-&lt;li&gt;N：negative 表示消极的，看成负例&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;排列组合，即可得到以下结果：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;TP：预测为 P（正例），预测对了，本来是正样本，检测为正样本（真阳性）&lt;/li&gt;
-&lt;li&gt;TN：预测为 N（负例），预测对了，本来是本样本，检测为负样本（真阴性）&lt;/li&gt;
-&lt;li&gt;FP：预测为 P（正例），预测错了，本来是负样本，检测为正样本（假阳性）&lt;/li&gt;
-&lt;li&gt;FN：预测为 N（负例），预测错了，本来是正样本，检测为负样本（假阴性）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;合计：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;TP+FP+TN+FN：样本总数&lt;/li&gt;
-&lt;li&gt;TP+FN：实际正样本数&lt;/li&gt;
-&lt;li&gt;TP+FP：预测结果为正样本的总数，包括预测正确的和错误的&lt;/li&gt;
-&lt;li&gt;FP+TN：实际负样本数&lt;/li&gt;
-&lt;li&gt;TN+FN：预测结果为负样本的总数，包括预测正确的和错误的&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;召回率recall&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#召回率recall&#34;&gt;#&lt;/a&gt; 召回率（Recall）：&lt;/h2&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;表示的是样本中的正例有多少被预测正确了（找的全），即所有正例中被正确预测出来比例&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;用途：用于评估检测器对所有待检测目标的检测覆盖率&lt;/p&gt;
-&lt;p&gt;针对数据集中所有正例（TP+FN）而言， &lt;code&gt;模型正确判断出正例（TP）占数据集中所有正例的比例&lt;/code&gt; 。FN 表示被模型误认为是负例但实际是正例的数据， &lt;code&gt;召回率也叫做查全率&lt;/code&gt; 。以物体检测为例，我们往往把图片中的物体作为正例，此时 &lt;code&gt;召回率高代表着模型可以找出图片中更多的物体&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;katex-display&#34;&gt;&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34; display=&#34;block&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mi&gt;F&lt;/mi&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;Recall=\frac{TP}{TP-FN}
-&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.69444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.00773em;&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.01968em;&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.01968em;&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:2.1296600000000003em;vertical-align:-0.7693300000000001em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mopen nulldelimiter&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mfrac&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:1.36033em;&#34;&gt;&lt;span style=&#34;top:-2.314em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.13889em;&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.13889em;&#34;&gt;P&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;−&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.13889em;&#34;&gt;F&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.10903em;&#34;&gt;N&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;top:-3.23em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;frac-line&#34; style=&#34;border-bottom-width:0.04em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;top:-3.677em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.13889em;&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.13889em;&#34;&gt;P&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.7693300000000001em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mclose nulldelimiter&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;h2 id=&#34;精确率precision&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#精确率precision&#34;&gt;#&lt;/a&gt; 精确率（Precision）&lt;/h2&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;表示的是预测为正的样本中有多少是真正的正样本（找的对），即预测结果中真正的正例的比例&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;用途：用于评估检测器在检测成功基础上的正确率&lt;/p&gt;
-&lt;p&gt;针对模型判断出的所有正例（TP+FP）而言，其中真正例（TP）占的比例。精确率也叫查准率，还是以物体检测为例，精确率高表示模型检测出的物体中大部分是正确的，只有少数不是物体的对象被当作物体&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;katex-display&#34;&gt;&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34; display=&#34;block&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mi&gt;F&lt;/mi&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;Precision=\frac{TP}{TP+FP}
-&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.68333em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.13889em;&#34;&gt;P&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:2.1296600000000003em;vertical-align:-0.7693300000000001em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mopen nulldelimiter&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mfrac&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:1.36033em;&#34;&gt;&lt;span style=&#34;top:-2.314em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.13889em;&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.13889em;&#34;&gt;P&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.13889em;&#34;&gt;F&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.13889em;&#34;&gt;P&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;top:-3.23em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;frac-line&#34; style=&#34;border-bottom-width:0.04em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;top:-3.677em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.13889em;&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.13889em;&#34;&gt;P&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.7693300000000001em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mclose nulldelimiter&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;也就是说， &lt;code&gt;recall表示在整个检测结果中有用部分占整个数据集有用部分的比重，precision表示在整个检测结果中有用部分占整个检测结果为有用的比重&lt;/code&gt; 。虽然希望两个指标都能越高越好，但是这两个指标在某些情况下是存在矛盾的，所以在实际检测场景中需要根据自己的判断选择取舍或绘制 precision-recall 曲线（简称 PR 曲线）帮助分析&lt;/p&gt;
-&lt;h2 id=&#34;准确率accuracy&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#准确率accuracy&#34;&gt;#&lt;/a&gt; 准确率（Accuracy）&lt;/h2&gt;
-&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;表示模型判断正确的数据（TP+TN）占总数据的比例&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;span class=&#34;katex-display&#34;&gt;&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34; display=&#34;block&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mi&gt;F&lt;/mi&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mi&gt;F&lt;/mi&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;Acc=\frac{TP+TN}{TP+TN+FP+FN}
-&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.68333em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:2.1296600000000003em;vertical-align:-0.7693300000000001em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mopen nulldelimiter&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mfrac&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:1.36033em;&#34;&gt;&lt;span style=&#34;top:-2.314em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.13889em;&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.13889em;&#34;&gt;P&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.13889em;&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.10903em;&#34;&gt;N&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.13889em;&#34;&gt;F&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.13889em;&#34;&gt;P&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.13889em;&#34;&gt;F&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.10903em;&#34;&gt;N&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;top:-3.23em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;frac-line&#34; style=&#34;border-bottom-width:0.04em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;top:-3.677em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.13889em;&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.13889em;&#34;&gt;P&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.13889em;&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.10903em;&#34;&gt;N&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.7693300000000001em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mclose nulldelimiter&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;div class=&#34;note warning&#34;&gt;
-&lt;p&gt;准确率是分类问题中最简单也是最直观的评价指标，但存在明显的缺陷。比如，当负样本占 99% 时，分类器把所有样本都预测为负样本也可以获得 99% 的准确率，但这对我们的研究工作几乎没有帮助。所以，当不同类别的样本比例非常不均衡时，占比大的类别往往成为影响准确率的最主要因素。&lt;/p&gt;
-&lt;/div&gt;
-&lt;h2 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1cxOTk1Uy9hcnRpY2xlL2RldGFpbHMvMTE0OTg4NjM3&#34;&gt;召回率（recall）和精度（precision）&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
  ]]></description>
         </item>

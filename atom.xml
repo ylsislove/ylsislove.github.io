@@ -17,7 +17,7 @@
         <link rel="alternate" href="https://blog.aayu.today/skill/miscellaneous/20230817/"/>
         <content type="html">&lt;h2 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h2&gt;
 &lt;p&gt;之前（2023-07-14）在论坛上反馈的帖子一直没审核通过，咱也不知道为什么 / 捂脸，所以就在这里发一下吧～&lt;/p&gt;
-&lt;h2 id=&#34;问题详情&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#问题详情&#34;&gt;#&lt;/a&gt; 问题详情&lt;/h2&gt;
+&lt;h2 id=&#34;设备&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#设备&#34;&gt;#&lt;/a&gt; 设备&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -40,6 +40,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;h2 id=&#34;问题描述&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#问题描述&#34;&gt;#&lt;/a&gt; 问题描述&lt;/h2&gt;
 &lt;p&gt;今天突然发现，我在 AR 空间无法使用拍照和录制功能了。一点击拍照功能，眼镜画面就会直接卡死不动，APP 操作无相应反馈，只能杀死进程重新进入才行。当点击录制功能，手机会弹出「 要开始录制或投射内容吗？ 」对话框，如下图&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/08/17/202308172311430.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;点击立即开始后，会有正常录制时 321 的倒计时，当倒计时结束后，正式开始录制时，就和点击拍照时一样了，眼睛画面卡死，APP 可以操作，但操作无响应。&lt;/p&gt;

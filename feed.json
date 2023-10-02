@@ -7,6 +7,17 @@
     "home_page_url": "https://blog.aayu.today",
     "items": [
         {
+            "id": "https://blog.aayu.today/feature/unity/20231002/",
+            "url": "https://blog.aayu.today/feature/unity/20231002/",
+            "title": "Unity3D优化笔记（2）垂直同步",
+            "date_published": "2023-10-02T15:34:17.000Z",
+            "content_html": "<p>垂直同步用于将游戏的帧率限制为显示器的刷新率，可以防止游戏画面在高速移动时的画面撕裂现象，使游戏画面更加平滑和连贯。</p>\n<p>如果不启用垂直同步，当游戏的帧率高于显示器的刷新率时，<mark>图像的一部分可能会在显示器刷新之前更新</mark>，导致画面上出现明显的断裂线。而启用垂直同步后，图形处理器会等待显示器完成一次完整的刷新，然后再发送下一帧图像，确保每个图像帧都在刷新之前完全绘制，从而消除了撕裂现象。</p>\n<p>简单理解的话，<mark>当显示器比如说要渲染 A 帧画面时，渲染到一半，由于游戏的帧率高于显示器的刷新率，所以 A 帧数据被更新，然后显示器就渲染更新后的数据了</mark>，可能会导致画面上出现断裂线和不连续。</p>\n<p>但是启用垂直同步会消耗一些性能，也可能会出现卡顿的现象，要根据自己的实际情况来决定是否启用。</p>\n",
+            "tags": [
+                "Unity3D",
+                "Unity3D"
+            ]
+        },
+        {
             "id": "https://blog.aayu.today/feature/unity/20231001/",
             "url": "https://blog.aayu.today/feature/unity/20231001/",
             "title": "Unity3D优化笔记（1）Stats窗口的作用",
@@ -231,18 +242,6 @@
                 "人工智能",
                 "机器学习修炼之PyTorch",
                 "PyTorch"
-            ]
-        },
-        {
-            "id": "https://blog.aayu.today/english/spoken/20230709/",
-            "url": "https://blog.aayu.today/english/spoken/20230709/",
-            "title": "常用口语-海关",
-            "date_published": "2023-07-09T15:34:59.000Z",
-            "content_html": "<h2 id=\"常见词汇\"><a class=\"anchor\" href=\"#常见词汇\">#</a> 常见词汇</h2>\n<h3 id=\"border-国界边界\"><a class=\"anchor\" href=\"#border-国界边界\">#</a> Border 国界；边界</h3>\n<p>cross the border 过了边界</p>\n<p>You should never try to illegally cross the board into a different country.</p>\n<h3 id=\"declaration-card-form-海关申报书\"><a class=\"anchor\" href=\"#declaration-card-form-海关申报书\">#</a> Declaration card /form 海关申报书</h3>\n<p>Most countries require you to fill in a declaration card.</p>\n<h3 id=\"arrival-card-form-入境卡\"><a class=\"anchor\" href=\"#arrival-card-form-入境卡\">#</a> Arrival card /form 入境卡</h3>\n<p>For China, foreigners just have to fill in a small arrival card.</p>\n<h3 id=\"fill-in-填\"><a class=\"anchor\" href=\"#fill-in-填\">#</a> Fill in 填</h3>\n<p>Make sure to fill in the form accurately. Otherwise you might get into trouble.</p>\n<h3 id=\"country-of-residence-居住国\"><a class=\"anchor\" href=\"#country-of-residence-居住国\">#</a> Country of residence 居住国</h3>\n<p>What is your country of residence? —— Canada.</p>\n<h3 id=\"currency-货币\"><a class=\"anchor\" href=\"#currency-货币\">#</a> Currency 货币</h3>\n<p>Are you traveling with any foreign currency?</p>\n<h3 id=\"resident-visitor-住户-访客\"><a class=\"anchor\" href=\"#resident-visitor-住户-访客\">#</a> Resident / Visitor 住户 / 访客</h3>\n<p>Residents line up on the left, visitors line up on the right.</p>\n<h3 id=\"nationality-国籍\"><a class=\"anchor\" href=\"#nationality-国籍\">#</a> Nationality 国籍</h3>\n<p>What is your nationality? —— Chinese.</p>\n<h3 id=\"citizenship-公民身份\"><a class=\"anchor\" href=\"#citizenship-公民身份\">#</a> Citizenship 公民身份</h3>\n<p>What is your citizenship? —— I have Chinese citizenship. / I am a citizen of China.</p>\n<h3 id=\"firearms-weapons-火器-武器\"><a class=\"anchor\" href=\"#firearms-weapons-火器-武器\">#</a> Firearms /weapons 火器 / 武器</h3>\n<p>It's generally a good idea to not travel with firearms or weapons.</p>\n<h3 id=\"duration-of-stay-停留时间\"><a class=\"anchor\" href=\"#duration-of-stay-停留时间\">#</a> Duration of stay 停留时间</h3>\n<p>What will be your duration of stay in Canada?</p>\n<h3 id=\"business-pleasure-study-商务-娱乐-学习\"><a class=\"anchor\" href=\"#business-pleasure-study-商务-娱乐-学习\">#</a> Business /pleasure/study 商务 / 娱乐 / 学习</h3>\n<p>What is your purpose of traveling? Business, pleasure, or study? —— I'm traveling for business.</p>\n<h3 id=\"border-agent-边境官员\"><a class=\"anchor\" href=\"#border-agent-边境官员\">#</a> Border agent 边境官员</h3>\n<p>The border agent will sometimes ask you a few questions.</p>\n<h3 id=\"kiosk-自助服务亭\"><a class=\"anchor\" href=\"#kiosk-自助服务亭\">#</a> kiosk 自助服务亭</h3>\n<p>Canadian citizens or permanent residents can use the automatic kiosks at customs and immigration.</p>\n<h3 id=\"prohibited-禁止\"><a class=\"anchor\" href=\"#prohibited-禁止\">#</a> Prohibited 禁止</h3>\n<p>Certain items like firearms or weapons are prohibited to travel with.</p>\n<h2 id=\"question\"><a class=\"anchor\" href=\"#question\">#</a> Question</h2>\n<ol>\n<li>Have you ever been questioned by airport security? What did they ask you?</li>\n<li>Have you ever been caught with prohibited items?</li>\n</ol>\n<h2 id=\"homework\"><a class=\"anchor\" href=\"#homework\">#</a> Homework</h2>\n<p>Write a dialog going through customs.</p>\n<p>You should say:</p>\n<ul>\n<li>what is your purpose of travel?</li>\n<li>How long are you staying?</li>\n<li>What is the value of goods you are traveling with?</li>\n</ul>\n<blockquote>\n<p>Agent: Hi there, can I see your passport?</p>\n<p>Me: Yes, here you go.</p>\n<p>A: And where is your final destination?</p>\n<p>M: Vancouver.</p>\n<p>A: Okay, what is your purpose of travel?</p>\n<p>M: I'm visiting my family.</p>\n<p>A: How long will you be staying in Canada?</p>\n<p>M: For 1 month.</p>\n<p>A: What is the value of goods you are traveling with?</p>\n<p>M: Just 500$. I'm bringing some gifts for my family.</p>\n<p>A: Okay. You're good to go. Move along.</p>\n<p>M: Thank you.</p>\n</blockquote>\n",
-            "tags": [
-                "英语学习之路",
-                "口语",
-                "英语"
             ]
         }
     ]

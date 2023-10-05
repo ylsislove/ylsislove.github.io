@@ -10,10 +10,150 @@
         </author>
         <description>真理和热爱是吾永生的追求</description>
         <language>zh-CN</language>
-        <pubDate>Wed, 04 Oct 2023 23:08:07 +0800</pubDate>
-        <lastBuildDate>Wed, 04 Oct 2023 23:08:07 +0800</lastBuildDate>
+        <pubDate>Thu, 05 Oct 2023 23:49:32 +0800</pubDate>
+        <lastBuildDate>Thu, 05 Oct 2023 23:49:32 +0800</lastBuildDate>
         <category term="HoloLens" />
         <category term=" NAS" />
+        <item>
+            <guid isPermalink="true">https://blog.aayu.today/feature/unity/20231005/</guid>
+            <title>Unity3D优化笔记（4）其他分析工具</title>
+            <link>https://blog.aayu.today/feature/unity/20231005/</link>
+            <category term="Unity3D" scheme="https://blog.aayu.today/categories/unity/" />
+            <category term="Unity3D" scheme="https://blog.aayu.today/tags/Unity3D/" />
+            <pubDate>Thu, 05 Oct 2023 23:49:32 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;unity-frame-debugger-窗口帧调试器窗口&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#unity-frame-debugger-窗口帧调试器窗口&#34;&gt;#&lt;/a&gt; Unity Frame Debugger 窗口（帧调试器窗口）&lt;/h2&gt;
+&lt;p&gt;Frame Debugger 窗口也叫帧调试器窗口，用于查看每一帧的画面是如何渲染出来的，可以详细查看这一帧的绘制过程。&lt;/p&gt;
+&lt;p&gt;打开 Frame Debugger 面板的方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Window——Analysis——Frame Debugger&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;按下 “Enable”，则会启动帧调试，此时如果运行了游戏，则会自动暂停，然后当前这帧的渲染情况可以在这个窗口中查看。&lt;/p&gt;
+&lt;p&gt;上方的 X of X 表示绘制过程中有多少步，可以查看下一步或上一步。&lt;/p&gt;
+&lt;p&gt;如果要禁用帧调试，可以按下 “Disable”。&lt;/p&gt;
+&lt;p&gt;&lt;mark&gt;用 Frame Debugger 窗口查看当前一帧的每一步时，可以配合 Stats 窗口使用，以此来确定哪一个物体造成的性能开销较大&lt;/mark&gt;。&lt;/p&gt;
+&lt;p&gt;绘制的步骤越少，性能越好。&lt;/p&gt;
+&lt;p&gt;Frame Debugger 窗口也能看到每一帧的 Shader 信息，但是需要有一定 Shader 基础才能看懂。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;大多数平台都支持帧调试器的使用，可以用手机的数据线成功连接到电脑，在手机上运行 Unity 的游戏，Frame Debugger 窗口中会多出该手机设备供我们选择，我们就可以分析该手机设备上运行的 Unity 项目的性能。&lt;/li&gt;
+&lt;li&gt;也可以让手机和电脑都连接同一个 wifi，这样一来，Frame Debugger 窗口中也会多出该手机设备供我们选择，我们就可以分析该手机设备上运行的 Unity 项目的性能。&lt;/li&gt;
+&lt;li&gt;但是要注意，构建时必须在 Project Settings 窗口中勾选 “Development Build”。而且有些平台可能不支持 Frame Debugger 的使用，例如 WebGL 平台。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;memory-profiler&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#memory-profiler&#34;&gt;#&lt;/a&gt; Memory Profiler&lt;/h2&gt;
+&lt;p&gt;&lt;mark&gt;Memory Profiler 可以查看游戏当前一帧具体的内存使用情况&lt;/mark&gt;，我们可以详细地看到各种东西占用了多少内存。&lt;/p&gt;
+&lt;p&gt;如果发现某样东西占用了过高的内存，则可以考虑问题是不是出在它身上，从它身上入手来进行优化。也可以分析是不是存在内存泄漏问题，即可以分析是不是某些资源一直占着内存得不到释放，才导致内存占用过高。&lt;/p&gt;
+&lt;p&gt;旧版 Unity 安装它的方法：&lt;br /&gt;
+Windows——Package Manager——All packages——Memory Profiler——Install&lt;br /&gt;
+ 如果找不到，说明它可能在当前 Unity 版本下是预览版，可以在 Advanced 下拉菜单选择 Show preview packages，再查找它出来安装&lt;/p&gt;
+&lt;p&gt;安装方法：&lt;br /&gt;
+Edit——Project Settings——Package Manager—— 勾选 Enable Pre-release Packages—— 关闭窗口 ——Window——Package Manager—— 点击左上方的 + 号 ——Add package by name—— 输入 com.unity.memoryprofiler—— 点击 Add&lt;br /&gt;
+ 注意：下载的时候可能需要科学上网。&lt;/p&gt;
+&lt;p&gt;安装完后打开方式：&lt;br /&gt;
+Window——Analysis——Memory Profiler&lt;/p&gt;
+&lt;p&gt;点击 Capture New Snapshot 会创建当前这一时刻的内存快照，可以看到这一帧的内存情况。== 它默认会存储在与 Assets 文件夹同级的目录的一个叫做 MemoryCaptures 的文件夹中。== 如果要修改这个路径，也可以点击右上角的三点，点击 Open Preferences，修改 Memory Snapshot Storage Path 的值。&lt;/p&gt;
+&lt;p&gt;Single Snapshot 表示用来分析单张内存快照，Compare Snapshots 可以通过对比来分析两张内存快照。&lt;/p&gt;
+&lt;p&gt;选中一张内存快照后，点击 Tree Map 可以看出各种资源和脚本所占用的内存，选中其中一块，可以具体地看出到底它们分别占用多少内存。如果某个名字的资源占用的内存高，那么可以考虑问题是不是出在它身上，这样我们就可以从它身上入手来进行优化。但是要注意，有一些名字的资源可能在项目中不找到，因为它们是 Unity 自带的资源。&lt;/p&gt;
+&lt;p&gt;&lt;mark&gt;在 Unity 编辑器中运行游戏，Memory Profiler 记录的内存情况可能会不准确&lt;/mark&gt;，它会把 Unity 编辑器的一些内存占用情况也记录进去。&lt;mark&gt;我们应该把游戏构建到电脑或者手机，然后在电脑或者手机上运行游戏，再用 Memory Profiler 拍内存快照来分析，此时这些内存快照记录的数据才是准确的。&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;构建项目到电脑时，应勾选 Build Settings 窗口的 Development Build、Autoconnect Profiler，这样当发布的游戏运行时，就可以在 Unity 引擎的 Memory Profiler 左上角的下拉菜单选择关联刚才发布的程序，拍下快照查看它的内存占用情况。&lt;/p&gt;
+&lt;p&gt;用手机数据线连接到电脑，在手机上运行游戏，并在电脑分析，也必须勾选 Build Settings 窗口的 Development Build、Autoconnect Profiler，而且手机上应勾选 “开启开发者选项”、“USB 调试”、“USB 安装”。当用手机数据线连接到电脑，Memory Profiler 左上的下拉菜单可以选择连接到电脑的手机设备。&lt;/p&gt;
+&lt;h2 id=&#34;unity-physics-debugger-窗口物理调试窗口&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#unity-physics-debugger-窗口物理调试窗口&#34;&gt;#&lt;/a&gt; Unity Physics Debugger 窗口（物理调试窗口）&lt;/h2&gt;
+&lt;p&gt;Physics Debugger 窗口也叫物理调试窗口，使用它可以在 Scene 窗口中查看当前场景中游戏对象的碰撞器、触发器、刚体、关节等与物理模拟相关的东西的范围。尤其是在游戏对象较多的场景中，&lt;mark&gt;使用物理调试窗口可以方便我们观看它们的范围&lt;/mark&gt;。&lt;/p&gt;
+&lt;p&gt;打开方法：Window——Analysis——Physics Debugger&lt;/p&gt;
+&lt;p&gt;官方文档：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLnVuaXR5M2QuY29tL2NuL2N1cnJlbnQvTWFudWFsL1BoeXNpY3NEZWJ1Z1Zpc3VhbGl6YXRpb24uaHRtbA==&#34;&gt;https://docs.unity3d.com/cn/current/Manual/PhysicsDebugVisualization.html&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;在 Scene 窗口中勾选 Collision Geometry，则会在 Scene 窗口中显示游戏对象的碰撞几何体，具体的情况可以在 Physics Debugger 窗口中查看到和修改。如果勾选 Mouse Select，则会开启鼠标悬停和鼠标选择功能，方便查看碰撞几何体。&lt;/p&gt;
+&lt;p&gt;点击右上方的 Reset 可以重置 Physics Debugger 窗口中的设置。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Selected Object Info 表示当前选中的游戏对象的信息。&lt;/li&gt;
+&lt;li&gt;Show Physics Scene 表示要在哪些场景中显示碰撞几何体。&lt;/li&gt;
+&lt;li&gt;Show Layers 表示哪些 Layer 层的游戏对象要显示碰撞几何体。&lt;/li&gt;
+&lt;li&gt;Show Static Colliders 表示显示静态的碰撞器组件的范围。&lt;/li&gt;
+&lt;li&gt;Show Triggers 表示显示勾选了 Is Trigger 属性的碰撞器的范围。&lt;/li&gt;
+&lt;li&gt;Show Rigidbodies 表示显示 Rigidbody 组件的范围。&lt;/li&gt;
+&lt;li&gt;Show Kinematic Bodies 表示显示勾选了 Is Kinematic 的 Rigidbody 组件的范围。&lt;/li&gt;
+&lt;li&gt;Show Articulation Bodies 表示显示 Articulation Body 组件的范围。Articulation Body 组件用于模拟机器人、车辆等物体的关节行为。例如可以实现机器人的动作、车辆的悬挂等物理效果。&lt;/li&gt;
+&lt;li&gt;Show Sleeping Bodies 表示显示处于睡眠状态的 Rigidbody 组件的范围。当一个刚体在一段时间内没有受到外力作用，则会自动进入睡眠状态，进入睡眠状态的刚体不会参与物理模拟。当它再次受到外力的作用时，它就会从睡眠状态中唤醒，此时就又会重新参与物理模拟了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Collider Types&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Show BoxColliders 表示显示盒子碰撞器的范围。&lt;/li&gt;
+&lt;li&gt;Show SphereColliders 表示显示球体碰撞器的范围。&lt;/li&gt;
+&lt;li&gt;Show CapsuleColliders 表示显示胶囊体碰撞器的范围。&lt;/li&gt;
+&lt;li&gt;Show MeshColliders (convex) 表示显示网格碰撞器的范围。&lt;/li&gt;
+&lt;li&gt;Show MeshColliders (concave) 表示显示网格碰撞器的范围。&lt;/li&gt;
+&lt;li&gt;Show Terrain Colliders 表示显示地形碰撞器的范围。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Colors&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Static Colliders 表示显示静态的碰撞器的颜色。&lt;/li&gt;
+&lt;li&gt;Triggers 表示显示勾选了 Is Trigger 属性的碰撞器的颜色。&lt;/li&gt;
+&lt;li&gt;Rigidbodies 表示显示 Rigidbody 组件的颜色。&lt;/li&gt;
+&lt;li&gt;Kinematic Bodies 表示显示勾选了 Is Kinematic 的 Rigidbody 组件的颜色。&lt;/li&gt;
+&lt;li&gt;Articulation Bodies 表示显示 Articulation Body 组件的颜色。&lt;/li&gt;
+&lt;li&gt;Sleeping Bodies 表示显示处于睡眠状态的 Rigidbody 组件的颜色。&lt;/li&gt;
+&lt;li&gt;Variation 表示要显示的颜色与随机颜色混合的程度。调节这个变量，会影响所有显示的几何碰撞体的颜色。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Rendering&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Transparency 控制绘制的碰撞几何体的透明度。&lt;/li&gt;
+&lt;li&gt;Force Overdraw，勾选后，绘制的碰撞集合体会更加清晰。&lt;/li&gt;
+&lt;li&gt;View Distance 控制能在 Scene 窗口中看到碰撞几何体的距离。&lt;/li&gt;
+&lt;li&gt;Terrain Tiles Max 控制能在 Scene 窗口中看到 Unity 自带的地形系统 Terrain 的瓦片的最大数量。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;unity-import-activity-窗口&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#unity-import-activity-窗口&#34;&gt;#&lt;/a&gt; Unity Import Activity 窗口&lt;/h2&gt;
+&lt;p&gt;&lt;mark&gt;Import Activity 可以查看项目中的资源的信息。例如什么时候导入这个资源的、这个资源的文件大小等&lt;/mark&gt;。&lt;/p&gt;
+&lt;p&gt;打开方法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Window——Analysis——Import Activity&lt;/li&gt;
+&lt;li&gt;右击一个资源，点击 View in Import Activity Window。&lt;/li&gt;
+&lt;li&gt;在 Inspector 窗口中右击 Inspector，点击 Open in Import Activity Window。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;官方文档：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLnVuaXR5M2QuY29tLzIwMjEuMi9Eb2N1bWVudGF0aW9uL01hbnVhbC9JbXBvcnRBY3Rpdml0eVdpbmRvdy5odG1s&#34;&gt;https://docs.unity3d.com/2021.2/Documentation/Manual/ImportActivityWindow.html&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;点击左上方的 Show Overview 可以看出项目中依赖最多的资源和导入时花费时间最长的资源。&lt;/p&gt;
+&lt;p&gt;左上方 Options 的选项&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use relative timestamps：勾选后，资源的最后导入时间会以 “几小时前”、“几天前” 这样的格式显示。取消勾选，则资源的最后导入时间会以 “日 - 月 - 年小时：分钟：秒” 的格式显示。&lt;/li&gt;
+&lt;li&gt;Show previous imports：勾选后，选中一个资源，则会显示这个资源以前导入时的信息，也能在 Library 文件夹中查看一个资源有多少个历史版本。但是要注意，当 Unity 的 AGC（Artifact Garbage Collection）运行时，或者重新启动 Unity 时，以前导入的资源的信息会被清空掉。如果要关闭 AGC 的执行，则可以取消勾选 “Edit——Project Settings——Editor——Remove unused Artifacts on Restart”，也可以在脚本中通过 EditorUserSettings.artifactGarbageCollection 来禁用它。&lt;/li&gt;
+&lt;li&gt;Include PreviewImporter：勾选后，会包含由预览窗口生成的 Artifacts。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;右上方的搜索框可以搜索项目中的资源。&lt;/p&gt;
+&lt;p&gt;左侧的 Asset 表示资源，Last Import 表示最后一次导入这个资源是在什么时候，Duration (ms) 表示最后一次导入这个资源时花费了多少毫秒才将它导入到项目中。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;选中一个资源后，可以在右侧看到它的信息。&lt;/li&gt;
+&lt;li&gt;点击 Asset，Project 窗口会在项目中定位到该资源存放的位置。&lt;/li&gt;
+&lt;li&gt;GUID 表示 Unity 分配给这个资源的全局唯一标识。&lt;/li&gt;
+&lt;li&gt;Asset Size 表示这个资源的文件大小。&lt;/li&gt;
+&lt;li&gt;Path 表示这个资源在项目中的路径。&lt;/li&gt;
+&lt;li&gt;Editor 表示是 Unity 的哪个版本创建这个资源的 Artifact 的。&lt;/li&gt;
+&lt;li&gt;Timestamp 表示这个资源的 Artifact 被创建时的时间，它对应 Library 文件夹中指定文件的 Timestamp 的值。&lt;/li&gt;
+&lt;li&gt;Duration 表示导入这个资源所花费的时间。&lt;/li&gt;
+&lt;li&gt;Reason for import 表示导入原因，即这个资源最近重新导入的描述，以及这个资源相关依赖类型的详细信息。当导入原因有多个是，可以用搜索栏进行查找。&lt;/li&gt;
+&lt;li&gt;Produced Files/Artifacts 表示这个资源最后一次导入 Unity 时，在 Library 文件夹中呈现的 Artifact 的路径。通常每个资产只有一个 Artifact，有时也可能有多个。&lt;/li&gt;
+&lt;li&gt;Dependencies 表示这个资源依赖的其它资源，如果修改它们，可能会导致这个资源被重新导入到 Unity。如果 Dependencies 的数量过多，可以使用搜索栏查找。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;unity-code-coverage-窗口&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#unity-code-coverage-窗口&#34;&gt;#&lt;/a&gt; Unity Code Coverage 窗口&lt;/h2&gt;
+&lt;p&gt;&lt;mark&gt;Code Coverage 用来评估我们编写的代码，在游戏测试运行的时候有多少被执行了&lt;/mark&gt;。如果有一部分代码没有被执行，我们就要考虑是不是我们代码的逻辑有问题，从而改进我们的代码。&lt;/p&gt;
+&lt;p&gt;打开方法：Window——Analysic——Code Coverage&lt;/p&gt;
+&lt;p&gt;官方文档：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLnVuaXR5LmNuL1BhY2thZ2VzL2NvbS51bml0eS50ZXN0dG9vbHMuY29kZWNvdmVyYWdlQDEuMS9tYW51YWwvaW5kZXguaHRtbA==&#34;&gt;https://docs.unity.cn/Packages/com.unity.testtools.codecoverage@1.1/manual/index.html&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;使用思路：&lt;/p&gt;
+&lt;p&gt;先勾选 Enable Code Coverage，然后勾选 Auto Generate Report，再点击 Start Recording 按钮，接着点击播放按钮运行游戏。点击 Start Recording 按钮后，它会变成 Stop Recording，测试完毕后点击它，就会停止测试。然后我们就可以在 Result Location 的路径找到生成的报告，从中看出在测试的时候有多少代码被执行了。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Results Location 表示生成的报告要存放到的路径。&lt;/li&gt;
+&lt;li&gt;History Location 表示生成的报告的历史记录要存放到的路径。必须勾选了 Generate History 才会生成。&lt;/li&gt;
+&lt;li&gt;Enable Code Coverage 表示启用代码覆盖，测试之前要勾选它。&lt;/li&gt;
+&lt;li&gt;Included Assemblies 表示测试的时候要考虑哪些程序集的代码。&lt;/li&gt;
+&lt;li&gt;Included Paths 表示测试的时候要考虑哪些文件夹或文件中的代码。&lt;/li&gt;
+&lt;li&gt;Excluded Paths 表示测试的时候不考虑哪些文件夹或文件中的代码。&lt;/li&gt;
+&lt;li&gt;Generate HTML Report，勾选后，生成报告时，会以 html 的格式来生成报告。如果取消勾选，则会以其它形式来生成报告，但是这样不方便我们观看。建议勾选。&lt;/li&gt;
+&lt;li&gt;Generate Summary Badges，勾选后，生成的报告的文件夹中，会额外生成.svg 和.png 后缀的文件，概括这次测试中有百分之几的代码被使用了。&lt;/li&gt;
+&lt;li&gt;Generate History，勾选后，生成报告时，会自动在 History Location 的路径生成历史记录。&lt;/li&gt;
+&lt;li&gt;Generate Additional Metrics，勾选后，生成报告时，报告中会有额外的衡量指标。&lt;/li&gt;
+&lt;li&gt;Auto Generate Report，勾选后，我们点击 Start Recording 开始测试，然后点击 Stop Recording 结束测试后，会自动在 Results Location 的路径生成报告。&lt;/li&gt;
+&lt;li&gt;Clear Data 清空上一次测试的数据。&lt;/li&gt;
+&lt;li&gt;Clear History，清空 History Location 路径中的所有历史记录。&lt;/li&gt;
+&lt;li&gt;Generate from Last，根据上一次测试的数据，在 Results Location 的路径生成报告。&lt;/li&gt;
+&lt;li&gt;Start Recording，开始测试。&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://blog.aayu.today/feature/unity/20231004/</guid>
             <title>Unity3D优化笔记（3）性能分析器Profiler</title>
@@ -1318,145 +1458,6 @@
 &lt;li&gt;f(3.584428, -1.848126) = 0.0&lt;/li&gt;
 &lt;/ul&gt;
 &lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt;  numpy &lt;span class=&#34;token keyword&#34;&gt;as&lt;/span&gt; np&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt;    mpl_toolkits&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;mplot3d &lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; Axes3D&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt;    matplotlib &lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; pyplot &lt;span class=&#34;token keyword&#34;&gt;as&lt;/span&gt; plt&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt;  torch&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;himmelblau&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;x&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;x&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;**&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; x&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;**&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;x&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; x&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;**&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;**&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;x &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; np&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;arange&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0.1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;y &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; np&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;arange&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0.1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;x,y range:&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; x&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;shape&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; y&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;shape&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;X&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; Y &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; np&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;meshgrid&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;x&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; y&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;X,Y maps:&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; X&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;shape&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; Y&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;shape&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;Z &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; himmelblau&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;X&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; Y&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;fig &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; plt&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;figure&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;himmelblau&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ax &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; fig&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;add_subplot&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;projection &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;3d&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ax&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;plot_surface&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;X&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; Y&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; Z&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ax&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;view_init&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;60&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ax&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;set_xlabel&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;x&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ax&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;set_ylabel&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;y&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;plt&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;show&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# [1., 0.], [-4, 0.], [4, 0.]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;x &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; torch&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;tensor&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; requires_grad&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token boolean&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;27&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;optimizer &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; torch&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;optim&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;Adam&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;x&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; lr&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1e-3&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;28&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; step &lt;span class=&#34;token keyword&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;20000&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;29&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;30&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    pred &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; himmelblau&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;x&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;31&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;32&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    optimizer&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;zero_grad&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;33&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    pred&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;backward&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;34&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    optimizer&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;step&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;35&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;36&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; step &lt;span class=&#34;token operator&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2000&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;37&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;step &amp;#123;&amp;#125;: x = &amp;#123;&amp;#125;, f(x) = &amp;#123;&amp;#125;&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;38&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;               &lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token builtin&#34;&gt;format&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;step&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; x&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;tolist&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; pred&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;item&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://blog.aayu.today/artificial-intelligence/pytorch/20230717/</guid>
-            <title>PyTorch学习笔记（2）</title>
-            <link>https://blog.aayu.today/artificial-intelligence/pytorch/20230717/</link>
-            <category term="人工智能" scheme="https://blog.aayu.today/categories/artificial-intelligence/" />
-            <category term="机器学习修炼之PyTorch" scheme="https://blog.aayu.today/categories/artificial-intelligence/pytorch/" />
-            <category term="PyTorch" scheme="https://blog.aayu.today/tags/PyTorch/" />
-            <pubDate>Mon, 17 Jul 2023 15:47:29 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;broadcasting&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#broadcasting&#34;&gt;#&lt;/a&gt; Broadcasting&lt;/h1&gt;
-&lt;p&gt;自动扩展维度语法糖&lt;/p&gt;
-&lt;h2 id=&#34;关键点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#关键点&#34;&gt;#&lt;/a&gt; 关键点&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;A 和 B 张量做 broadcasting，如果 B 前面缺失一个维度，则自动在前面插入一个维度&lt;/li&gt;
-&lt;li&gt;插入的维度大小为 1，接下来会自动将其维度大小为 1 的维度扩张到和 A 张量相同位置维度一样的大小&lt;/li&gt;
-&lt;li&gt;例子：Bias [32, 1, 1] -&amp;gt; [1, 32, 1, 1] -&amp;gt; [4, 32, 14, 14]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;所以 broadcasting 的本质就是 unsqueeze + expand&lt;/p&gt;
-&lt;h2 id=&#34;案例&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#案例&#34;&gt;#&lt;/a&gt; 案例&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;for actual demanding&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;[class, students, scores]&lt;/li&gt;
-&lt;li&gt;Add bias for every students: +5 score&lt;/li&gt;
-&lt;li&gt;[4, 32, 8] + [4, 32, 8]&lt;/li&gt;
-&lt;li&gt;[4, 32, 8] + [5.0]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;boardcasting 会自动完成：[5.0].unsqueeze (0).unsqueeze (0).expand (A) 这个操作&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;适用情况&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#适用情况&#34;&gt;#&lt;/a&gt; 适用情况&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Match from &lt;strong&gt;&lt;mark&gt;Last&lt;/mark&gt;&lt;/strong&gt; dim!&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;If current dim = 1, expand to same&lt;/li&gt;
-&lt;li&gt;If either has no dim, insert one dim and expand to same&lt;/li&gt;
-&lt;li&gt;otherwise, NOT broadcasting-able&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;例如：[4, 32, 14, 14] + [2, 32, 14, 14] 不可以进行，因为&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Dim 0 has dim, can NOT insert and expand to same&lt;/li&gt;
-&lt;li&gt;Dim 0 has distinct dim, NOT size 1&lt;/li&gt;
-&lt;li&gt;So NOT broadcasting-able&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;理解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#理解&#34;&gt;#&lt;/a&gt; 理解&lt;/h2&gt;
-&lt;p&gt;从最后一个维度开始匹配 match from last dim&lt;/p&gt;
-&lt;p&gt;因为人们相信高维的东西都是相同的，只有低维的才会针对不同的情况有不同的数据&lt;/p&gt;
-&lt;p&gt;例如对于 [4, 3, 32, 32] +&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;[32, 32]，表示在所有照片，所有通道上都叠加一个相同的 Map&lt;/li&gt;
-&lt;li&gt;[3, 1, 1]，表示在所有照片，不同通道上叠加设定的值，例如 R 通道上都加 0.5，G 通道上都加 0.4，B 通道上都加 0.3&lt;/li&gt;
-&lt;li&gt;[1]，表示在所有照片，所有通道，所有像素点上都叠加一个相同的值&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;合并与分割&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#合并与分割&#34;&gt;#&lt;/a&gt; 合并与分割&lt;/h1&gt;
-&lt;h2 id=&#34;cat&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cat&#34;&gt;#&lt;/a&gt; cat&lt;/h2&gt;
-&lt;p&gt;例如 a 是 [class1-4, students, scores]，b 是 [class5-9, students, scores]&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;assets/image-20230717015120-74ho2j1.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;assets/image-20230717015658-396h6ii.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;h2 id=&#34;stack&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#stack&#34;&gt;#&lt;/a&gt; stack&lt;/h2&gt;
-&lt;p&gt;stack 和 cat 的区别是 stack 会创建一个新的维度&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;assets/image-20230717015906-ymafbbd.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;assets/image-20230717020037-tdezmc6.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;h2 id=&#34;split&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#split&#34;&gt;#&lt;/a&gt; split&lt;/h2&gt;
-&lt;p&gt;按长度进行拆分，用 List 作为参数的话，可以指定拆分后的张量在指定维度的长度，不用 List 的话就表示根据参数进行均分&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;assets/image-20230717020251-rssnn7h.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;h2 id=&#34;chunk&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#chunk&#34;&gt;#&lt;/a&gt; chunk&lt;/h2&gt;
-&lt;p&gt;按数量进行拆分，上面报错的例子，如果用 chunk 就不会报错，因为 chunk 里面的参数 2 指定了要拆分成两个块，而 split 里面的 2 指定了用长度为 2 进行拆分，而维度 0 一共就 2 个，所以用 split 指定 2 拆分后，就只能得到一个张量，不能用 aa, bb 两个张量进行接收，而用 chunk 就不会有这个问题&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;assets/image-20230717020910-aq9tpxs.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;数学运算&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数学运算&#34;&gt;#&lt;/a&gt; 数学运算&lt;/h1&gt;
-&lt;h2 id=&#34;加减乘除&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#加减乘除&#34;&gt;#&lt;/a&gt; 加减乘除&lt;/h2&gt;
-&lt;p&gt;这里就用到了前面所讲的 broadcasting&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;assets/image-20230717021145-azg8c61.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;h2 id=&#34;矩阵乘法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#矩阵乘法&#34;&gt;#&lt;/a&gt; 矩阵乘法&lt;/h2&gt;
-&lt;p&gt;有三种方式&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL1RvcmNoLm1t&#34;&gt;Torch.mm&lt;/span&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;只适用于二维张量&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Torch.matmul&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;@&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img data-src=&#34;assets/image-20230717021920-ev4ouy3.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;assets/image-20230717021518-vx4vtw9.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;高维矩阵乘法实际上也是对最后两维进行矩阵乘法运算，本质就是支持多个矩阵对并行相乘&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;assets/image-20230717022145-waqr7bm.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;注意，broadcasting 也在其中发挥了作用&lt;/p&gt;
-&lt;h2 id=&#34;次方运算&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#次方运算&#34;&gt;#&lt;/a&gt; 次方运算&lt;/h2&gt;
-&lt;p&gt;log 运算默认以 e 为底，使用 log2 或 log10 进行其他底数的运算&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;assets/image-20230717022412-yb0lhtz.png&#34; alt=&#34;image&#34; /&gt;&lt;img data-src=&#34;assets/image-20230717022516-g1j0bpe.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;h2 id=&#34;取近似运算&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#取近似运算&#34;&gt;#&lt;/a&gt; 取近似运算&lt;/h2&gt;
-&lt;p&gt;floor 往下走，ceil 往上走，trunc 取整数部分，frac 取小数部分，round 四舍五入&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;assets/image-20230717022745-t69lqyh.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;h2 id=&#34;裁剪运算&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#裁剪运算&#34;&gt;#&lt;/a&gt; 裁剪运算&lt;/h2&gt;
-&lt;p&gt;一个参数表示小于设定参数的变为设定参数，两个参数表示（min，max），不在这个区间的设置为参数值，如下&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;assets/image-20230717023119-5ankhqd.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;属性统计&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#属性统计&#34;&gt;#&lt;/a&gt; 属性统计&lt;/h1&gt;
-&lt;h2 id=&#34;范数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#范数&#34;&gt;#&lt;/a&gt; 范数&lt;/h2&gt;
-&lt;h3 id=&#34;vector-norm-vs-matrix-norm&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#vector-norm-vs-matrix-norm&#34;&gt;#&lt;/a&gt; vector norm vs. matrix norm&lt;/h3&gt;
-&lt;p&gt;&lt;img data-src=&#34;assets/image-20230717023809-miekd8n.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;h3 id=&#34;norm-运算&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#norm-运算&#34;&gt;#&lt;/a&gt; norm 运算&lt;/h3&gt;
-&lt;p&gt;对哪个维度计算范式，就会消掉哪个维度哦&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;assets/image-20230717023712-z8aez4q.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;h2 id=&#34;min-max-sum-mean-prod&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#min-max-sum-mean-prod&#34;&gt;#&lt;/a&gt; min / max / sum / mean / prod&lt;/h2&gt;
-&lt;p&gt;&lt;img data-src=&#34;assets/image-20230717024404-2jmiohm.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;h2 id=&#34;argmin-argmax&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#argmin-argmax&#34;&gt;#&lt;/a&gt; argmin / argmax&lt;/h2&gt;
-&lt;p&gt;注意，它会默认把所有维度都打平，如果不想被打平，需要指定 dim&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;assets/image-20230717024704-5rmdmq8.png&#34; alt=&#34;image&#34; /&gt;&lt;img data-src=&#34;assets/image-20230717024715-v4dy7bf.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;h2 id=&#34;dim-和-keepdim&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dim-和-keepdim&#34;&gt;#&lt;/a&gt; dim 和 keepdim&lt;/h2&gt;
-&lt;p&gt;正常情况下，在哪个维度 dim 运算，就会消掉哪个维度。keepdim 设置 true 可以保证 dim 不被消掉&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;assets/image-20230717025144-3qh3gg8.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;h2 id=&#34;topk-和-kthvalue&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#topk-和-kthvalue&#34;&gt;#&lt;/a&gt; topk 和 kthvalue&lt;/h2&gt;
-&lt;p&gt;topk 比 max 返回更多的数据&lt;/p&gt;
-&lt;p&gt;kthvalue 返回的是第 k 小的数和索引&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;assets/image-20230717025724-y6rb2xx.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;h2 id=&#34;&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#&#34;&gt;#&lt;/a&gt; &amp;gt;, &amp;gt;=, &amp;lt;, &amp;lt;=, !=, ==&lt;/h2&gt;
-&lt;p&gt;&lt;img data-src=&#34;assets/image-20230717025851-vbkhq4r.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;高阶操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#高阶操作&#34;&gt;#&lt;/a&gt; 高阶操作&lt;/h1&gt;
-&lt;h2 id=&#34;where&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#where&#34;&gt;#&lt;/a&gt; where&lt;/h2&gt;
-&lt;p&gt;&lt;img data-src=&#34;assets/image-20230717030230-vmk91mi.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;assets/image-20230717030715-x1fuwf4.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;where 可以方便的将数据放到 GPU 上进行并行处理&lt;/p&gt;
-&lt;h2 id=&#34;gather&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#gather&#34;&gt;#&lt;/a&gt; gather&lt;/h2&gt;
-&lt;p&gt;&lt;img data-src=&#34;assets/image-20230717030802-enmfyxg.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;简单来说就是查表操作，比如有 [dog, cat, whale] 标签表，因为 PyTorch 里不能用字符串，所以预测我们得到结果张量为 [1, 0, 1, 2]，如果我们想根据索引查到对应的 Label，即 [cat, dog, cat, whale] 这样的结果，gather 方法就可以帮我们完成这件事&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;assets/image-20230717031313-pvfqpca.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
- ]]></description>
         </item>
     </channel>
 </rss>

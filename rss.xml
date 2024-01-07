@@ -21,7 +21,9 @@
             <category term="Unity3D" scheme="https://blog.aayu.today/categories/unity/" />
             <category term="Unity3D" scheme="https://blog.aayu.today/tags/Unity3D/" />
             <pubDate>Mon, 01 Jan 2024 22:00:52 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;创建项目&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#创建项目&#34;&gt;#&lt;/a&gt; 创建项目&lt;/h2&gt;
+            <description><![CDATA[ &lt;h2 id=&#34;效果展示&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#效果展示&#34;&gt;#&lt;/a&gt; 效果展示&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2024/01/07/202401072310971.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;创建项目&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#创建项目&#34;&gt;#&lt;/a&gt; 创建项目&lt;/h2&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2024/01/01/202401012208061.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;安装包&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装包&#34;&gt;#&lt;/a&gt; 安装包&lt;/h2&gt;
 &lt;p&gt;确保 Visual Effect Graph 和 Shader Graph 已经安装，如果没有安装，可以在 Unity 的 Package Manager 中安装。&lt;/p&gt;

@@ -10,10 +10,36 @@
         </author>
         <description>真理和热爱是吾永生的追求</description>
         <language>zh-CN</language>
-        <pubDate>Wed, 24 Jan 2024 01:46:51 +0800</pubDate>
-        <lastBuildDate>Wed, 24 Jan 2024 01:46:51 +0800</lastBuildDate>
+        <pubDate>Tue, 20 Feb 2024 22:12:15 +0800</pubDate>
+        <lastBuildDate>Tue, 20 Feb 2024 22:12:15 +0800</lastBuildDate>
         <category term="HoloLens" />
         <category term=" NAS" />
+        <item>
+            <guid isPermalink="true">https://blog.aayu.today/leisure/forever/20240220/</guid>
+            <title>2023 XR 设备体验分享~</title>
+            <link>https://blog.aayu.today/leisure/forever/20240220/</link>
+            <category term="清风明月" scheme="https://blog.aayu.today/categories/leisure/" />
+            <category term="永恒" scheme="https://blog.aayu.today/categories/leisure/forever/" />
+            <category term="AR" scheme="https://blog.aayu.today/tags/AR/" />
+            <pubDate>Tue, 20 Feb 2024 22:12:15 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;不知不觉，我也体验过不少的 AR 眼镜了，如 HoloLens1/2 代，XREAL X/Air2，INMO Go、魅族 MYVU、Blucap Moto 和 Rokid Max Pro，这里想分享一下作为一个普通用户我的佩戴体验，仅供参考哈哈&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HoloLens1/2 代：1 和 2 代的缺点就是笨重，我个人坚持不到半小时就不想佩戴了，压脑袋。优点就是有 Windows 生态，开发难度适中，并且不需要外置电源。总结，适合 ToB，不适合 ToC。&lt;/li&gt;
+&lt;li&gt;XREAL X/Air2：XREAL X 支持 RGB 摄像头和手势追踪，开发难度适中。缺点就是压鼻子，戴不住，并且手势追踪的延迟较高，生态少。Air2 佩戴体验比 XREAL X 好很多，外观也挺酷，缺点就是没有摄像头，只适合观影和游戏，配合 Win 和 MacOS 电脑端软件可以虚拟多屏办公，实际体验不错。XREAL X 佩戴舒适度满分 10 分的话我给 5 分，Air2 能到 8 分。&lt;/li&gt;
+&lt;li&gt;INMO Go：总体来说中规中矩，缺点就是单目光波导，有彩虹纹，近视解决方式不友好。佩戴舒适度能到 7 分。&lt;/li&gt;
+&lt;li&gt;魅族 MYVU：优点双目光波导好评，缺点是外出佩戴，半个屏幕都是彩虹纹，影响体验，近视解决方式也是夹片不友好。佩戴舒适度也是 7 分。&lt;/li&gt;
+&lt;li&gt;Blucap Moto：新起之秀，官网介绍是专为摩托用户设计的 AR 眼镜，支持各类消息和来电显示，支持导航地图显示。我实际佩戴过程中舒适度能打到 8 分，可以让我在骑单车或小电驴遛街时真正解放手机。近视解决方案是直接定制近视波导片，不用在眼镜上额外增加夹片，不刮睫毛好评哈哈。缺点就是单目光波导，也没有麦克风和扬声器，眼镜功能相比 INMO Go 和 MYVU 少。App 只支持 iOS，目前还不支持 Android。&lt;/li&gt;
+&lt;li&gt;Rokid Max Pro：外星科技，能在支持摄像头和手势追踪的同时，重量做到如此的轻，以至于我第一次戴上的时候真的是很震惊哈哈，而且手势识别的延迟也很低，超赞。优点还有 Rokid 生态，秒杀其他友商，欣欣向荣。还有开发者文档和论坛技术支持也很赞。缺点就是也需要做一个近视夹片，外观设计稍逊于 XREAL 系列，佩戴舒适度能给到 8 分。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其中，XREAL X/Air2、Rokid Max Pro 是 BB 技术方案，INMO Go、MYVU 和 Blucap Moto 是阵列光波导技术方案，HoloLens1/2 代没记错的话应该是衍射光波导方案。&lt;/p&gt;
+&lt;p&gt;BB 的近视解决方案通常就是近视夹片了，我个人是感觉比较麻烦的，而且夹片也会有概率刮到睫毛。&lt;/p&gt;
+&lt;p&gt;阵列光波导是我看好的，体积更小，能做到更接近日常佩戴的眼镜形态，而且近视镜片能做到和波导片直接贴合。目前痛点就是彩虹纹，但据说有望在 2024 年有重大改善哈哈。当前，显示效果和分辨率想达到 BB 方案的高度还有很长的路要走。&lt;/p&gt;
+&lt;p&gt;有一个有意思的点是，XREAL X 的近视框架是磁吸式的，所以我剪了两小片磁条，粘贴到 Rokid Max Pro 上，就可以很完美的将 XREAL X 的近视镜吸到 Rokid Max Pro 上了，不剧烈晃动就不会掉。哈哈哈，只要思想不滑坡，办法总比困难多～&lt;/p&gt;
+&lt;p&gt;希望未来能有机会体验下雷鸟系的 AR 眼镜，以及最期待的 Apple Vision Pro 嘿嘿，冲冲冲～&lt;/p&gt;
+&lt;p&gt;小彩蛋，猜一猜下图都是哪些 AR 设备 😉&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2024/02/20/202402202215306.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://blog.aayu.today/feature/rokid/20240124/</guid>
             <title>Rokid 空间小程序《我们的地球》开源~</title>
@@ -1259,140 +1285,6 @@ Window——Analysis——Memory Profiler&lt;/p&gt;
 &lt;/table&gt;
 &lt;h2 id=&#34;工程架构讲解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#工程架构讲解&#34;&gt;#&lt;/a&gt; 工程架构讲解&lt;/h2&gt;
 &lt;p&gt;​&lt;img data-src=&#34;assets/image-20230829232745-0l14829.png&#34; alt=&#34;image&#34; /&gt;​&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://blog.aayu.today/hardware/stm32/20230829/</guid>
-            <title>STM32学习笔记（1）简介</title>
-            <link>https://blog.aayu.today/hardware/stm32/20230829/</link>
-            <category term="硬件修炼手册" scheme="https://blog.aayu.today/categories/hardware/" />
-            <category term="STM32" scheme="https://blog.aayu.today/categories/hardware/STM32/" />
-            <category term="STM32" scheme="https://blog.aayu.today/tags/STM32/" />
-            <pubDate>Tue, 29 Aug 2023 17:47:17 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;STM32 是 ST 公司基于 ARM Cortex-M 内核开发的 32 位微控制器&lt;/li&gt;
-&lt;li&gt;STM32 常应用在嵌入式领域，如智能车、无人机、机器人、无线通信、物联网、工业控制、娱乐电子产品等&lt;/li&gt;
-&lt;li&gt;STM32 功能强大、性能优异、片上资源丰富、功耗低，是一款经典的嵌入式微控制器&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;​&lt;img data-src=&#34;assets/image-20230829062418-b4zqa2d.png&#34; alt=&#34;image&#34; width=&#34;600px&#34; /&gt;&lt;/p&gt;
-&lt;h2 id=&#34;arm-简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#arm-简介&#34;&gt;#&lt;/a&gt; ARM 简介&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;ARM 既指 ARM 公司，也指 ARM 处理器内核&lt;/li&gt;
-&lt;li&gt;ARM 公司是全球领先的半导体知识产权（IP）提供商，全世界超过 95% 的智能手机和平板电脑都采用 ARM 架构&lt;/li&gt;
-&lt;li&gt;ARM 公司设计 ARM 内核，半导体厂商完善内核周边电路并生产芯片&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p class=&#34;gallery&#34; data-height=&#34;240&#34;&gt;​&lt;img data-src=&#34;assets/image-20230829175000-sfot1fr.png&#34; alt=&#34;image&#34; /&gt;​&lt;br /&gt;
-​&lt;img data-src=&#34;assets/image-20230829085006-963k30s.png&#34; alt=&#34;image&#34; /&gt;​&lt;/p&gt;
-&lt;h2 id=&#34;芯片命名规则系统结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#芯片命名规则系统结构&#34;&gt;#&lt;/a&gt; 芯片命名规则 / 系统结构&lt;/h2&gt;
-&lt;p class=&#34;gallery&#34; data-height=&#34;400&#34;&gt;​&lt;img data-src=&#34;assets/image-20230829085334-zco8aqz.png&#34; alt=&#34;image&#34; /&gt;​&lt;br /&gt;
-​&lt;img data-src=&#34;assets/image-20230829085412-okgln4i.png&#34; alt=&#34;image&#34; /&gt;​&lt;/p&gt;
-&lt;h2 id=&#34;stm32f103c8t6&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#stm32f103c8t6&#34;&gt;#&lt;/a&gt; STM32F103C8T6&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;系列：主流系列 STM32F1&lt;/li&gt;
-&lt;li&gt;内核：ARM Cortex-M3&lt;/li&gt;
-&lt;li&gt;主频：72MHz&lt;/li&gt;
-&lt;li&gt;RAM：20K（SRAM）&lt;/li&gt;
-&lt;li&gt;ROM：64K（Flash）&lt;/li&gt;
-&lt;li&gt;供电：2.0~3.6V（标准 3.3V）&lt;/li&gt;
-&lt;li&gt;封装：LQFP48&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;​&lt;img data-src=&#34;assets/image-20230829085113-dlbipzm.png&#34; alt=&#34;image&#34; /&gt;​&lt;/p&gt;
-&lt;h3 id=&#34;片上资源外设&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#片上资源外设&#34;&gt;#&lt;/a&gt; 片上资源 / 外设&lt;/h3&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;英文缩写&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;名称&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;英文缩写&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;名称&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;NVIC&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;嵌套向量中断控制器&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;CAN&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;CAN 通信&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;SysTick&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;系统滴答定时器&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;USB&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;USB 通信&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;RCC&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;复位和时钟控制&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;RTC&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;实时时钟&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;GPIO&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;通用 IO 口&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;CRC&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;CRC 校验&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;AFIO&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;复用 IO 口&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;PWR&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;电源控制&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;EXTI&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;外部中断&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;BKP&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;备份寄存器&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;TIM&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;定时器&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;IWDG&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;独立看门狗&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;ADC&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;模数转换器&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;WWDG&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;窗口看门狗&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;DMA&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;直接内存访问&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;&lt;s&gt;DAC&lt;/s&gt;&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;&lt;s&gt;数模转换器&lt;/s&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;USART&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;同步 / 异步串口通信&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;&lt;s&gt;SDIO&lt;/s&gt;&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;&lt;s&gt;SD 卡接口&lt;/s&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;I2C&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;I2C 通信&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;&lt;s&gt;FSMC&lt;/s&gt;&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;&lt;s&gt;可变静态存储控制器&lt;/s&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;SPI&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;SPI 通信&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;&lt;s&gt;USB OTG&lt;/s&gt;&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;&lt;s&gt;USB 主机接口&lt;/s&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;​&lt;img data-src=&#34;assets/image-20230829085705-zv58vnn.png&#34; alt=&#34;image&#34; /&gt;​&lt;/p&gt;
-&lt;p&gt;​&lt;img data-src=&#34;assets/image-20230829085440-otbugzr.png&#34; alt=&#34;image&#34; /&gt;​&lt;/p&gt;
-&lt;h3 id=&#34;最小系统电路&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#最小系统电路&#34;&gt;#&lt;/a&gt; 最小系统电路&lt;/h3&gt;
-&lt;p&gt;​&lt;img data-src=&#34;assets/image-20230829085834-a3ncoer.png&#34; alt=&#34;image&#34; /&gt;​&lt;/p&gt;
-&lt;h2 id=&#34;参考资料&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考资料&#34;&gt;#&lt;/a&gt; 参考资料&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMXRoNDExejdzbj9wPTI=&#34;&gt;STM32 入门教程&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;assets/STM32F103C8T6%E6%A0%B8%E5%BF%83%E6%9D%BF%E5%8E%9F%E7%90%86%E5%9B%BE-20230829090126-n4p7n0d.pdf&#34;&gt;STM32F103C8T6 核心板原理图.pdf&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;assets/STM32F103x8B_DS_CH_V10-20230829090132-snsquym.pdf&#34;&gt;STM32F103x8B_DS_CH_V10.pdf&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
  ]]></description>
         </item>
     </channel>

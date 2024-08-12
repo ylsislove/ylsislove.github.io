@@ -15,7 +15,67 @@
         <id>https://blog.aayu.today/nas/zspace/20240727/</id>
         <title>手拉手教你部署思源笔记+发布服务+外网访问</title>
         <link rel="alternate" href="https://blog.aayu.today/nas/zspace/20240727/"/>
-        <content type="html">&lt;p&gt;待更～&lt;/p&gt;
+        <content type="html">&lt;h2 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h2&gt;
+&lt;h3 id=&#34;官方思源笔记-docker-版权限问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#官方思源笔记-docker-版权限问题&#34;&gt;#&lt;/a&gt; 官方思源笔记 Docker 版权限问题&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;官方思源笔记 Docker 地址：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9odWIuZG9ja2VyLmNvbS9yL2IzbG9nL3NpeXVhbg==&#34;&gt;https://hub.docker.com/r/b3log/siyuan&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在极空间部署官方的 Docker 镜像会遇到权限问题，具体表现为映射文件夹后启动会报错，如下：&lt;/p&gt;
+&lt;p class=&#34;gallery&#34; data-height=&#34;240&#34;&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2024/08/11/202408110006812.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://image.aayu.today/uploads/2024/08/11/202408110006707.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://image.aayu.today/uploads/2024/08/11/202408110009015.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;报错原因是因为：官方的思源笔记 Docker 镜像是使用的默认创建的普通用户  &lt;code&gt;siyuan&lt;/code&gt; （uid 1000/gid 1000）来启动内核进程的，但极空间文件夹是 root 用户权限，当创建 docker 镜像时做了文件夹映射后，普通用户  &lt;code&gt;siyuan&lt;/code&gt;  是没有权限在设置的目录下创建新的文件夹&lt;/p&gt;
+&lt;p&gt;所以报错原因就如上图所示：在设置的目录下创建 temp 文件夹失败，镜像就会启动不成功，一直反复重启。&lt;/p&gt;
+&lt;h2 id=&#34;修改了权限后的思源笔记-docker-镜像&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#修改了权限后的思源笔记-docker-镜像&#34;&gt;#&lt;/a&gt; 修改了权限后的思源笔记 Docker 镜像&lt;/h2&gt;
+&lt;p&gt;借助极空间论坛 zsource 大佬镜像自助编译的思路，将思源笔记官方的 Dockerfile 文件里的启动用户改为 root 用户，完美解决创建 Docker 容器文件夹路径映射后权限不足的问题。&lt;/p&gt;
+&lt;p&gt;修改了 Dockerfile 文件的代码仓我也上传到了 GitHub 上，地址：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3lsc2lzbG92ZS9zaXl1YW4tejQ=&#34;&gt;https://github.com/ylsislove/siyuan-z4&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;同时借助 GitHub Action，可以自助编译成不同架构的 Docker 镜像，这样极空间 z4 和 z2Pro 等不同设备都可以用我修改了权限后的思源笔记镜像了。这也是我想写这篇文章的一个原因，让更多的小白用户都能用上思源笔记，支持开源开发者！&lt;/p&gt;
+&lt;p&gt;后面如果我不出意外，应该会和官方镜像保持同步更新的节奏～&lt;/p&gt;
+&lt;h2 id=&#34;部署思源笔记&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#部署思源笔记&#34;&gt;#&lt;/a&gt; 部署思源笔记&lt;/h2&gt;
+&lt;h3 id=&#34;下载镜像&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#下载镜像&#34;&gt;#&lt;/a&gt; 下载镜像&lt;/h3&gt;
+&lt;p&gt;部署就很简单了，首先在极空间 Docker 镜像界面搜索 siyuan，然后找到 ylsislove/siyuan 版本的，点击下载。&lt;/p&gt;
+&lt;p&gt;这里可能会有用户碰到点击下载后显示不出版本信息，或镜像无法拉取的问题。这是因为国内有些地区的网络无法访问 Docker Hub，所以拉取不到镜像。有这个问题的用户可以在博客给我留言，我抽空就把最新镜像导出成文件，上传到极空间后，就可以在本地镜像下用上传文件的方式导入镜像了。&lt;/p&gt;
+&lt;p&gt;选择当前最新版本，点击下载，下载完成后就可以在本地镜像中看到，双击开始配置容器。&lt;/p&gt;
+&lt;p class=&#34;gallery&#34; data-height=&#34;240&#34;&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2024/08/11/202408110037907.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://image.aayu.today/uploads/2024/08/12/202408122328480.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://image.aayu.today/uploads/2024/08/12/202408122328472.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;配置容器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置容器&#34;&gt;#&lt;/a&gt; 配置容器&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;基础设置：可以根据自己需求设置，名称随便取&lt;/li&gt;
+&lt;li&gt;文件夹路径：需要选择一个极空间文件夹，来持久化保存我们的文件&lt;/li&gt;
+&lt;li&gt;网络：保持默认就行&lt;/li&gt;
+&lt;li&gt;端口：这里需要设置两个端口映射， &lt;code&gt;6806&lt;/code&gt;  是思源笔记访问端口， &lt;code&gt;6807&lt;/code&gt;  可以在思源笔记里配置成服务发布端口。所以这两个端口都需要映射出去，我选择映射成 &lt;code&gt;26806&lt;/code&gt;  和 &lt;code&gt;26807&lt;/code&gt;  这两个空闲端口，小伙伴也可以自己映射成其他端口，都是 no problem&lt;/li&gt;
+&lt;li&gt;别名：保持默认即可&lt;/li&gt;
+&lt;li&gt;环境：也保持默认即可， &lt;code&gt;ACCESSAUTHCODE&lt;/code&gt;  字段我们在命令那一栏配置&lt;/li&gt;
+&lt;li&gt;命令：这里比较重要，我们要在自定义命令中配置工作空间路径，授权码，和默认语言这三项，如图片所示，把我下面这行配置粘过去即可，记得自己改一下授权密码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight txt&#34;&gt;&lt;figcaption data-lang=&#34;txt&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;--workspace=/siyuan/workspace --accessAuthCode=123456789 --lang=zh_CN&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ul&gt;
+&lt;li&gt;能力：保持默认即可&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p class=&#34;gallery&#34; data-height=&#34;150&#34;&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2024/08/12/202408122331837.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://image.aayu.today/uploads/2024/08/12/202408122331757.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://image.aayu.today/uploads/2024/08/12/202408122332875.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://image.aayu.today/uploads/2024/08/12/202408122333410.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p class=&#34;gallery&#34; data-height=&#34;150&#34;&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2024/08/12/202408122338320.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://image.aayu.today/uploads/2024/08/12/202408122339184.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://image.aayu.today/uploads/2024/08/12/202408122344516.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://image.aayu.today/uploads/2024/08/12/202408122344964.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;最后点击应用，不出意外的话容器就会创建成功啦，创建成功后，记得点击容器的日志按钮，出现如下日志，说明容器配置的没问题。&lt;/p&gt;
+&lt;p&gt;再打开我们在极空间映射的文件夹，也正常映射出了文件。&lt;/p&gt;
+&lt;p&gt;最后，在浏览器访问 &lt;code&gt;极空间IP:26806&lt;/code&gt;  地址，能正常访问思源笔记，思源笔记部署篇完美结束～&lt;/p&gt;
+&lt;p class=&#34;gallery&#34; data-height=&#34;150&#34;&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2024/08/12/202408122347518.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://image.aayu.today/uploads/2024/08/12/202408122346628.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://image.aayu.today/uploads/2024/08/12/202408122349553.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://image.aayu.today/uploads/2024/08/12/202408122351891.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;发布服务&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#发布服务&#34;&gt;#&lt;/a&gt; 发布服务&lt;/h2&gt;
+&lt;p&gt;待更～&lt;/p&gt;
+&lt;h2 id=&#34;外网访问&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#外网访问&#34;&gt;#&lt;/a&gt; 外网访问&lt;/h2&gt;
+&lt;p&gt;待更～&lt;/p&gt;
+&lt;h2 id=&#34;绑定域名&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#绑定域名&#34;&gt;#&lt;/a&gt; 绑定域名&lt;/h2&gt;
+&lt;p&gt;待更～&lt;/p&gt;
+&lt;h2 id=&#34;webdav备份&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#webdav备份&#34;&gt;#&lt;/a&gt; WebDAV 备份&lt;/h2&gt;
+&lt;p&gt;待更～&lt;/p&gt;
+&lt;p&gt;这周要经常加班，尽量抽时间把这篇教程写完，喜欢的话欢迎在评论区给我留言，（づ￣3￣）づ╭❤～&lt;/p&gt;
 </content>
         <category term="我的NAS捣鼓笔记" scheme="https://blog.aayu.today/categories/nas/" />
         <category term="极空间" scheme="https://blog.aayu.today/categories/nas/%E6%9E%81%E7%A9%BA%E9%97%B4/" />

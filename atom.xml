@@ -68,8 +68,16 @@
 &lt;img data-src=&#34;https://image.aayu.today/uploads/2024/08/12/202408122349553.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
 &lt;img data-src=&#34;https://image.aayu.today/uploads/2024/08/12/202408122351891.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;发布服务&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#发布服务&#34;&gt;#&lt;/a&gt; 发布服务&lt;/h2&gt;
-&lt;p&gt;待更～&lt;/p&gt;
+&lt;p&gt;在思源笔记左上角点击「 设置 」，找到「 发布 」选项，然后打开发布功能&lt;/p&gt;
+&lt;p&gt;注意端口要和容器中设置的端口对应。&lt;/p&gt;
+&lt;p&gt;设置完毕后，就可以在浏览器访问 &lt;code&gt;极空间IP:26807&lt;/code&gt;  地址，就能看到笔记被发布出去了～&lt;/p&gt;
+&lt;p&gt;发布模式（端口 6807）和普通模式（端口 6806）的区别就是：发布模式访问笔记本是只读的，其他人是无法更改你的笔记内容的，只能浏览，这对于喜欢分享笔记的朋友来说就非常友好啦～&lt;/p&gt;
+&lt;p class=&#34;gallery&#34; data-height=&#34;240&#34;&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2024/08/18/202408182346847.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://image.aayu.today/uploads/2024/08/18/202408182352007.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;外网访问&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#外网访问&#34;&gt;#&lt;/a&gt; 外网访问&lt;/h2&gt;
+&lt;p&gt;外网访问的方式有很多，比如如果有小伙伴能向运营商申请到公网 IP 的话，直接在浏览器输入公网 IP:26806 就能访问到思源笔记了。&lt;/p&gt;
+&lt;p&gt;但有些地区的运营商可能不会向普通民众开放公网 IP，所以这里我们就需要借助一台能公网访问的云服务器来实现内网穿透，借助这台云服务的公网 IP 来访问极空间内网的思源笔记。&lt;/p&gt;
+&lt;p&gt;云服务器的选购也有很多种，比如阿里云、腾讯云、华为云等等，这里我以腾讯云的云服务器为例，小伙伴也可以自行选购其他家更便宜的云服务器～&lt;/p&gt;
 &lt;p&gt;待更～&lt;/p&gt;
 &lt;h2 id=&#34;绑定域名&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#绑定域名&#34;&gt;#&lt;/a&gt; 绑定域名&lt;/h2&gt;
 &lt;p&gt;待更～&lt;/p&gt;

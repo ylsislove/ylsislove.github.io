@@ -218,6 +218,14 @@
 &lt;p class=&#34;gallery&#34; data-height=&#34;240&#34;&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2024/08/31/202408310148232.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
 &lt;img data-src=&#34;https://image.aayu.today/uploads/2024/08/31/202408310153827.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;绑定域名&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#绑定域名&#34;&gt;#&lt;/a&gt; 绑定域名&lt;/h2&gt;
+&lt;p&gt;想要通过域名访问内网的思源笔记，首先就需要我们有一个域名呀～&lt;/p&gt;
+&lt;p&gt;域名怎么来，得购买！因为我之前都是在腾讯云买的域名，所以这里就以腾讯云为例，小伙伴也可以选择其他域名服务商～&lt;/p&gt;
+&lt;p&gt;腾讯云域名注册地址：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9jb25zb2xlLmNsb3VkLnRlbmNlbnQuY29tL2RvbWFpbg==&#34;&gt;https://console.cloud.tencent.com/domain&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;小伙伴在这里就可以挑选自己心爱的域名，当然，一些比较好记好听的域名价格都会比较昂贵，这里切记要量力而行，挑选一个对自己有意义的域名即可～&lt;/p&gt;
+&lt;p&gt;这里随手搜了下我对象的名字，完美匹配到一个可注册的域名，真是好运哈哈哈&lt;/p&gt;
+&lt;p&gt;首年 14，续费 32，三年价格 78，买了！&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2024/08/31/202408310208856.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;购买完成后，在「 我的域名 」栏目下就能看到刚购买的域名，刚购买的域名状态应该是  &lt;code&gt;域名命名审核中&lt;/code&gt; ，这里耐心等待一两天，审核通过后，就可以正常使用了～&lt;/p&gt;
 &lt;p&gt;待更～&lt;/p&gt;
 &lt;h2 id=&#34;webdav备份&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#webdav备份&#34;&gt;#&lt;/a&gt; WebDAV 备份&lt;/h2&gt;
 &lt;p&gt;待更～&lt;/p&gt;

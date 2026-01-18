@@ -10,18 +10,71 @@
         </author>
         <description>真理和热爱是吾永生的追求</description>
         <language>zh-CN</language>
-        <pubDate>Sun, 18 Jan 2026 17:05:03 +0800</pubDate>
-        <lastBuildDate>Sun, 18 Jan 2026 17:05:03 +0800</lastBuildDate>
+        <pubDate>Sun, 18 Jan 2026 20:01:00 +0800</pubDate>
+        <lastBuildDate>Sun, 18 Jan 2026 20:01:00 +0800</lastBuildDate>
         <category term="HoloLens" />
         <category term=" NAS" />
         <item>
-            <guid isPermalink="true">https://blog.aayu.today/leisure/mood/20260118/</guid>
-            <title>hexo-action修复ssh-keyscan not found问题</title>
-            <link>https://blog.aayu.today/leisure/mood/20260118/</link>
-            <category term="清风明月" scheme="https://blog.aayu.today/categories/leisure/" />
-            <category term="心情" scheme="https://blog.aayu.today/categories/leisure/mood/" />
-            <category term="心情" scheme="https://blog.aayu.today/tags/%E5%BF%83%E6%83%85/" />
+            <guid isPermalink="true">https://blog.aayu.today/skill/mac/20260118/</guid>
+            <title>在Mac系统中实现STLink烧录固件（不用虚拟机！）</title>
+            <link>https://blog.aayu.today/skill/mac/20260118/</link>
+            <category term="不看会后悔的实用技巧分享" scheme="https://blog.aayu.today/categories/skill/" />
+            <category term="MacBook" scheme="https://blog.aayu.today/categories/skill/MacBook/" />
             <category term="MacBook" scheme="https://blog.aayu.today/tags/MacBook/" />
+            <category term="STLink" scheme="https://blog.aayu.today/tags/STLink/" />
+            <pubDate>Sun, 18 Jan 2026 20:01:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;参考链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考链接&#34;&gt;#&lt;/a&gt; 参考链接&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjUxMzkyOC9hcnRpY2xlL2RldGFpbHMvMTU2NDQxMDE5&#34;&gt;Mac 系统中实现 STLink 驱动下载（STM32）的完整方案&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9jaGF0LmRlZXBzZWVrLmNvbS9zaGFyZS90aWJubHV5bjBrYWt0NHowb3Q=&#34;&gt;Keil5 生成 BIN 文件及烧录方法详解&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;使用homebrew安装openocd&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用homebrew安装openocd&#34;&gt;#&lt;/a&gt; 使用 Homebrew 安装 openocd&lt;/h2&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;brew &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; libusb openocd&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;工具说明：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;工具&lt;/th&gt;
+&lt;th&gt;作用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;libusb&lt;/td&gt;
+&lt;td&gt;提供用户态直接访问 USB 设备的能力，绕过系统驱动限制&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;openocd&lt;/td&gt;
+&lt;td&gt;实现 ARM Cortex-M 调试协议栈，充当 “调试服务器”&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;安装完成后，你可以通过以下命令检查版本：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;openocd &lt;span class=&#34;token parameter variable&#34;&gt;--version&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 输出类似：Open On-Chip Debugger 0.12.0&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;文件格式区别&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#文件格式区别&#34;&gt;#&lt;/a&gt; 文件格式区别&lt;/h2&gt;
+&lt;h3 id=&#34;axf文件-arm-executable-format&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#axf文件-arm-executable-format&#34;&gt;#&lt;/a&gt; AXF 文件 (ARM eXecutable Format)&lt;/h3&gt;
+&lt;p&gt;包含内容：完整的可执行代码 + 调试信息 + 符号表 + 段信息&lt;/p&gt;
+&lt;p&gt;文件大小：通常比 HEX/BIN 大很多&lt;/p&gt;
+&lt;p&gt;主要用途：用于调试（可以用 Keil/IDE 单步调试）&lt;/p&gt;
+&lt;p&gt;不能直接烧录到 MCU，因为包含太多非代码信息&lt;/p&gt;
+&lt;h3 id=&#34;hex文件-intel-hex格式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hex文件-intel-hex格式&#34;&gt;#&lt;/a&gt; HEX 文件 (Intel HEX 格式)&lt;/h3&gt;
+&lt;p&gt;包含内容：纯可执行代码 + 地址信息（文本格式）&lt;/p&gt;
+&lt;p&gt;文件格式：ASCII 文本格式，每行包含地址、数据、校验和&lt;/p&gt;
+&lt;p&gt;可以烧录到 MCU，烧录工具会自动解析地址&lt;/p&gt;
+&lt;h3 id=&#34;bin文件-binary格式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#bin文件-binary格式&#34;&gt;#&lt;/a&gt; BIN 文件 (Binary 格式)&lt;/h3&gt;
+&lt;p&gt;包含内容：纯二进制代码（无地址信息）&lt;/p&gt;
+&lt;p&gt;文件格式：原始二进制，最紧凑&lt;/p&gt;
+&lt;p&gt;烧录时需要指定起始地址（如你命令中的 0x08000000）&lt;/p&gt;
+&lt;h2 id=&#34;烧录命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#烧录命令&#34;&gt;#&lt;/a&gt; 烧录命令&lt;/h2&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 方案 A：使用 BIN&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;openocd &lt;span class=&#34;token parameter variable&#34;&gt;-f&lt;/span&gt; interface/stlink.cfg &lt;span class=&#34;token parameter variable&#34;&gt;-f&lt;/span&gt; target/stm32f1x.cfg &lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token parameter variable&#34;&gt;-c&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;program firmware.bin 0x08000000 verify reset exit&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 方案 B：使用 HEX（更简单）&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;openocd &lt;span class=&#34;token parameter variable&#34;&gt;-f&lt;/span&gt; interface/stlink.cfg &lt;span class=&#34;token parameter variable&#34;&gt;-f&lt;/span&gt; target/stm32f1x.cfg &lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token parameter variable&#34;&gt;-c&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;program firmware.hex verify reset exit&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://blog.aayu.today/skill/blog/20260118/</guid>
+            <title>hexo-action修复ssh-keyscan not found问题</title>
+            <link>https://blog.aayu.today/skill/blog/20260118/</link>
+            <category term="不看会后悔的实用技巧分享" scheme="https://blog.aayu.today/categories/skill/" />
+            <category term="个人博客" scheme="https://blog.aayu.today/categories/skill/blog/" />
+            <category term="MacBook" scheme="https://blog.aayu.today/tags/MacBook/" />
+            <category term="Hexo" scheme="https://blog.aayu.today/tags/Hexo/" />
+            <category term="Blog" scheme="https://blog.aayu.today/tags/Blog/" />
             <pubDate>Sun, 18 Jan 2026 17:05:03 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;用本地的hexo-action目录替换远程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#用本地的hexo-action目录替换远程&#34;&gt;#&lt;/a&gt; 用本地的 hexo-action 目录替换远程&lt;/h2&gt;
 &lt;p&gt;要不然每次在本地添加一些排查语句，都得上传到 GitHub 上去排查调试，太麻烦了&lt;/p&gt;
@@ -1078,80 +1131,6 @@
 &lt;p&gt;&lt;mark&gt;使用 GPU Instancing 往往能减少 CPU 和 GPU 的开销，提升游戏性能，但同时也会占用一定的内存。&lt;/mark&gt;&lt;/p&gt;
 &lt;p&gt;是否要启用 GPU Instancing，要根据自己的项目来定。可以尝试启用，在性能分析器中看看效果如果，如果效果好，再确定启用它。&lt;/p&gt;
 &lt;p&gt;一般来说，当场景中有大量重复的网格实例时，可以尝试启用 GPU Instancing。例如场景中有大量树木、草地、石块等，这些实例具有相同的网格和材质，只是位置、颜色等属性稍有差异，那么启用 GPU Instancing 或许能够显著提高性能。&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://blog.aayu.today/feature/unity/20231006/</guid>
-            <title>XREAL开发笔记（1）照片溶解特效</title>
-            <link>https://blog.aayu.today/feature/unity/20231006/</link>
-            <category term="Unity3D" scheme="https://blog.aayu.today/categories/unity/" />
-            <category term="XREAL" scheme="https://blog.aayu.today/categories/unity/XREAL/" />
-            <category term="Unity3D" scheme="https://blog.aayu.today/tags/Unity3D/" />
-            <category term="XREAL" scheme="https://blog.aayu.today/tags/XREAL/" />
-            <pubDate>Fri, 06 Oct 2023 23:12:33 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h2&gt;
-&lt;p&gt;最近学了一个照片溶解特效，感觉很炫酷，也可以作为后续项目花里胡哨的基础，便在此将学习过程记录一下吧～&lt;/p&gt;
-&lt;p&gt;话不多说，先看看最终效果～&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/10/07/202310071342614.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;h2 id=&#34;创建和配置项目&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#创建和配置项目&#34;&gt;#&lt;/a&gt; 创建和配置项目&lt;/h2&gt;
-&lt;p&gt;选择 3D（URP）项目，然后点击 Create Project 即可创建项目。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/10/06/202310062329303.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;打开 Unity，File--&amp;gt;Build Settings, 选择 Android，点击 Switch Platform&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/10/07/202310071110378.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;在 Build Settings 窗口中，选择 Player Settings, 然后按照下面对应的设置进行配置&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/10/07/202310071112820.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/10/07/202310071115921.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/10/07/202310071115680.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/10/07/202310071118937.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/10/07/202310071118023.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;h2 id=&#34;导入-nrsdk&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#导入-nrsdk&#34;&gt;#&lt;/a&gt; 导入 NRSDK&lt;/h2&gt;
-&lt;p&gt;将 NRSDKForUnity_Release_1.10.2 拖入到 Assets 文件夹中，点击 Import 即可导入&lt;/p&gt;
-&lt;p&gt;在 Scenes 文件夹下创建个新场景，删除默认的相机，将 NRCameraRig 和 NRInput 拖拽到场景中&lt;/p&gt;
-&lt;h2 id=&#34;创建-shader&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#创建-shader&#34;&gt;#&lt;/a&gt; 创建 Shader&lt;/h2&gt;
-&lt;p&gt;在 Assets 下创建 Materials 文件夹，在 Materials 文件夹上右键，点击 Create -&amp;gt; Shader Graph -&amp;gt; URP -&amp;gt; Lit Shader Graph，命名为 Dissolve，双击打开&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/10/07/202310071135598.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;小 Tip：双击选项卡可以最大化选项卡，再次双击可以恢复&lt;/p&gt;
-&lt;p&gt;首先创建 4 个可以暴露的属性，注意创建属性的类型&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/10/07/202310071138114.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;然后将 MainTex 拖拽到画板里，从节点拉出一根线然后在空白书松开，选择 Sample Texture 2D，双击创建新节点，然后把 RGBA 连接到 Base Color&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/10/07/202310071141655.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;勾选 Graph Inspector 窗口里的 Alpha Clip，可以看到片元着色器就会多出两个属性，透明度和透明度裁剪阈值，我们的溶解特效就是根据这两个属性实现的。具体来讲就是随机一个高斯噪声，根据噪声透明度和阈值裁剪照片，将透明度小于该值的像素点裁剪掉，通过将阈值从小变到大，从而实现溶解特效。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/10/07/202310071145121.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;在画板空白处右键，选择 Simple Noise 节点创建，将 X 值调为 30 左右，然后将 Out 连接到 Alpha 变量上&lt;/p&gt;
-&lt;p&gt;为了溶解特效更加炫酷，可以将溶解边缘增加发光效果，具体节点和连接如下&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/10/07/202310071202381.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;小 Tip：可以框选住一些节点，然后右键选择 Group Selection，可以将这些节点合并成一个节点，方便一起拖拽&lt;/p&gt;
-&lt;p&gt;可以在右侧 Graph Inspector 窗口的 Node Settings 里将 AlphaThreshold 模式变为滑动条模式，并给一个默认值 0.5，就可以看到 Step 节点下面的预览图像为二值化后的图像了&lt;/p&gt;
-&lt;p&gt;RimColor 将模式变为 HDR，然后默认颜色可以设为红色，这样就可以将溶解边缘设为红色的发光了&lt;/p&gt;
-&lt;p&gt;然后再将最后的 Out 连接到片元着色器的 Emission 上，这样溶解边缘发光的 Shader 就配置好啦&lt;/p&gt;
-&lt;p&gt;边缘发光的宽度可以通过 RimWidth 属性控制，可以将 RimWidth 也设为滑动条模式，然后范围设为 0 到 5，默认值为 2&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/10/07/202310071204576.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;至此，溶解特效的 Shader 就配置好啦，点击左上角的 Save Asset 保存，然后双击选项卡退出最大化&lt;/p&gt;
-&lt;h2 id=&#34;创建材质&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#创建材质&#34;&gt;#&lt;/a&gt; 创建材质&lt;/h2&gt;
-&lt;p&gt;在 Assets 里的 Dissolve Shader 上右键，点击 Create -&amp;gt; Material，命名为 Mat_Dissolve&lt;/p&gt;
-&lt;p&gt;然后在场景中创建一个 Quad，双击可以聚焦到这个物体，然后将 Mat_Dissolve 拖拽到这个物体上，就可以看到这个物体的材质变成了 Mat_Dissolve&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/10/07/202310071211267.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;现在溶解特效就已经可以看出来了&lt;/p&gt;
-&lt;p&gt;可以将 Quad 的 Z 值设为 3，即物体在镜头外 3 米的地方，这样就可以在 Game 窗口里看到物体了&lt;/p&gt;
-&lt;p&gt;将 NRSDK 里自带的 Image 拖拽到我们在 Shader 里设置的 MainTex 属性上&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/10/07/202310071215794.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;然后拖拽 AlphaThreshold 就可以看到效果了&lt;/p&gt;
-&lt;p&gt;想要看到炫光还需要一点配置&lt;/p&gt;
-&lt;p&gt;首先在场景处右键，选择 Volume -&amp;gt; Global Volume，然后配置文件选择默认已有的 SampleSceneProfile 即可&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/10/07/202310071221375.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;然后将 LeftCamera，CenterCamera，RightCamera 的 Post Processing 都打上勾，即启用后处理配置&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/10/07/202310071224514.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;然后再回到 Quad，可以在 RimColor 里调整炫光强度&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/10/07/202310071225331.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;至此，照片溶解特效就配置好啦&lt;/p&gt;
-&lt;h2 id=&#34;编写脚本&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#编写脚本&#34;&gt;#&lt;/a&gt; 编写脚本&lt;/h2&gt;
-&lt;p&gt;在 Assets 下创建 Scripts 文件夹，然后在 Scripts 文件夹上右键，点击 Create -&amp;gt; C# Script，命名为 Dissolve，双击打开代码编辑器，代码内容如下&lt;/p&gt;
-&lt;figure class=&#34;highlight csharp&#34;&gt;&lt;figcaption data-lang=&#34;C#&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;System&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;Collections&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;UnityEngine&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Dissolve&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token type-list&#34;&gt;&lt;span class=&#34;token class-name&#34;&gt;MonoBehaviour&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;readonly&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt;&lt;/span&gt; mAlphaThreshold &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; Shader&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;PropertyToID&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;_AlphaThreshold&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token return-type class-name&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;StartDissolve&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token function&#34;&gt;StartCoroutine&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;DissolveEffect&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;token return-type class-name&#34;&gt;IEnumerator&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;DissolveEffect&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;// 获取当前物体的 MeshRenderer 组件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token class-name&#34;&gt;MeshRenderer&lt;/span&gt; meshRenderer &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; gameObject&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token generic-method&#34;&gt;&lt;span class=&#34;token function&#34;&gt;GetComponent&lt;/span&gt;&lt;span class=&#34;token generic class-name&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;MeshRenderer&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;// 获取当前物体的材质&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token class-name&#34;&gt;Material&lt;/span&gt; material &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; meshRenderer&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;material&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;// 将材质的溶解值缓慢从 0 变为 1，持续 2s&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;float&lt;/span&gt;&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;+=&lt;/span&gt; Time&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;deltaTime&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            material&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;SetFloat&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;mAlphaThreshold&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; i&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token keyword&#34;&gt;yield&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;// 重新设置溶解值为 0&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        material&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;SetFloat&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;mAlphaThreshold&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;27&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;28&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;在 Quad 上添加一个 Button 组件，并将 Dissolve 脚本先拖拽到 Quad 物体上，然后把 Quad 拖拽到 On Click 事件里，然后选择 Dissolve -&amp;gt; StartDissolve&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/10/07/202310071252207.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;这样，当控制器的射线点击到 Quad 上时，就会触发溶解特效了&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/10/07/202310071256539.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;最后就是构建成手机 App，然后将 Air2 眼镜切换为 3D 模式，运行应用就可以看到效果啦&lt;/p&gt;
-&lt;p&gt;完结撒花～&lt;/p&gt;
  ]]></description>
         </item>
     </channel>

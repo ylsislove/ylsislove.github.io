@@ -542,10 +542,11 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://blog.aayu.today/feature/rokid/20240124/</guid>
+            <guid isPermalink="true">https://blog.aayu.today/future/rokid/20240124/</guid>
             <title>Rokid 空间小程序《我们的地球》开源~</title>
-            <link>https://blog.aayu.today/feature/rokid/20240124/</link>
-            <category term="Rokid" scheme="https://blog.aayu.today/categories/Rokid/" />
+            <link>https://blog.aayu.today/future/rokid/20240124/</link>
+            <category term="未来" scheme="https://blog.aayu.today/categories/future/" />
+            <category term="Rokid" scheme="https://blog.aayu.today/categories/future/Rokid/" />
             <category term="Rokid" scheme="https://blog.aayu.today/tags/Rokid/" />
             <category term="空间小程序" scheme="https://blog.aayu.today/tags/%E7%A9%BA%E9%97%B4%E5%B0%8F%E7%A8%8B%E5%BA%8F/" />
             <pubDate>Wed, 24 Jan 2024 01:46:51 +0800</pubDate>
@@ -565,10 +566,11 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://blog.aayu.today/feature/unity/20240101/</guid>
+            <guid isPermalink="true">https://blog.aayu.today/future/unity/20240101/</guid>
             <title>Unity3D特效学习笔记（1）魔法球</title>
-            <link>https://blog.aayu.today/feature/unity/20240101/</link>
-            <category term="Unity3D" scheme="https://blog.aayu.today/categories/unity/" />
+            <link>https://blog.aayu.today/future/unity/20240101/</link>
+            <category term="未来" scheme="https://blog.aayu.today/categories/future/" />
+            <category term="Unity3D" scheme="https://blog.aayu.today/categories/future/unity/" />
             <category term="Unity3D" scheme="https://blog.aayu.today/tags/Unity3D/" />
             <pubDate>Mon, 01 Jan 2024 22:00:52 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;效果展示&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#效果展示&#34;&gt;#&lt;/a&gt; 效果展示&lt;/h2&gt;
@@ -624,11 +626,11 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://blog.aayu.today/feature/rokid/20231125/</guid>
+            <guid isPermalink="true">https://blog.aayu.today/future/rokid/20231125/</guid>
             <title>Rokid 新项目构建过程中，可能遇到的问题及解决方案</title>
-            <link>https://blog.aayu.today/feature/rokid/20231125/</link>
-            <category term="Unity3D" scheme="https://blog.aayu.today/categories/unity/" />
-            <category term="Rokid" scheme="https://blog.aayu.today/categories/unity/Rokid/" />
+            <link>https://blog.aayu.today/future/rokid/20231125/</link>
+            <category term="未来" scheme="https://blog.aayu.today/categories/future/" />
+            <category term="Rokid" scheme="https://blog.aayu.today/categories/future/Rokid/" />
             <category term="Unity3D" scheme="https://blog.aayu.today/tags/Unity3D/" />
             <category term="Rokid" scheme="https://blog.aayu.today/tags/Rokid/" />
             <pubDate>Sat, 25 Nov 2023 19:31:42 +0800</pubDate>
@@ -785,10 +787,11 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://blog.aayu.today/feature/unity/20231021/</guid>
+            <guid isPermalink="true">https://blog.aayu.today/future/unity/20231021/</guid>
             <title>Unity3D优化笔记（10）其他优化</title>
-            <link>https://blog.aayu.today/feature/unity/20231021/</link>
-            <category term="Unity3D" scheme="https://blog.aayu.today/categories/unity/" />
+            <link>https://blog.aayu.today/future/unity/20231021/</link>
+            <category term="未来" scheme="https://blog.aayu.today/categories/future/" />
+            <category term="Unity3D" scheme="https://blog.aayu.today/categories/future/unity/" />
             <category term="Unity3D" scheme="https://blog.aayu.today/tags/Unity3D/" />
             <pubDate>Sat, 21 Oct 2023 22:52:00 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;代码优化&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#代码优化&#34;&gt;#&lt;/a&gt; 代码优化&lt;/h2&gt;
@@ -843,10 +846,11 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://blog.aayu.today/feature/unity/20231020/</guid>
+            <guid isPermalink="true">https://blog.aayu.today/future/unity/20231020/</guid>
             <title>Unity3D优化笔记（9）合并网格、动画、音频、物理优化</title>
-            <link>https://blog.aayu.today/feature/unity/20231020/</link>
-            <category term="Unity3D" scheme="https://blog.aayu.today/categories/unity/" />
+            <link>https://blog.aayu.today/future/unity/20231020/</link>
+            <category term="未来" scheme="https://blog.aayu.today/categories/future/" />
+            <category term="Unity3D" scheme="https://blog.aayu.today/categories/future/unity/" />
             <category term="Unity3D" scheme="https://blog.aayu.today/tags/Unity3D/" />
             <pubDate>Fri, 20 Oct 2023 21:34:24 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;合并网格mesh-combine&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#合并网格mesh-combine&#34;&gt;#&lt;/a&gt; 合并网格（Mesh Combine）&lt;/h2&gt;
@@ -895,10 +899,11 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://blog.aayu.today/feature/unity/20231019/</guid>
+            <guid isPermalink="true">https://blog.aayu.today/future/unity/20231019/</guid>
             <title>Unity3D优化笔记（8）UI优化、模型优化和LOD技术</title>
-            <link>https://blog.aayu.today/feature/unity/20231019/</link>
-            <category term="Unity3D" scheme="https://blog.aayu.today/categories/unity/" />
+            <link>https://blog.aayu.today/future/unity/20231019/</link>
+            <category term="未来" scheme="https://blog.aayu.today/categories/future/" />
+            <category term="Unity3D" scheme="https://blog.aayu.today/categories/future/unity/" />
             <category term="Unity3D" scheme="https://blog.aayu.today/tags/Unity3D/" />
             <pubDate>Thu, 19 Oct 2023 23:56:10 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;ui-优化&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ui-优化&#34;&gt;#&lt;/a&gt; UI 优化&lt;/h2&gt;
@@ -968,10 +973,11 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://blog.aayu.today/feature/unity/20231018/</guid>
+            <guid isPermalink="true">https://blog.aayu.today/future/unity/20231018/</guid>
             <title>Unity3D优化笔记（7）光照优化、图片优化</title>
-            <link>https://blog.aayu.today/feature/unity/20231018/</link>
-            <category term="Unity3D" scheme="https://blog.aayu.today/categories/unity/" />
+            <link>https://blog.aayu.today/future/unity/20231018/</link>
+            <category term="未来" scheme="https://blog.aayu.today/categories/future/" />
+            <category term="Unity3D" scheme="https://blog.aayu.today/categories/future/unity/" />
             <category term="Unity3D" scheme="https://blog.aayu.today/tags/Unity3D/" />
             <pubDate>Wed, 18 Oct 2023 12:40:45 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;光照优化&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#光照优化&#34;&gt;#&lt;/a&gt; 光照优化&lt;/h2&gt;
@@ -1015,10 +1021,11 @@
 &lt;figure class=&#34;highlight csharp&#34;&gt;&lt;figcaption data-lang=&#34;C#&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token return-type class-name&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;Awake&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	spriteAtlas &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; Resources&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token generic-method&#34;&gt;&lt;span class=&#34;token function&#34;&gt;Load&lt;/span&gt;&lt;span class=&#34;token generic class-name&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;SpriteAtlas&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;MySpriteAtlas&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token return-type class-name&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;Update&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;Input&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;GetKeyDown&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;KeyCode&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;Q&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		image1&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;sprite &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; spriteAtlas&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;GetSprite&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;trees_0&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;Input&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;GetKeyDown&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;KeyCode&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;W&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		image2&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;sprite &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; spriteAtlas&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;GetSprite&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;trees_1&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://blog.aayu.today/feature/unity/20231017/</guid>
+            <guid isPermalink="true">https://blog.aayu.today/future/unity/20231017/</guid>
             <title>Unity3D优化笔记（6）遮挡剔除</title>
-            <link>https://blog.aayu.today/feature/unity/20231017/</link>
-            <category term="Unity3D" scheme="https://blog.aayu.today/categories/unity/" />
+            <link>https://blog.aayu.today/future/unity/20231017/</link>
+            <category term="未来" scheme="https://blog.aayu.today/categories/future/" />
+            <category term="Unity3D" scheme="https://blog.aayu.today/categories/future/unity/" />
             <category term="Unity3D" scheme="https://blog.aayu.today/tags/Unity3D/" />
             <pubDate>Tue, 17 Oct 2023 13:43:03 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;正常情况下，如果一个障碍物 A 挡住了后面的物体 B，虽然我们看不见物体 B，但是 Unity 仍然会消耗性能来渲染这个物体 B。这样 CPU 和 GPU 就会有一部分性能白白浪费在渲染物体 B 身上。&lt;/p&gt;
@@ -1063,10 +1070,11 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://blog.aayu.today/feature/unity/20231016/</guid>
+            <guid isPermalink="true">https://blog.aayu.today/future/unity/20231016/</guid>
             <title>Unity3D优化笔记（5）静态合批、动态合批和GPU Instancing</title>
-            <link>https://blog.aayu.today/feature/unity/20231016/</link>
-            <category term="Unity3D" scheme="https://blog.aayu.today/categories/unity/" />
+            <link>https://blog.aayu.today/future/unity/20231016/</link>
+            <category term="未来" scheme="https://blog.aayu.today/categories/future/" />
+            <category term="Unity3D" scheme="https://blog.aayu.today/categories/future/unity/" />
             <category term="Unity3D" scheme="https://blog.aayu.today/tags/Unity3D/" />
             <pubDate>Mon, 16 Oct 2023 13:38:40 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;静态合批&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#静态合批&#34;&gt;#&lt;/a&gt; 静态合批&lt;/h2&gt;

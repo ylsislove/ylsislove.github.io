@@ -539,9 +539,9 @@
         <updated>2024-02-20T14:12:15.000Z</updated>
     </entry>
     <entry>
-        <id>https://blog.aayu.today/feature/rokid/20240124/</id>
+        <id>https://blog.aayu.today/future/rokid/20240124/</id>
         <title>Rokid 空间小程序《我们的地球》开源~</title>
-        <link rel="alternate" href="https://blog.aayu.today/feature/rokid/20240124/"/>
+        <link rel="alternate" href="https://blog.aayu.today/future/rokid/20240124/"/>
         <content type="html">&lt;h2 id=&#34;真机演示&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#真机演示&#34;&gt;#&lt;/a&gt; 真机演示&lt;/h2&gt;
 &lt;p&gt;&lt;div class=&#34;media-container&#34;&gt;&lt;div class=&#34;player&#34; data-type=&#34;video&#34; data-src=&#39;[{&#34;name&#34;:&#34;小破球，转起来，呼啦呼啦向前走，吼吼&#34;,&#34;url&#34;:&#34;https://pan.aayu.today/workspace/video/ourEarth.mp4&#34;}]&#39;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/p&gt;
 &lt;h2 id=&#34;开源地址&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#开源地址&#34;&gt;#&lt;/a&gt; 开源地址&lt;/h2&gt;
@@ -556,15 +556,16 @@
 &lt;p&gt;更进一步说，借助 AI 除了收集文字资料，还可以收集图片和视频资料呀，这样我在了解世界各地发生的好玩的事情时，相关的图片也可以展示在我眼前，体验肯定会更好。或许可以在 v1.4.0 版本实现这个功能～&lt;/p&gt;
 &lt;p&gt;欢迎有感兴趣的小伙伴一起开发，也顺便可以治治我的拖延症嘿嘿😉&lt;/p&gt;
 </content>
-        <category term="Rokid" scheme="https://blog.aayu.today/categories/Rokid/" />
+        <category term="未来" scheme="https://blog.aayu.today/categories/future/" />
+        <category term="Rokid" scheme="https://blog.aayu.today/categories/future/Rokid/" />
         <category term="Rokid" scheme="https://blog.aayu.today/tags/Rokid/" />
         <category term="空间小程序" scheme="https://blog.aayu.today/tags/%E7%A9%BA%E9%97%B4%E5%B0%8F%E7%A8%8B%E5%BA%8F/" />
         <updated>2024-01-23T17:46:51.000Z</updated>
     </entry>
     <entry>
-        <id>https://blog.aayu.today/feature/unity/20240101/</id>
+        <id>https://blog.aayu.today/future/unity/20240101/</id>
         <title>Unity3D特效学习笔记（1）魔法球</title>
-        <link rel="alternate" href="https://blog.aayu.today/feature/unity/20240101/"/>
+        <link rel="alternate" href="https://blog.aayu.today/future/unity/20240101/"/>
         <content type="html">&lt;h2 id=&#34;效果展示&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#效果展示&#34;&gt;#&lt;/a&gt; 效果展示&lt;/h2&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2024/01/07/202401072310971.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;创建项目&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#创建项目&#34;&gt;#&lt;/a&gt; 创建项目&lt;/h2&gt;
@@ -616,14 +617,15 @@
 &lt;p&gt;可以随意更改颜色，大小，速率等变量，至此，就可以得到一个很炫酷的魔法球特效了&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2024/01/02/202401020029423.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </content>
-        <category term="Unity3D" scheme="https://blog.aayu.today/categories/unity/" />
+        <category term="未来" scheme="https://blog.aayu.today/categories/future/" />
+        <category term="Unity3D" scheme="https://blog.aayu.today/categories/future/unity/" />
         <category term="Unity3D" scheme="https://blog.aayu.today/tags/Unity3D/" />
         <updated>2024-01-01T14:00:52.000Z</updated>
     </entry>
     <entry>
-        <id>https://blog.aayu.today/feature/rokid/20231125/</id>
+        <id>https://blog.aayu.today/future/rokid/20231125/</id>
         <title>Rokid 新项目构建过程中，可能遇到的问题及解决方案</title>
-        <link rel="alternate" href="https://blog.aayu.today/feature/rokid/20231125/"/>
+        <link rel="alternate" href="https://blog.aayu.today/future/rokid/20231125/"/>
         <content type="html">&lt;p&gt;按照开发者文档构建新项目时，可能会碰到如下报错&lt;/p&gt;
 &lt;p&gt;从报错信息中可以看到一条关键信息  &lt;code&gt;Could not resolve com.rokid.uxrplugin:rkuxrplugin:2.3.10&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://image.aayu.today/uploads/2023/11/25/202311251932196.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -645,8 +647,8 @@
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC84NTI5ZGM4MmY4MTI=&#34;&gt;解决：Android Studio 之 Cause: dl.google.com:443 failed to respond&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
-        <category term="Unity3D" scheme="https://blog.aayu.today/categories/unity/" />
-        <category term="Rokid" scheme="https://blog.aayu.today/categories/unity/Rokid/" />
+        <category term="未来" scheme="https://blog.aayu.today/categories/future/" />
+        <category term="Rokid" scheme="https://blog.aayu.today/categories/future/Rokid/" />
         <category term="Unity3D" scheme="https://blog.aayu.today/tags/Unity3D/" />
         <category term="Rokid" scheme="https://blog.aayu.today/tags/Rokid/" />
         <updated>2023-11-25T11:31:42.000Z</updated>
@@ -782,9 +784,9 @@
         <updated>2023-10-22T15:30:38.000Z</updated>
     </entry>
     <entry>
-        <id>https://blog.aayu.today/feature/unity/20231021/</id>
+        <id>https://blog.aayu.today/future/unity/20231021/</id>
         <title>Unity3D优化笔记（10）其他优化</title>
-        <link rel="alternate" href="https://blog.aayu.today/feature/unity/20231021/"/>
+        <link rel="alternate" href="https://blog.aayu.today/future/unity/20231021/"/>
         <content type="html">&lt;h2 id=&#34;代码优化&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#代码优化&#34;&gt;#&lt;/a&gt; 代码优化&lt;/h2&gt;
 &lt;p&gt;== 使用 AssetBundle 作为资源加载方案。== 而且经常一起使用的资源可以打在同一个 AssetBundle 包中。尽量避免同一个资源被打包进多个 AB 包中。&lt;/p&gt;
 &lt;p&gt;压缩方式尽量使用 LZ4，少用或不要用 LZMA 的压缩方式。如果确定后续开发不会升级 Unity 版本，则可以尝试启用打包选项 BuildAssetBundleOption.DisableWriteType，这样 TypeTree 信息不会被打到 AB 包中，可以极大减小包体大小以及运行加载时的内存开销。&lt;/p&gt;
@@ -835,14 +837,15 @@
 &lt;p&gt;Unity UPR 网址：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly91cHIudW5pdHkuY24vaW5zdHJ1Y3Rpb25zL2Rlc2t0b3A=&#34;&gt;https://upr.unity.cn/instructions/desktop&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;其中 Unity UPR 中的 Asset Checker 能对本地的整个 Unity 项目进行性能分析，帮助我们找出问题。&lt;/p&gt;
 </content>
-        <category term="Unity3D" scheme="https://blog.aayu.today/categories/unity/" />
+        <category term="未来" scheme="https://blog.aayu.today/categories/future/" />
+        <category term="Unity3D" scheme="https://blog.aayu.today/categories/future/unity/" />
         <category term="Unity3D" scheme="https://blog.aayu.today/tags/Unity3D/" />
         <updated>2023-10-21T14:52:00.000Z</updated>
     </entry>
     <entry>
-        <id>https://blog.aayu.today/feature/unity/20231020/</id>
+        <id>https://blog.aayu.today/future/unity/20231020/</id>
         <title>Unity3D优化笔记（9）合并网格、动画、音频、物理优化</title>
-        <link rel="alternate" href="https://blog.aayu.today/feature/unity/20231020/"/>
+        <link rel="alternate" href="https://blog.aayu.today/future/unity/20231020/"/>
         <content type="html">&lt;h2 id=&#34;合并网格mesh-combine&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#合并网格mesh-combine&#34;&gt;#&lt;/a&gt; 合并网格（Mesh Combine）&lt;/h2&gt;
 &lt;p&gt;对使用相同材质的模型可以使用第三方插件（例如：Easy Mesh Combine Tool）合并网格&lt;/p&gt;
 &lt;p&gt;合并后，所有被合并的模型被整合成一个新的模型，DrawCall 和 Shader Caster 会下降，但顶点个数和三角面个数可能会增多，所以需要根据实际情况来使用&lt;/p&gt;
@@ -887,14 +890,15 @@
 &lt;p&gt;Edit——Project Settings——Physics 或者 Physics 2D—— 设置 Layer Collision Matrix。它规定了哪些 Layer 层的游戏对象可以彼此碰撞，哪些 Layer 层的游戏对象会忽略碰撞。如果有些 Layer 层的游戏对象之前不需要进行碰撞，则可以在这里设置，取消勾选则表示不会碰撞。&lt;/p&gt;
 &lt;p&gt;Edit——Project Settings——Time—— 稍微调大 Fixed Timestep，这样可以稍微提升游戏性能，但是物体的运动可能会出现问题。&lt;/p&gt;
 </content>
-        <category term="Unity3D" scheme="https://blog.aayu.today/categories/unity/" />
+        <category term="未来" scheme="https://blog.aayu.today/categories/future/" />
+        <category term="Unity3D" scheme="https://blog.aayu.today/categories/future/unity/" />
         <category term="Unity3D" scheme="https://blog.aayu.today/tags/Unity3D/" />
         <updated>2023-10-20T13:34:24.000Z</updated>
     </entry>
     <entry>
-        <id>https://blog.aayu.today/feature/unity/20231019/</id>
+        <id>https://blog.aayu.today/future/unity/20231019/</id>
         <title>Unity3D优化笔记（8）UI优化、模型优化和LOD技术</title>
-        <link rel="alternate" href="https://blog.aayu.today/feature/unity/20231019/"/>
+        <link rel="alternate" href="https://blog.aayu.today/future/unity/20231019/"/>
         <content type="html">&lt;h2 id=&#34;ui-优化&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ui-优化&#34;&gt;#&lt;/a&gt; UI 优化&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;尽量避免使用 IMGUI 来做游戏时的 UI，因为 IMGUI 的开销比较大。&lt;/li&gt;
@@ -960,14 +964,15 @@
 &lt;p&gt;&lt;mark&gt;使用 LOD 技术能起到优化渲染性能的效果。但是使用 LOD 技术也会增加内存占用。&lt;/mark&gt;&lt;/p&gt;
 &lt;p&gt;在 Unity 中可以使用 LODGroup 组件来实现 LOD 技术。&lt;/p&gt;
 </content>
-        <category term="Unity3D" scheme="https://blog.aayu.today/categories/unity/" />
+        <category term="未来" scheme="https://blog.aayu.today/categories/future/" />
+        <category term="Unity3D" scheme="https://blog.aayu.today/categories/future/unity/" />
         <category term="Unity3D" scheme="https://blog.aayu.today/tags/Unity3D/" />
         <updated>2023-10-19T15:56:10.000Z</updated>
     </entry>
     <entry>
-        <id>https://blog.aayu.today/feature/unity/20231018/</id>
+        <id>https://blog.aayu.today/future/unity/20231018/</id>
         <title>Unity3D优化笔记（7）光照优化、图片优化</title>
-        <link rel="alternate" href="https://blog.aayu.today/feature/unity/20231018/"/>
+        <link rel="alternate" href="https://blog.aayu.today/future/unity/20231018/"/>
         <content type="html">&lt;h2 id=&#34;光照优化&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#光照优化&#34;&gt;#&lt;/a&gt; 光照优化&lt;/h2&gt;
 &lt;p&gt;&lt;mark&gt;减少不必要的光源的使用&lt;/mark&gt;，调节好每个 Light 组件的属性，平衡视觉效果和游戏性能。&lt;/p&gt;
 &lt;p&gt;&lt;mark&gt;优先考虑使用烘焙光照或者混合光照，此时可以配合光照探针使用&lt;/mark&gt;。Lighting 窗口可以设置烘焙光照的参数。减少启用的阴影投射。&lt;/p&gt;
@@ -1007,14 +1012,15 @@
 &lt;/ul&gt;
 &lt;p&gt;在代码中控制加载 Sprite Atlas&lt;/p&gt;
 &lt;figure class=&#34;highlight csharp&#34;&gt;&lt;figcaption data-lang=&#34;C#&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token return-type class-name&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;Awake&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	spriteAtlas &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; Resources&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token generic-method&#34;&gt;&lt;span class=&#34;token function&#34;&gt;Load&lt;/span&gt;&lt;span class=&#34;token generic class-name&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;SpriteAtlas&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;MySpriteAtlas&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token return-type class-name&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;Update&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;Input&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;GetKeyDown&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;KeyCode&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;Q&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		image1&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;sprite &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; spriteAtlas&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;GetSprite&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;trees_0&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;Input&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;GetKeyDown&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;KeyCode&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;W&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		image2&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;sprite &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; spriteAtlas&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;GetSprite&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;trees_1&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
-        <category term="Unity3D" scheme="https://blog.aayu.today/categories/unity/" />
+        <category term="未来" scheme="https://blog.aayu.today/categories/future/" />
+        <category term="Unity3D" scheme="https://blog.aayu.today/categories/future/unity/" />
         <category term="Unity3D" scheme="https://blog.aayu.today/tags/Unity3D/" />
         <updated>2023-10-18T04:40:45.000Z</updated>
     </entry>
     <entry>
-        <id>https://blog.aayu.today/feature/unity/20231017/</id>
+        <id>https://blog.aayu.today/future/unity/20231017/</id>
         <title>Unity3D优化笔记（6）遮挡剔除</title>
-        <link rel="alternate" href="https://blog.aayu.today/feature/unity/20231017/"/>
+        <link rel="alternate" href="https://blog.aayu.today/future/unity/20231017/"/>
         <content type="html">&lt;p&gt;正常情况下，如果一个障碍物 A 挡住了后面的物体 B，虽然我们看不见物体 B，但是 Unity 仍然会消耗性能来渲染这个物体 B。这样 CPU 和 GPU 就会有一部分性能白白浪费在渲染物体 B 身上。&lt;/p&gt;
 &lt;p&gt;&lt;mark&gt;如果想在一个障碍物挡住了后面的物体后，不渲染被挡住的物体，则可以使用遮挡剔除。&lt;/mark&gt;&lt;/p&gt;
 &lt;p&gt;官方文档：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLnVuaXR5M2QuY29tL2NuL2N1cnJlbnQvTWFudWFsL09jY2x1c2lvbkN1bGxpbmcuaHRtbA==&#34;&gt;https://docs.unity3d.com/cn/current/Manual/OcclusionCulling.html&lt;/span&gt;&lt;/p&gt;
@@ -1055,14 +1061,15 @@
 &lt;p&gt;这样一来，Occlusion Portal 组件就会生效。当取消勾选它的 Open 属性后，被这堵墙就会使用遮挡剔除。当勾选它的 Open 属性后，被这堵墙就不会使用遮挡剔除。我们可以使用代码来控制 Open 属性，控制这堵墙在什么时候使用遮挡剔除，什么时候不使用遮挡剔除。&lt;/p&gt;
 &lt;p&gt;Occlusion Portal 组件的 Center 属性控制了中心的位置，Size 属性控制了遮挡的范围。点击 Edit Bounds 左侧的按钮后，可以在 Scene 窗口手动调节 Occlusion Portal 组件的遮挡范围。每次调整完，或者修改过场景，都要重新烘焙。&lt;/p&gt;
 </content>
-        <category term="Unity3D" scheme="https://blog.aayu.today/categories/unity/" />
+        <category term="未来" scheme="https://blog.aayu.today/categories/future/" />
+        <category term="Unity3D" scheme="https://blog.aayu.today/categories/future/unity/" />
         <category term="Unity3D" scheme="https://blog.aayu.today/tags/Unity3D/" />
         <updated>2023-10-17T05:43:03.000Z</updated>
     </entry>
     <entry>
-        <id>https://blog.aayu.today/feature/unity/20231016/</id>
+        <id>https://blog.aayu.today/future/unity/20231016/</id>
         <title>Unity3D优化笔记（5）静态合批、动态合批和GPU Instancing</title>
-        <link rel="alternate" href="https://blog.aayu.today/feature/unity/20231016/"/>
+        <link rel="alternate" href="https://blog.aayu.today/future/unity/20231016/"/>
         <content type="html">&lt;h2 id=&#34;静态合批&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#静态合批&#34;&gt;#&lt;/a&gt; 静态合批&lt;/h2&gt;
 &lt;p&gt;静态合批也叫静态批处理，是 Unity 的一种优化技术。&lt;/p&gt;
 &lt;p&gt;&lt;mark&gt;对于始终静止不动的物体使用静态合批后，CPU 会把它们合并为一个批次发送给 GPU 处理，这样可以减少 Draw Call 带来的性能消耗，从而提升游戏性能。&lt;/mark&gt;&lt;/p&gt;
@@ -1134,7 +1141,8 @@
 &lt;p&gt;是否要启用 GPU Instancing，要根据自己的项目来定。可以尝试启用，在性能分析器中看看效果如果，如果效果好，再确定启用它。&lt;/p&gt;
 &lt;p&gt;一般来说，当场景中有大量重复的网格实例时，可以尝试启用 GPU Instancing。例如场景中有大量树木、草地、石块等，这些实例具有相同的网格和材质，只是位置、颜色等属性稍有差异，那么启用 GPU Instancing 或许能够显著提高性能。&lt;/p&gt;
 </content>
-        <category term="Unity3D" scheme="https://blog.aayu.today/categories/unity/" />
+        <category term="未来" scheme="https://blog.aayu.today/categories/future/" />
+        <category term="Unity3D" scheme="https://blog.aayu.today/categories/future/unity/" />
         <category term="Unity3D" scheme="https://blog.aayu.today/tags/Unity3D/" />
         <updated>2023-10-16T05:38:40.000Z</updated>
     </entry>
